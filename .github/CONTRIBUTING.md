@@ -47,7 +47,28 @@ You dont need picture for that. 😒
 
 Create a pull request to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures that the master branch only contains finished and approved work.
 
+- Click on the **New Pull Request** button to create a Pull Request.
+
 ![Pull request image](/media/contributing/creating-pull-request.png)
+
+- Compare changes
+
+![Compare changes image](/media/contributing/compare-changes.png)
+
+- Open Pull Request
+
+     - Type a title and description for your pull request.
+       
+
+**NOTE:** *Be sure to give a nameful title to your pull request to made easier for others to underestand*
+  
+![Open pull request image](/media/contributing/open-pull-request.png)
+
+You will finish up with somthing like this
+
+![Finished pull request image](/media/contributing/finished-pull-request.png)
 
 
 ## Merging to `master` branch
+
+
