@@ -11,6 +11,7 @@ You won't be able to contribute without a GitHub account, so start by [joining G
 - [Adding your code to the repository](#adding-your-code-to-the-repository)
 - [Creating your Pull Request](#creating-your-pull-request)
 - [Merging to `master` branch](#merging-to-master-branch)
+- [Helpful links](#helpful-links)
 
 
 ## Forking Repository
@@ -75,5 +76,18 @@ Read more about [creating a pull request](https://help.github.com/articles/creat
 
 ## Merging to `master` branch
 
+Read about [Understanding GitHub Flow](https://guides.github.com/introduction/flow/).
 
+There's only one rule: anything in the master branch is always deployable, so **Master Branch** is what the actual project is.
+
+This is how will looks like after a brach is merged:
+
+![Pull request merged image](/media/contributing/pull-request-merged.png)
+
+## Helpful links
+
+- [What a branch is?](https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is)
+- [Git Download](https://git-scm.com/downloads). 
+- [GitHub Desktop Download](https://desktop.github.com)
+- [Learing Git](https://www.codecademy.com/learn/learn-git)
 
