@@ -39,7 +39,7 @@ Read more about [creating a branch](https://help.github.com/articles/creating-an
 
 ## Adding your code to the repository
 
-Within the new forked repository and the new branch you can feel free to add, edit, and enjoy adding your code and staff.
+Within the new forked repository and the new branch you can feel free to add, edit, and enjoy adding your code and stuff.
 
 You dont need picture for that. 😒
 
