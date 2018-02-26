@@ -9,8 +9,8 @@ You won't be able to contribute without a GitHub account, so start by [joining G
 - [Forking Repository](#forking-repository)
 - [Creating your new branch](#creating-your-new-branch)
 - [Adding your code to the repository](#adding-your-code-to-the-repository)
+- [Creating your Pull Request](#creating-your-pull-request)
 - [Merging to `master` branch](#merging-to-master-branch)
-- [Updating your Pull Request](#updating-your-pull-request)
 
 
 ## Forking Repository
@@ -42,6 +42,12 @@ Within the new forked repository and the new branch you can feel free to add, ed
 
 You dont need picture for that. 😒
 
-## Merging to `master` branch
 
-## Updating your Pull Request
+## Creating your Pull Request
+
+Create a pull request to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures that the master branch only contains finished and approved work.
+
+![Pull request image](/media/contributing/creating-pull-request.png)
+
+
+## Merging to `master` branch
