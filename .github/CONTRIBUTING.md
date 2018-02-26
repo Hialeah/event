@@ -42,6 +42,9 @@ Within the new forked repository and the new branch you can feel free to add, ed
 
 You dont need picture for that. 😒
 
+I highly recommend to use [GitHub desktop](https://desktop.github.com/) to work on you repository locally.
+
+More about [working with GitHub Desktop](https://resources.github.com/webcasts/GitHub-and-GitHub-desktop/).
 
 ## Creating your Pull Request
 
@@ -64,11 +67,13 @@ Create a pull request to propose and collaborate on changes to a repository. The
   
 ![Open pull request image](/media/contributing/open-pull-request.png)
 
-You will finish up with somthing like this
+You will finish up with somthing like this:
 
 ![Finished pull request image](/media/contributing/finished-pull-request.png)
 
+Read more about [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
 ## Merging to `master` branch
+
 
 
