@@ -1,9 +1,16 @@
 <img align="center" src="media/event.png" alt="Event README image">
 
-<h4 align="center">
-	<br><br>
-	<a href=".github/CONTRIBUTING.md">Contributing Guide</a>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;
-	<!-- <a href="https://github.com/MDCBlue/event/wiki"> Wiki </a>&nbsp;&nbsp;&nbsp&nbsp;&nbsp; -->
-	<a href="LICENSE">License</a>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;
-	<br><br>
-</h4>
+
+# Contributing 
+
+See [Contributing Guide](.github/CONTRIBUTING.md)
+
+# Contributors
+
+[![Carlos Abraham ](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah) | [![Emanuel](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4)](https://github.com/LuisRobaina) | image | 
+--- | --- | --- | 
+[Abraham](https://github.com/19cah) | [Emanuel](https://github.com/Jikiyama) | [Luis F.](LuisRobaina) | 
+
+# License
+
+[MDC Blue](https://github.com/MDCblue) © 2018 [MIT License](LICENSE)
