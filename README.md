@@ -7,9 +7,9 @@ See [Contributing Guide](.github/CONTRIBUTING.md)
 
 # Contributors
 
-[![Carlos Abraham ](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah) | [![Emanuel](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4)](https://github.com/LuisRobaina) | image | 
+[![Carlos Abraham ](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah) | [![Emanuel](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4)](https://github.com/Jikiyama) | image | 
 --- | --- | --- | 
-[Abraham](https://github.com/19cah) | [Emanuel](https://github.com/Jikiyama) | [Luis F.](LuisRobaina) | 
+[Abraham](https://github.com/19cah) | [Emanuel](https://github.com/Jikiyama) | [Luis F.](https://github.com/LuisRobaina) | 
 
 # License
 
