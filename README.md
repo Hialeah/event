@@ -3,6 +3,9 @@
 >*Making your events easier*
 
 [![MDC Blue](https://mdc.blue/bandage.svg)](https://mdc.blue/)
+[![GitHub top language](https://img.shields.io/github/languages/top/mdcblue/event.svg)](https://github.com/mdcblue/event)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/mdcblue/event.svg)](https://github.com/mdcblue/event)
+[![license](https://img.shields.io/github/license/mdcblue/event.svg)](https://github.com/MDCblue/event/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg)](https://github.com/MDCblue/event/graphs/contributors)
 
 
