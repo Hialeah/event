@@ -1,7 +1,5 @@
 # 🅴🆅🅴🅽🆃 
 
-[![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)](https://gitter.im/MDCblue/event?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 >*Making your events easier*
 
 [![MDC Blue](https://mdc.blue/bandage.svg)](https://mdc.blue/)
@@ -10,6 +8,7 @@
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/mdcblue/event.svg)](https://github.com/mdcblue/event)
 [![license](https://img.shields.io/github/license/mdcblue/event.svg)](https://github.com/MDCblue/event/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg)](https://github.com/MDCblue/event/graphs/contributors)
+[![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)](https://gitter.im/MDCblue/event?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 **#Event** is a Windows desktop application build on **C#**, designed to create your live easier when it comes to organize your need for an event. 
