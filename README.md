@@ -1,7 +1,24 @@
-# #Event
+# 🅴🆅🅴🅽🆃 
 
+*Making your events easier*
+
+**#Event** is a Windows desktop application build on **C#**, designed to create your live easier when it comes to organize your need for an event. 
+
+**#Event** is designed with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
+
+# Installing
+
+#### Prerequisites
+
+- Window 7 higher.
+
+## Window
+
+Download the latest [**#Event**](#) release.
 
 # Contributing 
+
+Please note that this project is licensed under MIT License. By participating in this project you agree to abide by its terms.
 
 See [Contributing Guide](.github/CONTRIBUTING.md)
 
