@@ -12,9 +12,9 @@
 
 ![Event Screenshot](media/event.png)
 
-**#Event** is a Windows desktop application build on **C#**, designed to create your live easier when it comes to organize your need for an event. 
+**#Event** is a Windows desktop application build on **C#**, designed to create your live easier when it comes to organize your needs for an event. 
 
-**#Event** is designed with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
+**#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
 # Installing
 
