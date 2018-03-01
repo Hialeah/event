@@ -12,7 +12,7 @@
 
 #### Prerequisites
 
-- Window 7 higher.
+- Window 7 or higher.
 
 ## Window
 
