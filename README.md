@@ -1,5 +1,7 @@
 # 🅴🆅🅴🅽🆃 
 
+[![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)](https://gitter.im/MDCblue/event?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 >*Making your events easier*
 
 [![MDC Blue](https://mdc.blue/bandage.svg)](https://mdc.blue/)
