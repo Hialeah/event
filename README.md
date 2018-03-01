@@ -1,6 +1,6 @@
 # 🅴🆅🅴🅽🆃 
 
-*Making your events easier*
+>*Making your events easier*
 
 [![MDC Blue](https://mdc.blue/bandage.svg)](https://mdc.blue/)
 
