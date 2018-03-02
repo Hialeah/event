@@ -23,25 +23,115 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="380" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="fillingInfo_label" min="-2" max="-2" attributes="0"/>
+                                          <Component id="event_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="phone_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="modelOfTransportation_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="advisor_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="268" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="clubName_label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="clubName_textField" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="location_label" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="dates_label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                                      <Component id="to_fromDates_label" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="expenses_label" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="No_StudentsInOrg_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="No_ofStudnetsAttending_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="No_chaperones_attending_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="caculate_anticipated_expenses_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="calculate_expenses_button" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="346" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="welcomeToEvent_label" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="makingEventsEasier_label" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="168" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace pref="380" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+              <Component id="welcomeToEvent_label" min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="makingEventsEasier_label" min="-2" pref="14" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="fillingInfo_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dates_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="to_fromDates_label" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="location_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="clubName_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clubName_textField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <Component id="advisor_label" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="event_label" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="phone_label" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="modelOfTransportation_label" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="No_StudentsInOrg_label" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="No_ofStudnetsAttending_label" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="No_chaperones_attending_label" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="caculate_anticipated_expenses_label" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+              <Component id="calculate_expenses_button" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="expenses_label" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="welcomeToEvent_label">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Yu Gothic UI Semibold" size="18" style="1"/>
@@ -52,6 +142,95 @@
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="welcomeToEvent_label"/>
       </AccessibilityProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="makingEventsEasier_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Making your event easier!"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fillingInfo_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Start by filling up this information"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="clubName_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Club Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="advisor_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Advisor"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="event_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Event"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="phone_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Phone"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="modelOfTransportation_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Model of Trasportation"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="No_StudentsInOrg_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of Students in Organization"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="No_ofStudnetsAttending_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of Studnets Attending to the Event"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="No_chaperones_attending_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of Chaperones Attending the Event"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="dates_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Date(s)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="to_fromDates_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="to"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="location_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Location"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="calculate_expenses_button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculate"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculate_expenses_buttonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="expenses_label">
+    </Component>
+    <Component class="javax.swing.JLabel" name="caculate_anticipated_expenses_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculate anticipated expenses"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="clubName_textField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clubName_textFieldActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -1,18 +1,14 @@
 /**
  *  # Event
  *  =============================
- *  Make your events easier
+ *  Make your events easier!
  * 
  *  MDC Blue (c) 2018 MIT License
- *  
- */
-
-/**
  *
  * @author MDC Blue Programming Team
- * @author Abraham
- * @author Luis
- * @author Adriel
+ * @author Carlos Abraham Hernandez
+ * @author Luis Fabian
+ * @author Adriel Camargo
  */
 public class Event extends javax.swing.JFrame {
 
@@ -32,35 +28,173 @@ public class Event extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        welcomeToEvent_label = new javax.swing.JLabel();
+        makingEventsEasier_label = new javax.swing.JLabel();
+        fillingInfo_label = new javax.swing.JLabel();
+        clubName_label = new javax.swing.JLabel();
+        advisor_label = new javax.swing.JLabel();
+        event_label = new javax.swing.JLabel();
+        phone_label = new javax.swing.JLabel();
+        modelOfTransportation_label = new javax.swing.JLabel();
+        No_StudentsInOrg_label = new javax.swing.JLabel();
+        javax.swing.JLabel No_ofStudnetsAttending_label = new javax.swing.JLabel();
+        No_chaperones_attending_label = new javax.swing.JLabel();
+        dates_label = new javax.swing.JLabel();
+        to_fromDates_label = new javax.swing.JLabel();
+        location_label = new javax.swing.JLabel();
+        calculate_expenses_button = new javax.swing.JButton();
+        expenses_label = new javax.swing.JLabel();
+        caculate_anticipated_expenses_label = new javax.swing.JLabel();
+        clubName_textField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        jLabel1.setText("Welcome to Event#");
-        jLabel1.setToolTipText("");
+        welcomeToEvent_label.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        welcomeToEvent_label.setText("Welcome to Event#");
+        welcomeToEvent_label.setToolTipText("");
+
+        makingEventsEasier_label.setText("Making your event easier!");
+
+        fillingInfo_label.setText("Start by filling up this information");
+
+        clubName_label.setText("Club Name");
+
+        advisor_label.setText("Advisor");
+
+        event_label.setText("Event");
+
+        phone_label.setText("Phone");
+
+        modelOfTransportation_label.setText("Model of Trasportation");
+
+        No_StudentsInOrg_label.setText("Number of Students in Organization");
+
+        No_ofStudnetsAttending_label.setText("Number of Studnets Attending to the Event");
+
+        No_chaperones_attending_label.setText("Number of Chaperones Attending the Event");
+
+        dates_label.setText("Date(s)");
+
+        to_fromDates_label.setText("to");
+
+        location_label.setText("Location");
+
+        calculate_expenses_button.setText("Calculate");
+        calculate_expenses_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculate_expenses_buttonActionPerformed(evt);
+            }
+        });
+
+        caculate_anticipated_expenses_label.setText("Calculate anticipated expenses");
+
+        clubName_textField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clubName_textFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(306, 306, 306)
-                .addComponent(jLabel1)
-                .addContainerGap(380, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(fillingInfo_label)
+                                            .addComponent(event_label)
+                                            .addComponent(phone_label)
+                                            .addComponent(modelOfTransportation_label)
+                                            .addComponent(advisor_label))
+                                        .addGap(268, 268, 268))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(clubName_label)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(clubName_textField)
+                                        .addGap(255, 255, 255)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(location_label)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(dates_label)
+                                        .addGap(93, 93, 93)
+                                        .addComponent(to_fromDates_label))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addComponent(expenses_label))
+                            .addComponent(No_StudentsInOrg_label)
+                            .addComponent(No_ofStudnetsAttending_label)
+                            .addComponent(No_chaperones_attending_label)
+                            .addComponent(caculate_anticipated_expenses_label)
+                            .addComponent(calculate_expenses_button)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(346, 346, 346)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(welcomeToEvent_label)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(makingEventsEasier_label)))))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(380, Short.MAX_VALUE))
+                .addGap(55, 55, 55)
+                .addComponent(welcomeToEvent_label, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(makingEventsEasier_label, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fillingInfo_label)
+                    .addComponent(dates_label)
+                    .addComponent(to_fromDates_label))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(location_label)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(clubName_label)
+                            .addComponent(clubName_textField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(7, 7, 7)
+                        .addComponent(advisor_label)
+                        .addGap(10, 10, 10)
+                        .addComponent(event_label)
+                        .addGap(10, 10, 10)
+                        .addComponent(phone_label)
+                        .addGap(10, 10, 10)
+                        .addComponent(modelOfTransportation_label)))
+                .addGap(38, 38, 38)
+                .addComponent(No_StudentsInOrg_label)
+                .addGap(11, 11, 11)
+                .addComponent(No_ofStudnetsAttending_label)
+                .addGap(11, 11, 11)
+                .addComponent(No_chaperones_attending_label)
+                .addGap(30, 30, 30)
+                .addComponent(caculate_anticipated_expenses_label)
+                .addGap(12, 12, 12)
+                .addComponent(calculate_expenses_button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(expenses_label)
+                .addGap(53, 53, 53))
         );
 
-        jLabel1.getAccessibleContext().setAccessibleName("welcomeToEvent_label");
+        welcomeToEvent_label.getAccessibleContext().setAccessibleName("welcomeToEvent_label");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void calculate_expenses_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculate_expenses_buttonActionPerformed
+        expenses_label.setText("Expenses");
+    }//GEN-LAST:event_calculate_expenses_buttonActionPerformed
+
+    private void clubName_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clubName_textFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clubName_textFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +232,22 @@ public class Event extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel No_StudentsInOrg_label;
+    private javax.swing.JLabel No_chaperones_attending_label;
+    private javax.swing.JLabel advisor_label;
+    private javax.swing.JLabel caculate_anticipated_expenses_label;
+    private javax.swing.JButton calculate_expenses_button;
+    private javax.swing.JLabel clubName_label;
+    private javax.swing.JTextField clubName_textField;
+    private javax.swing.JLabel dates_label;
+    private javax.swing.JLabel event_label;
+    private javax.swing.JLabel expenses_label;
+    private javax.swing.JLabel fillingInfo_label;
+    private javax.swing.JLabel location_label;
+    private javax.swing.JLabel makingEventsEasier_label;
+    private javax.swing.JLabel modelOfTransportation_label;
+    private javax.swing.JLabel phone_label;
+    private javax.swing.JLabel to_fromDates_label;
+    private javax.swing.JLabel welcomeToEvent_label;
     // End of variables declaration//GEN-END:variables
 }
