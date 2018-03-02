@@ -26,27 +26,33 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="fillingInfo_label" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="fillingInfo_label" min="-2" max="-2" attributes="0"/>
-                                          <Component id="event_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="phone_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="modelOfTransportation_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="advisor_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="268" max="-2" attributes="0"/>
+                                      <Component id="modelOfTransportation_label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="transportation_comboBox" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="clubName_label" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="clubName_textField" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="phone_label" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="clubName_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="advisor_label" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="event_label" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="clubName_textField" max="32767" attributes="0"/>
+                                          <Component id="event_textField" max="32767" attributes="0"/>
+                                          <Component id="advisor_textField" max="32767" attributes="0"/>
+                                          <Component id="phone_textField" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
+                              <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="location_label" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
@@ -56,29 +62,48 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="expenses_label" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="caculate_anticipated_expenses_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="calculate_expenses_button" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                      <Component id="expenses_label" min="-2" pref="72" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="No_chaperones_attending_label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="numberOfChaperones_TextField" min="-2" pref="33" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="No_ofStudnetsAttending_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="No_StudentsInOrg_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="numberOfStudentsAttending_textField" pref="35" max="32767" attributes="0"/>
+                                          <Component id="numberOfStudents_textField" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="No_StudentsInOrg_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="No_ofStudnetsAttending_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="No_chaperones_attending_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="caculate_anticipated_expenses_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="calculate_expenses_button" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="346" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="welcomeToEvent_label" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Component id="makingEventsEasier_label" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="168" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -103,29 +128,51 @@
                           <Component id="clubName_label" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="clubName_textField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="advisor_label" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="event_label" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="phone_label" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="modelOfTransportation_label" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="advisor_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="advisor_textField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="event_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="event_textField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="phone_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="phone_textField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="modelOfTransportation_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="transportation_comboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              <Component id="No_StudentsInOrg_label" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-              <Component id="No_ofStudnetsAttending_label" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-              <Component id="No_chaperones_attending_label" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="No_StudentsInOrg_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="numberOfStudents_textField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="No_ofStudnetsAttending_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="numberOfStudentsAttending_textField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="No_chaperones_attending_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="numberOfChaperones_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="caculate_anticipated_expenses_label" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-              <Component id="calculate_expenses_button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="expenses_label" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="calculate_expenses_button" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="expenses_label" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -221,6 +268,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="expenses_label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="caculate_anticipated_expenses_label">
       <Properties>
@@ -231,6 +281,49 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clubName_textFieldActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="advisor_textField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="advisor_textFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="event_textField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="event_textFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="phone_textField">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="transportation_comboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="Car"/>
+            <StringItem index="1" value="Aeroplane"/>
+            <StringItem index="2" value="Train"/>
+            <StringItem index="3" value="Bus"/>
+            <StringItem index="4" value="a pie"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="transportation_comboBoxActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="numberOfStudents_textField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numberOfStudents_textFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="numberOfStudentsAttending_textField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numberOfStudentsAttending_textFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="numberOfChaperones_TextField">
     </Component>
   </SubComponents>
 </Form>

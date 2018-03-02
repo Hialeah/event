@@ -46,6 +46,13 @@ public class Event extends javax.swing.JFrame {
         expenses_label = new javax.swing.JLabel();
         caculate_anticipated_expenses_label = new javax.swing.JLabel();
         clubName_textField = new javax.swing.JTextField();
+        advisor_textField = new javax.swing.JTextField();
+        event_textField = new javax.swing.JTextField();
+        phone_textField = new javax.swing.JTextField();
+        transportation_comboBox = new javax.swing.JComboBox<>();
+        numberOfStudents_textField = new javax.swing.JTextField();
+        numberOfStudentsAttending_textField = new javax.swing.JTextField();
+        numberOfChaperones_TextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,11 +93,44 @@ public class Event extends javax.swing.JFrame {
             }
         });
 
+        expenses_label.setText(".");
+
         caculate_anticipated_expenses_label.setText("Calculate anticipated expenses");
 
         clubName_textField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clubName_textFieldActionPerformed(evt);
+            }
+        });
+
+        advisor_textField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                advisor_textFieldActionPerformed(evt);
+            }
+        });
+
+        event_textField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                event_textFieldActionPerformed(evt);
+            }
+        });
+
+        transportation_comboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Car", "Aeroplane", "Train", "Bus", "a pie" }));
+        transportation_comboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transportation_comboBoxActionPerformed(evt);
+            }
+        });
+
+        numberOfStudents_textField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberOfStudents_textFieldActionPerformed(evt);
+            }
+        });
+
+        numberOfStudentsAttending_textField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberOfStudentsAttending_textFieldActionPerformed(evt);
             }
         });
 
@@ -101,23 +141,28 @@ public class Event extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
+                        .addGap(134, 134, 134)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(fillingInfo_label)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addComponent(modelOfTransportation_label)
+                                        .addGap(22, 22, 22)
+                                        .addComponent(transportation_comboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(phone_label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(clubName_label)
+                                            .addComponent(advisor_label, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(event_label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(20, 20, 20)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(fillingInfo_label)
-                                            .addComponent(event_label)
-                                            .addComponent(phone_label)
-                                            .addComponent(modelOfTransportation_label)
-                                            .addComponent(advisor_label))
-                                        .addGap(268, 268, 268))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(clubName_label)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(clubName_textField)
-                                        .addGap(255, 255, 255)))
+                                            .addComponent(clubName_textField)
+                                            .addComponent(event_textField)
+                                            .addComponent(advisor_textField)
+                                            .addComponent(phone_textField))))
+                                .addGap(239, 239, 239)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(location_label)
                                     .addGroup(layout.createSequentialGroup()
@@ -125,13 +170,26 @@ public class Event extends javax.swing.JFrame {
                                         .addGap(93, 93, 93)
                                         .addComponent(to_fromDates_label))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(120, 120, 120)
-                                .addComponent(expenses_label))
-                            .addComponent(No_StudentsInOrg_label)
-                            .addComponent(No_ofStudnetsAttending_label)
-                            .addComponent(No_chaperones_attending_label)
-                            .addComponent(caculate_anticipated_expenses_label)
-                            .addComponent(calculate_expenses_button)))
+                                .addGap(2, 2, 2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(caculate_anticipated_expenses_label)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(calculate_expenses_button)
+                                        .addGap(50, 50, 50)
+                                        .addComponent(expenses_label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(No_chaperones_attending_label)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(numberOfChaperones_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(No_ofStudnetsAttending_label)
+                                            .addComponent(No_StudentsInOrg_label))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(numberOfStudentsAttending_textField, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                                            .addComponent(numberOfStudents_textField))))
+                                .addGap(2, 2, 2))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(346, 346, 346)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,7 +197,7 @@ public class Event extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(makingEventsEasier_label)))))
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addGap(152, 152, 152))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,27 +218,41 @@ public class Event extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(clubName_label)
                             .addComponent(clubName_textField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(7, 7, 7)
-                        .addComponent(advisor_label)
-                        .addGap(10, 10, 10)
-                        .addComponent(event_label)
-                        .addGap(10, 10, 10)
-                        .addComponent(phone_label)
-                        .addGap(10, 10, 10)
-                        .addComponent(modelOfTransportation_label)))
-                .addGap(38, 38, 38)
-                .addComponent(No_StudentsInOrg_label)
-                .addGap(11, 11, 11)
-                .addComponent(No_ofStudnetsAttending_label)
-                .addGap(11, 11, 11)
-                .addComponent(No_chaperones_attending_label)
-                .addGap(30, 30, 30)
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(advisor_label)
+                            .addComponent(advisor_textField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(event_label)
+                            .addComponent(event_textField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(phone_label)
+                            .addComponent(phone_textField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(modelOfTransportation_label)
+                            .addComponent(transportation_comboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(No_StudentsInOrg_label)
+                    .addComponent(numberOfStudents_textField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(No_ofStudnetsAttending_label)
+                    .addComponent(numberOfStudentsAttending_textField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(No_chaperones_attending_label)
+                    .addComponent(numberOfChaperones_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addComponent(caculate_anticipated_expenses_label)
                 .addGap(12, 12, 12)
-                .addComponent(calculate_expenses_button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(expenses_label)
-                .addGap(53, 53, 53))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(calculate_expenses_button)
+                    .addComponent(expenses_label, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(73, 73, 73))
         );
 
         welcomeToEvent_label.getAccessibleContext().setAccessibleName("welcomeToEvent_label");
@@ -195,6 +267,26 @@ public class Event extends javax.swing.JFrame {
     private void clubName_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clubName_textFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_clubName_textFieldActionPerformed
+
+    private void advisor_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_advisor_textFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_advisor_textFieldActionPerformed
+
+    private void event_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_event_textFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_event_textFieldActionPerformed
+
+    private void transportation_comboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transportation_comboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transportation_comboBoxActionPerformed
+
+    private void numberOfStudents_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfStudents_textFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numberOfStudents_textFieldActionPerformed
+
+    private void numberOfStudentsAttending_textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfStudentsAttending_textFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numberOfStudentsAttending_textFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,19 +327,26 @@ public class Event extends javax.swing.JFrame {
     private javax.swing.JLabel No_StudentsInOrg_label;
     private javax.swing.JLabel No_chaperones_attending_label;
     private javax.swing.JLabel advisor_label;
+    private javax.swing.JTextField advisor_textField;
     private javax.swing.JLabel caculate_anticipated_expenses_label;
     private javax.swing.JButton calculate_expenses_button;
     private javax.swing.JLabel clubName_label;
     private javax.swing.JTextField clubName_textField;
     private javax.swing.JLabel dates_label;
     private javax.swing.JLabel event_label;
+    private javax.swing.JTextField event_textField;
     private javax.swing.JLabel expenses_label;
     private javax.swing.JLabel fillingInfo_label;
     private javax.swing.JLabel location_label;
     private javax.swing.JLabel makingEventsEasier_label;
     private javax.swing.JLabel modelOfTransportation_label;
+    private javax.swing.JTextField numberOfChaperones_TextField;
+    private javax.swing.JTextField numberOfStudentsAttending_textField;
+    private javax.swing.JTextField numberOfStudents_textField;
     private javax.swing.JLabel phone_label;
+    private javax.swing.JTextField phone_textField;
     private javax.swing.JLabel to_fromDates_label;
+    private javax.swing.JComboBox<String> transportation_comboBox;
     private javax.swing.JLabel welcomeToEvent_label;
     // End of variables declaration//GEN-END:variables
 }
