@@ -10,9 +10,9 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg)](https://github.com/MDCblue/event/graphs/contributors)
 [![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)](https://gitter.im/MDCblue/event)
 
-![Event Screenshot](media/event.png)
-
 **#Event** is a Windows desktop application build on **C#**, designed to create your live easier when it comes to organize your needs for an event. 
+
+![Event Screenshot](media/event.png)
 
 **#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
