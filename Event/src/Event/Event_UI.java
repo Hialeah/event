@@ -15,7 +15,7 @@ static Connection Find;
 static Connection Update;
 static Connection Eliminate;
 static Connection find_Emergency;
-String Path;//= new File("Databases and Forms/Databae.accdb").getAbsolutePath();
+String Path;
 boolean Empty = false;
 
 // Constructor
