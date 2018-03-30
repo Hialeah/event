@@ -13,8 +13,8 @@
 
 **#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event. 
 
-<p><img src="media/event.png" witdth="600" height="400"></p>
-<!--![Event Screenshot](media/event.png)-->
+<p><img src="media/event-ui.png" witdth="800" height="600"></p>
+<!--![Event Screenshot](media/event-ui.png)-->
 
 **#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
