@@ -1284,15 +1284,12 @@ boolean Empty = false;
             }
 
 
-
-
-
     }//GEN-LAST:event_Add_NewActionPerformed
 
     
-    /**
+    /*******************************************************************
      * Ask for your local Access DataBase on your computer and set the
-     * variable Path to the location of the file using  JFileChoosesr
+     * variable Path to the location of the file using  JFileChooser
      * 
      * @param evt 
      */
@@ -1306,7 +1303,8 @@ boolean Empty = false;
                 Path = accessDB.getAbsolutePath();
             }
     }//GEN-LAST:event_connect_DB_buttonActionPerformed
-     
+    
+    
     /**
      * @param args the command line arguments
      * @throws java.sql.SQLException
