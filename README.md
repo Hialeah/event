@@ -2,7 +2,7 @@
 
 >*Making your events easier*
 
-[![MDC Blue](https://mdc.blue/bandage.svg)](https://mdc.blue/)
+[![MDC Blue](https://mdc.blue/badge.svg)](https://mdc.blue/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/mdcblue/event.svg)](https://github.com/mdcblue/event)
 [![GitHub top language](https://img.shields.io/github/languages/top/mdcblue/event.svg)](https://github.com/mdcblue/event)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/mdcblue/event.svg)](https://github.com/mdcblue/event)
@@ -13,6 +13,7 @@
 **#Event** is a Windows desktop application build on **C#**, designed to create your live easier when it comes to organize your needs for an event. 
 
 <p><img src="media/event.png" witdth="600" height="400"></p>
+
 <!--![Event Screenshot](media/event.png)-->
 
 **#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
