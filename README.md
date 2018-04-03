@@ -1,3 +1,4 @@
+
 # 🅴🆅🅴🅽🆃 
 
 >*Making your events easier*
@@ -10,11 +11,12 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg)](https://github.com/MDCblue/event/graphs/contributors)
 [![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)](https://gitter.im/MDCblue/event)
 
-**#Event** is a Windows desktop application build on **C#**, designed to create your live easier when it comes to organize your needs for an event. 
+**#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event. 
 
-<p><img src="media/event.png" witdth="600" height="400"></p>
 
-<!--![Event Screenshot](media/event.png)-->
+<p><img src="media/event-ui.png" witdth="800" height="600"></p>
+<!--![Event Screenshot](media/event-ui.png)-->
+
 
 **#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
@@ -22,7 +24,9 @@
 
 #### Prerequisites
 
-- Window 7 or higher.
+- Windows 7 or higher.
+- Access 2012 (Office Product) or higher installed
+- [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library installed
 
 ## Window
 
