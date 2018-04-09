@@ -7,8 +7,6 @@ import javax.swing.JFrame;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
     
 public class Event_UI extends JFrame {
@@ -18,35 +16,42 @@ static Connection Find;
 static Connection Update;
 static Connection Eliminate;
 static Connection find_Emergency;
-String Path;
+private String Path;
 boolean Empty = false;
 
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
+    public String getPath() {
+        return Path;
+    }
+    
+    
+
 // Constructor
- public Event_UI()  {
+ public Event_UI() {
        
         initComponents();
         Yes.setVisible(false);
         Update_Event.setVisible(false);
         Allow_Remove.setVisible(false);
         Add_New.setVisible(false);
-        try {
-            Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-        }
-        catch(Exception e) {
-            String Error = e.getMessage();
-           Exceptions_box.setText(Error);
-           connection_label.setText("Connection failed");
-           jPanel7.setBackground(Color.red); 
-        }
+        
+        Exceptions_box.setText("Please Connect Database");
+        
+        
         
         // Checking connection
         
         try{
-           connect_DB_button.doClick();
+            
+           Exceptions_box.setText("Please Connect Database");
+           connect_DB_button.doClick(); 
            
-           Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
            connection = DriverManager.getConnection("jdbc:ucanaccess://" + Path);        
            Statement statement = connection.createStatement();  
+           
            
            ResultSet Result = statement.executeQuery("select Event from Event_Info where ID = 10");
            if(Result.next()) {
@@ -110,14 +115,20 @@ boolean Empty = false;
              jPanel4.setVisible(false);
              Empty = true;
             }
-        }         
+           
+           
+            
+        }
+         
         // Errors in Connection display red box and Error Message
-        catch(Exception e) {
-        String Error = e.getMessage();
-        Exceptions_box.setText(Error);
-        connection_label.setText("Connection failed");
-        jPanel7.setBackground(Color.red); 
-          }
+        catch(SQLException e) {
+            
+            connection_label.setText("Connection failed");
+            jPanel7.setBackground(Color.red); 
+            
+            String Error = e.getMessage();
+            Exceptions_box.setText(Error);          
+        }
  }
 
     @SuppressWarnings("unchecked")
@@ -188,35 +199,35 @@ boolean Empty = false;
         jLabel32 = new javax.swing.JLabel();
         Contact_Box_6 = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField26 = new javax.swing.JTextField();
+        advisor_quant_box = new javax.swing.JTextField();
+        stdt_quant_box = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jTextField31 = new javax.swing.JTextField();
+        meals_quant_box = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
-        jTextField32 = new javax.swing.JTextField();
+        lodging_quant_box = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
-        jTextField33 = new javax.swing.JTextField();
+        taxis_qualit_box = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jTextField34 = new javax.swing.JTextField();
+        gas_quant_box = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        expenses = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
-        jTextField35 = new javax.swing.JTextField();
+        slife_contribution = new javax.swing.JTextField();
         jLabel48 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
-        jTextField36 = new javax.swing.JTextField();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jTextField41 = new javax.swing.JTextField();
-        jTextField42 = new javax.swing.JTextField();
+        club_contribution = new javax.swing.JTextField();
+        advisor_fee_box = new javax.swing.JTextField();
+        stdt_fee_box = new javax.swing.JTextField();
+        meals_fee_box = new javax.swing.JTextField();
+        no_days = new javax.swing.JTextField();
+        taxis_fee_box = new javax.swing.JTextField();
+        gas_fee_box = new javax.swing.JTextField();
         jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
-        jTextField43 = new javax.swing.JTextField();
+        lodging_fee_box = new javax.swing.JTextField();
         jLabel53 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -580,8 +591,12 @@ boolean Empty = false;
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("Advisor Registration");
         jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 230, -1, -1));
-        jPanel4.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 230, 90, -1));
-        jPanel4.add(jTextField26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 200, 90, -1));
+
+        advisor_quant_box.setNextFocusableComponent(advisor_fee_box);
+        jPanel4.add(advisor_quant_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 230, 90, -1));
+
+        stdt_quant_box.setNextFocusableComponent(stdt_fee_box);
+        jPanel4.add(stdt_quant_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 200, 90, -1));
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
@@ -592,19 +607,25 @@ boolean Empty = false;
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setText("Meals");
         jPanel4.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 260, -1, -1));
-        jPanel4.add(jTextField31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 260, 90, -1));
+
+        meals_quant_box.setNextFocusableComponent(meals_fee_box);
+        jPanel4.add(meals_quant_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 260, 90, -1));
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("Lodging");
         jPanel4.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 290, -1, -1));
-        jPanel4.add(jTextField32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 290, 90, -1));
+
+        lodging_quant_box.setNextFocusableComponent(lodging_fee_box);
+        jPanel4.add(lodging_quant_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 290, 90, -1));
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
         jLabel43.setText("Taxis");
         jPanel4.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 320, -1, -1));
-        jPanel4.add(jTextField33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 320, 90, -1));
+
+        taxis_qualit_box.setNextFocusableComponent(taxis_fee_box);
+        jPanel4.add(taxis_qualit_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 320, 90, -1));
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
@@ -614,23 +635,28 @@ boolean Empty = false;
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("# days");
         jPanel4.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(1700, 260, -1, -1));
-        jPanel4.add(jTextField34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 350, 90, -1));
+
+        gas_quant_box.setNextFocusableComponent(gas_fee_box);
+        jPanel4.add(gas_quant_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 350, 90, -1));
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("Total Expenses");
         jPanel4.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 420, -1, -1));
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 470, 80, 30));
+        expenses.setBackground(new java.awt.Color(255, 255, 255));
+        expenses.setForeground(new java.awt.Color(255, 255, 255));
+        expenses.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        expenses.setNextFocusableComponent(slife_contribution);
+        jPanel4.add(expenses, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 470, 80, 30));
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setText("=");
         jPanel4.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 470, 20, -1));
-        jPanel4.add(jTextField35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 470, 110, 30));
+
+        slife_contribution.setNextFocusableComponent(club_contribution);
+        jPanel4.add(slife_contribution, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 470, 110, 30));
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
@@ -646,13 +672,27 @@ boolean Empty = false;
         jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setText("Club Contribution");
         jPanel4.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(1640, 420, -1, -1));
-        jPanel4.add(jTextField36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1650, 470, 110, 30));
-        jPanel4.add(jTextField37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 230, 80, -1));
-        jPanel4.add(jTextField38, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 200, 80, -1));
-        jPanel4.add(jTextField39, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 260, 80, -1));
-        jPanel4.add(jTextField40, new org.netbeans.lib.awtextra.AbsoluteConstraints(1690, 290, 80, -1));
-        jPanel4.add(jTextField41, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 320, 80, -1));
-        jPanel4.add(jTextField42, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 350, 80, -1));
+
+        club_contribution.setNextFocusableComponent(Student_Name_box);
+        jPanel4.add(club_contribution, new org.netbeans.lib.awtextra.AbsoluteConstraints(1650, 470, 110, 30));
+
+        advisor_fee_box.setNextFocusableComponent(meals_quant_box);
+        jPanel4.add(advisor_fee_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 230, 80, -1));
+
+        stdt_fee_box.setNextFocusableComponent(advisor_quant_box);
+        jPanel4.add(stdt_fee_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 200, 80, -1));
+
+        meals_fee_box.setNextFocusableComponent(lodging_quant_box);
+        jPanel4.add(meals_fee_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 260, 80, -1));
+
+        no_days.setNextFocusableComponent(taxis_qualit_box);
+        jPanel4.add(no_days, new org.netbeans.lib.awtextra.AbsoluteConstraints(1690, 290, 80, -1));
+
+        taxis_fee_box.setNextFocusableComponent(gas_quant_box);
+        jPanel4.add(taxis_fee_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 320, 80, -1));
+
+        gas_fee_box.setNextFocusableComponent(expenses);
+        jPanel4.add(gas_fee_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 350, 80, -1));
 
         jLabel51.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(255, 255, 255));
@@ -663,7 +703,9 @@ boolean Empty = false;
         jLabel52.setForeground(new java.awt.Color(255, 255, 255));
         jLabel52.setText("Quantity");
         jPanel4.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 170, -1, -1));
-        jPanel4.add(jTextField43, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 290, 80, -1));
+
+        lodging_fee_box.setNextFocusableComponent(no_days);
+        jPanel4.add(lodging_fee_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 290, 80, -1));
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
@@ -693,13 +735,14 @@ boolean Empty = false;
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGap(0, 720, Short.MAX_VALUE)
         );
 
-        jPanel4.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 10, 10, 700));
+        jPanel4.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 10, 10, 720));
 
         Add_student_button.setText("Add");
         Add_student_button.setActionCommand("Find");
+        Add_student_button.setNextFocusableComponent(find_student_name_box);
         Add_student_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Add_student_buttonActionPerformed(evt);
@@ -766,12 +809,13 @@ boolean Empty = false;
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGap(0, 720, Short.MAX_VALUE)
         );
 
-        jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, 710));
+        jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, 720));
 
         find_button.setText("Find");
+        find_button.setNextFocusableComponent(Get_Name_box);
         find_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 find_buttonActionPerformed(evt);
@@ -794,14 +838,27 @@ boolean Empty = false;
             }
         });
         jPanel4.add(find_student_name_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 80, 190, 30));
+
+        Get_Box_6.setNextFocusableComponent(Get_Box_7);
         jPanel4.add(Get_Box_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 160, -1));
+
+        Get_Box_4.setNextFocusableComponent(Get_Box_5);
         jPanel4.add(Get_Box_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, 160, -1));
+
+        Get_Box_3.setNextFocusableComponent(Get_Box_4);
         jPanel4.add(Get_Box_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 160, -1));
+
+        Get_Box_2.setNextFocusableComponent(Get_Box_3);
         jPanel4.add(Get_Box_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, 160, -1));
+
+        Get_Name_box.setNextFocusableComponent(Get_Box_2);
         jPanel4.add(Get_Name_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, 160, -1));
+
+        Get_Box_5.setNextFocusableComponent(Get_Box_6);
         jPanel4.add(Get_Box_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 160, -1));
 
         Traveler_Update.setText("Update");
+        Traveler_Update.setNextFocusableComponent(Remove);
         Traveler_Update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Traveler_UpdateActionPerformed(evt);
@@ -811,6 +868,7 @@ boolean Empty = false;
 
         Remove.setText("Remove");
         Remove.setToolTipText("");
+        Remove.setNextFocusableComponent(stdt_quant_box);
         Remove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RemoveActionPerformed(evt);
@@ -822,6 +880,8 @@ boolean Empty = false;
         jLabel62.setForeground(new java.awt.Color(255, 255, 255));
         jLabel62.setText("Address");
         jPanel4.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, -1, -1));
+
+        Get_Box_7.setNextFocusableComponent(Emergency_Box_1);
         jPanel4.add(Get_Box_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 500, 160, -1));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
@@ -846,15 +906,27 @@ boolean Empty = false;
         jLabel64.setForeground(new java.awt.Color(255, 255, 255));
         jLabel64.setText("Traveler");
         jPanel4.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 210, -1, -1));
+
+        Emergency_Box_5.setNextFocusableComponent(Emergency_Box_6);
         jPanel4.add(Emergency_Box_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 460, 170, -1));
+
+        Emergency_Box_4.setNextFocusableComponent(Emergency_Box_5);
         jPanel4.add(Emergency_Box_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 410, 170, -1));
+
+        Emergency_Box_3.setNextFocusableComponent(Emergency_Box_4);
         jPanel4.add(Emergency_Box_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 370, 170, -1));
+
+        Emergency_Box_2.setNextFocusableComponent(Emergency_Box_3);
         jPanel4.add(Emergency_Box_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 290, 170, -1));
+
+        Emergency_Box_1.setNextFocusableComponent(Emergency_Box_2);
         jPanel4.add(Emergency_Box_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 250, 170, -1));
+
+        Emergency_Box_6.setNextFocusableComponent(Traveler_Update);
         jPanel4.add(Emergency_Box_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 500, 170, -1));
 
         copyrigth_label.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        copyrigth_label.setForeground(new java.awt.Color(240, 240, 240));
+        copyrigth_label.setForeground(new java.awt.Color(102, 153, 255));
         copyrigth_label.setText("MDC Blue");
         copyrigth_label.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -874,7 +946,7 @@ boolean Empty = false;
         copyrigth_label1.setText("<html>\nEvent# &copy;\n</html>");
         jPanel4.add(copyrigth_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1620, 660, -1, -1));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 1830, 800));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 1830, 700));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -1361,7 +1433,8 @@ boolean Empty = false;
 
         if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             File accessDB = chooser.getSelectedFile();
-                Path = accessDB.getAbsolutePath();
+                //Path = accessDB.getAbsolutePath();
+                setPath(accessDB.getAbsolutePath());
             }
     }//GEN-LAST:event_connect_DB_buttonActionPerformed
     
@@ -1374,8 +1447,7 @@ boolean Empty = false;
             
             try {
                 java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
-            } catch (IOException ex) {  
-            Logger.getLogger(Event_UI.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
             }
     }//GEN-LAST:event_copyrigth_labelMouseClicked
 
@@ -1480,14 +1552,20 @@ boolean Empty = false;
     public static javax.swing.JButton Update_Event;
     public static javax.swing.JButton Update_button1;
     public static javax.swing.JButton Yes;
+    public static javax.swing.JTextField advisor_fee_box;
+    public static javax.swing.JTextField advisor_quant_box;
+    public static javax.swing.JTextField club_contribution;
     private javax.swing.JButton connect_DB_button;
     public static javax.swing.JLabel connection_label;
     private javax.swing.JLabel copyrigth_label;
     private javax.swing.JLabel copyrigth_label1;
     public static javax.swing.JTextField date_from_box;
+    private javax.swing.JLabel expenses;
     public static javax.swing.JButton find_button;
     public static javax.swing.JTextField find_last_name_box;
     public static javax.swing.JTextField find_student_name_box;
+    public static javax.swing.JTextField gas_fee_box;
+    public static javax.swing.JTextField gas_quant_box;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1498,7 +1576,6 @@ boolean Empty = false;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -1552,21 +1629,16 @@ boolean Empty = false;
     public static javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    public static javax.swing.JTextField jTextField18;
-    public static javax.swing.JTextField jTextField26;
-    public static javax.swing.JTextField jTextField31;
-    public static javax.swing.JTextField jTextField32;
-    public static javax.swing.JTextField jTextField33;
-    public static javax.swing.JTextField jTextField34;
-    public static javax.swing.JTextField jTextField35;
-    public static javax.swing.JTextField jTextField36;
-    public static javax.swing.JTextField jTextField37;
-    public static javax.swing.JTextField jTextField38;
-    public static javax.swing.JTextField jTextField39;
-    public static javax.swing.JTextField jTextField40;
-    public static javax.swing.JTextField jTextField41;
-    public static javax.swing.JTextField jTextField42;
-    public static javax.swing.JTextField jTextField43;
+    public static javax.swing.JTextField lodging_fee_box;
+    public static javax.swing.JTextField lodging_quant_box;
+    public static javax.swing.JTextField meals_fee_box;
+    public static javax.swing.JTextField meals_quant_box;
+    public static javax.swing.JTextField no_days;
+    public static javax.swing.JTextField slife_contribution;
+    public static javax.swing.JTextField stdt_fee_box;
+    public static javax.swing.JTextField stdt_quant_box;
+    public static javax.swing.JTextField taxis_fee_box;
+    public static javax.swing.JTextField taxis_qualit_box;
     // End of variables declaration//GEN-END:variables
 }
     /**
