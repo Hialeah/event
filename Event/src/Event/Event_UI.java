@@ -16,18 +16,8 @@ static Connection Find;
 static Connection Update;
 static Connection Eliminate;
 static Connection find_Emergency;
-private String Path;
+String Path;
 boolean Empty = false;
-
-    public void setPath(String Path) {
-        this.Path = Path;
-    }
-
-    public String getPath() {
-        return Path;
-    }
-    
-    
 
 // Constructor
  public Event_UI() {
@@ -1433,8 +1423,7 @@ boolean Empty = false;
 
         if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             File accessDB = chooser.getSelectedFile();
-                //Path = accessDB.getAbsolutePath();
-                setPath(accessDB.getAbsolutePath());
+                Path = accessDB.getAbsolutePath();
             }
     }//GEN-LAST:event_connect_DB_buttonActionPerformed
     
