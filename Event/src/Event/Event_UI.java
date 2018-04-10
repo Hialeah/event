@@ -28,18 +28,20 @@ boolean Empty = false;
         Allow_Remove.setVisible(false);
         Add_New.setVisible(false);
         
-        Exceptions_box.setText("Please Connect Database");
         
         
+ }
         
-        // Checking connection
-        
+
+public void connection(){  
         try{
             
            Exceptions_box.setText("Please Connect Database");
-           connect_DB_button.doClick(); 
            
-           connection = DriverManager.getConnection("jdbc:ucanaccess://" + Path);        
+           connection = DriverManager.getConnection("jdbc:ucanaccess://" + Path);
+           connection_label.setText("Database Connected");
+            jPanel7.setBackground(Color.GREEN); 
+           
            Statement statement = connection.createStatement();  
            
            
@@ -283,10 +285,10 @@ boolean Empty = false;
         jPanel5.add(Exceptions_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 1010, 40));
 
         connection_label.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
-        connection_label.setText("Database connected");
-        jPanel5.add(connection_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 10, 170, 40));
+        connection_label.setText("Connection failed");
+        jPanel5.add(connection_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 10, 150, 40));
 
-        jPanel7.setBackground(new java.awt.Color(51, 255, 51));
+        jPanel7.setBackground(java.awt.Color.red);
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -406,7 +408,7 @@ boolean Empty = false;
                 Update_button1ActionPerformed(evt);
             }
         });
-        jPanel3.add(Update_button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 180, 40));
+        jPanel3.add(Update_button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 170, 30));
 
         Add_New.setText("Add New");
         Add_New.addActionListener(new java.awt.event.ActionListener() {
@@ -414,7 +416,7 @@ boolean Empty = false;
                 Add_NewActionPerformed(evt);
             }
         });
-        jPanel3.add(Add_New, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 100, -1));
+        jPanel3.add(Add_New, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 100, -1));
 
         Update_Event.setText("UPDATE");
         Update_Event.addActionListener(new java.awt.event.ActionListener() {
@@ -422,7 +424,7 @@ boolean Empty = false;
                 Update_EventActionPerformed(evt);
             }
         });
-        jPanel3.add(Update_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, -1, -1));
+        jPanel3.add(Update_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, -1, -1));
 
         Yes.setText("NEW");
         Yes.addActionListener(new java.awt.event.ActionListener() {
@@ -430,7 +432,7 @@ boolean Empty = false;
                 YesActionPerformed(evt);
             }
         });
-        jPanel3.add(Yes, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 180, 80, -1));
+        jPanel3.add(Yes, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 80, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 1830, 230));
 
@@ -1425,6 +1427,7 @@ boolean Empty = false;
             File accessDB = chooser.getSelectedFile();
                 Path = accessDB.getAbsolutePath();
             }
+        connection();
     }//GEN-LAST:event_connect_DB_buttonActionPerformed
     
     /**
