@@ -1,15 +1,51 @@
+/*
+ * MIT License
+ * Copyright (c) 2018 MDC Blue and/or its contributors
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ * github.com/MDCblue/event
+ */
 package Event;
-import java.awt.Color;
+
+import java.io.*;
 import java.sql.*;
-import java.io.File;
-import java.io.IOException;
-import javax.swing.JFrame;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import javax.swing.*;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Date;
+import java.text.DateFormat;
 import javax.swing.JFileChooser;
-    
+import java.text.SimpleDateFormat;
+
+
+/**
+ * Designed to create your live easier when it
+ * comes to organize your needs for an event.
+ * Making Your Events Easier!
+ * 
+ * @author MDC Blue
+ */
 public class Event_UI extends JFrame {
+    
 static Statement statement;
 static Connection connection;
 static Connection Find;
@@ -18,8 +54,13 @@ static Connection Eliminate;
 static Connection find_Emergency;
 String Path;
 boolean Empty = false;
+boolean thereIsConnection = false;
+javax.swing.Timer timer;
 
-// Constructor
+/**
+ * Constructs initialize components of the JFrame
+ * Sets message to tell the user to Connect to database
+ */
  public Event_UI() {
        
         initComponents();
@@ -27,20 +68,17 @@ boolean Empty = false;
         Update_Event.setVisible(false);
         Allow_Remove.setVisible(false);
         Add_New.setVisible(false);
-        
-        
+        blink();
         
  }
-        
 
 public void connection(){  
         try{
-            
-           Exceptions_box.setText("Please Connect Database");
            
            connection = DriverManager.getConnection("jdbc:ucanaccess://" + Path);
            connection_label.setText("Database Connected");
-            jPanel7.setBackground(Color.GREEN); 
+           connection_status.setBackground(Color.GREEN);
+           thereIsConnection = true;
            
            Statement statement = connection.createStatement();  
            
@@ -102,7 +140,7 @@ public void connection(){
              Chaperones.getText().equals("") &&
              date_from_box.getText().equals("") &&
              To_box.getText().equals("")
-             ) {
+             ){
              Exceptions_box.setText("Start by Filling Event Information"); 
              jPanel4.setVisible(false);
              Empty = true;
@@ -116,7 +154,7 @@ public void connection(){
         catch(SQLException e) {
             
             connection_label.setText("Connection failed");
-            jPanel7.setBackground(Color.red); 
+            connection_status.setBackground(Color.red); 
             
             String Error = e.getMessage();
             Exceptions_box.setText(Error);          
@@ -133,7 +171,7 @@ public void connection(){
         jLabel1 = new javax.swing.JLabel();
         Exceptions_box = new javax.swing.JLabel();
         connection_label = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
+        connection_status = new javax.swing.JPanel();
         Allow_Remove = new javax.swing.JButton();
         connect_DB_button = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -284,25 +322,25 @@ public void connection(){
         Exceptions_box.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel5.add(Exceptions_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 1010, 40));
 
-        connection_label.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
-        connection_label.setText("Connection failed");
-        jPanel5.add(connection_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 10, 150, 40));
+        connection_label.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        connection_label.setText("Connection Failed");
+        jPanel5.add(connection_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(1610, 10, 170, 40));
 
-        jPanel7.setBackground(java.awt.Color.red);
-        jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        connection_status.setBackground(java.awt.Color.red);
+        connection_status.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout connection_statusLayout = new javax.swing.GroupLayout(connection_status);
+        connection_status.setLayout(connection_statusLayout);
+        connection_statusLayout.setHorizontalGroup(
+            connection_statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 14, Short.MAX_VALUE)
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        connection_statusLayout.setVerticalGroup(
+            connection_statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 14, Short.MAX_VALUE)
         );
 
-        jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1730, 20, 20, 20));
+        jPanel5.add(connection_status, new org.netbeans.lib.awtextra.AbsoluteConstraints(1780, 20, 20, 20));
 
         Allow_Remove.setText("YES");
         Allow_Remove.addActionListener(new java.awt.event.ActionListener() {
@@ -310,7 +348,7 @@ public void connection(){
                 Allow_RemoveActionPerformed(evt);
             }
         });
-        jPanel5.add(Allow_Remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 10, 80, 40));
+        jPanel5.add(Allow_Remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 10, 80, 40));
 
         connect_DB_button.setText("<html>\n<p>CONNECT <br/>\nDATABASE</p>\n</html>");
         connect_DB_button.setToolTipText("");
@@ -319,7 +357,7 @@ public void connection(){
                 connect_DB_buttonActionPerformed(evt);
             }
         });
-        jPanel5.add(connect_DB_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 10, -1, 40));
+        jPanel5.add(connect_DB_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(1510, 10, -1, 40));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1830, 70));
 
@@ -1007,7 +1045,7 @@ public void connection(){
         
         }catch(Exception e) {
         connection_label.setText(e.getMessage());
-        jPanel7.setBackground(Color.red); 
+        connection_status.setBackground(Color.red); 
         }
         }
         } 
@@ -1081,7 +1119,7 @@ public void connection(){
         catch(Exception e) {
         String error = e.getMessage();
         Exceptions_box.setText(error);
-        jPanel7.setBackground(Color.red); 
+        connection_status.setBackground(Color.red); 
         }            
     }//GEN-LAST:event_Add_student_buttonActionPerformed
 }
@@ -1321,7 +1359,7 @@ public void connection(){
         jPanel4.setVisible(true);
         }catch(Exception e) {
         connection_label.setText("Error Creating Event");
-        jPanel7.setBackground(Color.red); 
+        connection_status.setBackground(Color.red); 
         }
         Update_Event.setVisible(false);
         Yes.setVisible(false);
@@ -1404,7 +1442,7 @@ public void connection(){
         jPanel4.setVisible(true);
         }catch(Exception e) {
         connection_label.setText("Error Creating Event");
-        jPanel7.setBackground(Color.red); 
+        connection_status.setBackground(Color.red); 
         }
             }
 
@@ -1412,7 +1450,7 @@ public void connection(){
     }//GEN-LAST:event_Add_NewActionPerformed
 
     
-    /*******************************************************************
+    /**
      * Ask for your local Access DataBase on your computer and set the
      * variable Path to the location of the file using  JFileChooser
      * 
@@ -1459,42 +1497,52 @@ public void connection(){
         copyrigth_label.setForeground(new java.awt.Color(102, 153, 255));
     }//GEN-LAST:event_copyrigth_labelMouseExited
     
-   
+    /**
+     * Makes the text blink every 1s asking the user
+     * to connect database.
+     */
+    private void blink(){
+        timer = new Timer( 1000, new TimerListenerTwo());
+        timer.setInitialDelay(0);
+        timer.start();
+    }
+ 
+ /**
+  * Implements TimeListenerTwo class.
+  * 
+  * Sets Text with color <b>RED</b> or
+  * color <b>WHITE</b>. 
+  * 
+  * It will stop blinking until the database is connected.
+  */
+    class TimerListenerTwo implements ActionListener{
+        int count = 0;
+        public TimerListenerTwo(){}
+               
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(count % 2 == 0) //Print for even numbers
+                Exceptions_box.setText("<html><div color='#FFFFFF';>Please Connect Database</blink></div><html>");    
+            else
+                Exceptions_box.setText("<html><div color='red';>Please Connect Database</blink></div><html>");
+            
+            count++;
+            
+            if(thereIsConnection){
+                Exceptions_box.setText("");
+                timer.stop();
+            }        
+        }
+    }
     
     /**
      * @param args the command line arguments
-     * @throws java.sql.SQLException
      */
-    public static void main(String args[]) throws SQLException {
-     
-     
-    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Event_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Event_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Event_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Event_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    public static void main(String args[]) {
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Event_UI().setVisible(true);
-            }
+        EventQueue.invokeLater(() -> {
+            new Event_UI().setVisible(true);
         });
     }
     
@@ -1549,6 +1597,7 @@ public void connection(){
     public static javax.swing.JTextField club_contribution;
     private javax.swing.JButton connect_DB_button;
     public static javax.swing.JLabel connection_label;
+    public static javax.swing.JPanel connection_status;
     private javax.swing.JLabel copyrigth_label;
     private javax.swing.JLabel copyrigth_label1;
     public static javax.swing.JTextField date_from_box;
@@ -1618,7 +1667,6 @@ public void connection(){
     public static javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    public static javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     public static javax.swing.JTextField lodging_fee_box;
