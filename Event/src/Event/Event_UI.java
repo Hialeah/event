@@ -1469,7 +1469,7 @@ public void connection(){
     }//GEN-LAST:event_connect_DB_buttonActionPerformed
     
     /**
-     * Open <a>www.mdc.blue</a> when clicked
+     * Open www.MDC.blue when clicked
      * @param evt 
      */
     private void copyrigth_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_copyrigth_labelMouseClicked
@@ -1490,7 +1490,7 @@ public void connection(){
     }//GEN-LAST:event_copyrigth_labelMouseEntered
 
     /**
-     * Set color of the </b>MDC Blue</b> label to light blue 
+     * Set color of the <b>MDC Blue</b> label to light blue 
      * @param evt 
      */
     private void copyrigth_labelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_copyrigth_labelMouseExited
