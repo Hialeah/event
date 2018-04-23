@@ -1,7 +1,3 @@
----
-description: Making your events easier!
----
-
 # Event
 
 ## 🅴🆅🅴🅽🆃
