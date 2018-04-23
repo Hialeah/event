@@ -1,7 +1,3 @@
----
-description: Making your events easier!
----
-
 # Event
 
 ## 🅴🆅🅴🅽🆃
@@ -12,7 +8,7 @@ description: Making your events easier!
 
 **\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
-![](.gitbook/assets/event-ui.png)
+![Event](.gitbook/assets/event-ui.png)
 
 **\#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
