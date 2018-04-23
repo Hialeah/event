@@ -1,8 +1,8 @@
-# Event
+---
+description: Making your events easier
+---
 
-## 🅴🆅🅴🅽🆃
-
-> _Making your events easier_
+# 🅴🆅🅴🅽🆃
 
 ![MDC Blue](https://mdc.blue/badge.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/mdcblue/event.svg) ![GitHub top language](https://img.shields.io/github/languages/top/mdcblue/event.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/mdcblue/event.svg) ![license](https://img.shields.io/github/license/mdcblue/event.svg) ![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg) ![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)
 
