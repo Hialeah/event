@@ -19,7 +19,7 @@ A fork is a copy of a repository. Forking a repository allows you to freely expe
 
 Read more about [forking a repository](https://help.github.com/articles/fork-a-repo/).
 
-![Forking image](https://github.com/MDCblue/event/blob/master/.gitbook/contributing/forking-repository.png)
+![Forking image](https://raw.githubusercontent.com/MDCblue/event/master/.gitbook/contributing/forking-repository.png)
 
 ## Creating your new branch
 
@@ -49,22 +49,22 @@ Create a pull request to propose and collaborate on changes to a repository. The
 
 * Click on the **New Pull Request** button to create a Pull Request.
 
-![Pull request image](https://github.com/MDCblue/event/blob/master/.gitbook/contributing/creating-pull-request.png)
+![Pull request image](https://raw.githubusercontent.com/MDCblue/event/master/.gitbook/contributing/creating-pull-request.png)
 
 * Compare changes
 
-![Compare changes image](https://github.com/MDCblue/event/blob/master/.gitbook/contributing/compare-changes.png)
+![Compare changes image](https://raw.githubusercontent.com/MDCblue/event/master/.gitbook/contributing/compare-changes.png)
 
 * Open Pull Request
   * Type a title and description for your pull request.
 
 **NOTE:** _Be sure to give a nameful title to your pull request to made easier for others to underestand_
 
-![Open pull request image](https://github.com/MDCblue/event/blob/master/.gitbook/contributing/open-pull-request.png)
+![Open pull request image](https://raw.githubusercontent.com/MDCblue/event/master/.gitbook/contributing/open-pull-request.png)
 
 You will finish up with somthing like this:
 
-![Finished pull request image](https://github.com/MDCblue/event/blob/master/.gitbook/contributing/finished-pull-request.png)
+![Finished pull request image](https://raw.githubusercontent.com/MDCblue/event/master/.gitbook/contributing/finished-pull-request.png)
 
 Read more about [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
@@ -76,7 +76,7 @@ There's only one rule: anything in the master branch is always deployable, so **
 
 This is how will looks like after a brach is merged:
 
-![Pull request merged image](https://github.com/MDCblue/event/blob/master/.gitbook/contributing/pull-request-merged.png)
+![Pull request merged image](https://raw.githubusercontent.com/MDCblue/event/master/.gitbook/contributing/pull-request-merged.png)
 
 ## Helpful links
 
