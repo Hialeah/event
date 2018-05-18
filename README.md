@@ -22,7 +22,8 @@ description: Making your events easier!
 
 * Windows 7 or higher.
 * Access 2012 \(Office Product\) or higher installed
-* [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library installed
+* [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library
+* [JavaFX Material Design](http://www.jfoenix.com/) library
 
 ### Window
 
