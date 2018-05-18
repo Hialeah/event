@@ -6,12 +6,12 @@ You won't be able to contribute without a GitHub account, so start by [joining G
 
 ## Table of Contents
 
-* [Forking Repository](contributing.md#forking-repository)
-* [Creating your new branch](contributing.md#creating-your-new-branch)
-* [Adding your code to the repository](contributing.md#adding-your-code-to-the-repository)
-* [Creating your Pull Request](contributing.md#creating-your-pull-request)
-* [Merging to `master` branch](contributing.md#merging-to-master-branch)
-* [Helpful links](contributing.md#helpful-links)
+* [Forking Repository](contribution-guidelines.md#forking-repository)
+* [Creating your new branch](contribution-guidelines.md#creating-your-new-branch)
+* [Adding your code to the repository](contribution-guidelines.md#adding-your-code-to-the-repository)
+* [Creating your Pull Request](contribution-guidelines.md#creating-your-pull-request)
+* [Merging to `master` branch](contribution-guidelines.md#merging-to-master-branch)
+* [Helpful links](contribution-guidelines.md#helpful-links)
 
 ## Forking Repository
 
