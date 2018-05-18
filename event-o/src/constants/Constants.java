@@ -16,4 +16,9 @@ public class Constants {
      * Height of the window in Event Application
      */
     public static final int HEIGHT = 700;
+    
+    /**
+     * Moment in seconds when the first TEXT appears
+     */
+    public static final long INTRO_APPEARANCE = 2000;
 }
