@@ -1,8 +1,8 @@
 # Table of contents
 
-* [🅴🆅🅴🅽🆃](README.md)
+* [Event](README.md)
 * Contributing
-  * [Please compleate the information before opening an issue](.github/issue_template.md)
-  * [Code of Conduct](.github/code_of_conduct.md)
-  * [Contribution Guidelines](.github/contributing.md)
+  * [Please compleate the information before opening an issue](contributing/please-compleate-the-information-before-opening-an-issue.md)
+  * [Code of Conduct](contributing/code-of-conduct.md)
+  * [Contribution Guidelines](contributing/contribution-guidelines.md)
 

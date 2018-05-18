@@ -1,8 +1,12 @@
 ---
-description: Making your events easier
+description: Making your events easier!
 ---
 
-# 🅴🆅🅴🅽🆃
+# Event
+
+![Event Logo](.gitbook/assets/event%20%281%29.png)
+
+
 
 ![MDC Blue](https://mdc.blue/badge.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/mdcblue/event.svg) ![GitHub top language](https://img.shields.io/github/languages/top/mdcblue/event.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/mdcblue/event.svg) ![license](https://img.shields.io/github/license/mdcblue/event.svg) ![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg) ![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)
 
@@ -28,7 +32,7 @@ Download the latest [**\#Event**](./) release.
 
 Please note that this project is licensed under MIT License. By participating in this project you agree to abide by its terms.
 
-See [Contributing Guide](.github/contributing.md)
+See [Contributing Guide]()
 
 ## Contributors
 
