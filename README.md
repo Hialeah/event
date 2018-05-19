@@ -1,7 +1,3 @@
----
-description: Making your events easier!
----
-
 # Event
 
 ![Event Logo](.gitbook/assets/event%20%281%29.png)
@@ -22,7 +18,8 @@ description: Making your events easier!
 
 * Windows 7 or higher.
 * Access 2012 \(Office Product\) or higher installed
-* [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library installed
+* [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library
+* [JavaFX Material Design](http://www.jfoenix.com/) library
 
 ### Window
 
@@ -36,9 +33,9 @@ See [Contributing Guide]()
 
 ## Contributors
 
-| ![Carlos Abraham ](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4) | ![Emanuel](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4) | image |
-| --- | --- | --- |
-| [Abraham](https://github.com/19cah) | [Emanuel](https://github.com/Jikiyama) | [Luis F.](https://github.com/LuisRobaina) |
+| ![Carlos Abraham ](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4) | ![Emanuel](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4) | image | image |
+| --- | --- | --- | --- |
+| [Abraham](https://github.com/19cah) | [Emanuel](https://github.com/Jikiyama) | [Luis F.](https://github.com/LuisRobaina) | [Adriel](https://github.com/Adriel1221) |
 
 ## License
 
