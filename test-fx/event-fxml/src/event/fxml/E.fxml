@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -90,67 +91,72 @@
       </Pane>
       <Pane layoutX="304.0" prefHeight="700.0" prefWidth="599.0" style="-fx-background-color: #ffffff;">
          <children>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Name">
+            <Text fill="#7c7979" layoutX="56.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization">
+            <Text fill="#7c7979" layoutX="58.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advisor">
+            <Text fill="#7c7979" layoutX="58.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MDC ID">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transportation">
+            <Text fill="#7c7979" layoutX="58.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Students in Organization">
+            <Text fill="#7c7979" layoutX="60.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Students Attending Event">
+            <Text fill="#7c7979" layoutX="60.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Chaperones Attending Event">
+            <Text fill="#7c7979" layoutX="60.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="60.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+            <Text fill="#7c7979" layoutX="60.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Campus">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="299.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" textAlignment="CENTER">
+            <Text fill="#7c7979" layoutX="279.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
-            <JFXDatePicker layoutX="122.0" layoutY="489.0" prefHeight="29.0" prefWidth="144.0" />
-            <JFXDatePicker layoutX="335.0" layoutY="491.0" prefHeight="29.0" prefWidth="144.0" />
-            <Text fill="#7c7979" layoutX="63.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+            <JFXButton layoutX="479.0" layoutY="614.0" prefHeight="38.0" prefWidth="69.0" text="Save " />
+            <TextField layoutX="181.0" layoutY="131.0" />
+            <TextField layoutX="183.0" layoutY="179.0" />
+            <TextField layoutX="183.0" layoutY="246.0" />
+            <TextField layoutX="183.0" layoutY="310.0" />
+            <TextField layoutX="152.0" layoutY="363.0" prefHeight="26.0" prefWidth="264.0" />
+            <TextField layoutX="152.0" layoutY="419.0" prefHeight="26.0" prefWidth="264.0" />
+            <TextField layoutX="120.0" layoutY="478.0" prefHeight="26.0" prefWidth="120.0" />
+            <TextField layoutX="379.0" layoutY="478.0" prefHeight="26.0" prefWidth="183.0" />
+            <DropdownButton layoutX="240.0" layoutY="543.0">
+                <items>
+                    <MenuItem text="Choice 1" />
+                    <MenuItem text="Choice 2" />
+                    <MenuItem text="Choice 3" />
+                </items>
+            </DropdownButton>
+            <Text fill="#1175f7" layoutX="58.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Traveler" wrappingWidth="151.5982458628714">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
-            <JFXButton layoutX="479.0" layoutY="614.0" prefHeight="38.0" prefWidth="69.0" text="Save" />
-            <TextField layoutX="207.0" layoutY="83.0" />
-            <TextField layoutX="207.0" layoutY="126.0" />
-            <TextField layoutX="207.0" layoutY="182.0" />
-            <TextField layoutX="207.0" layoutY="233.0" />
-            <TextField layoutX="405.0" layoutY="290.0" prefHeight="26.0" prefWidth="61.0" />
-            <TextField layoutX="405.0" layoutY="353.0" prefHeight="26.0" prefWidth="61.0" />
-            <TextField layoutX="405.0" layoutY="414.0" prefHeight="26.0" prefWidth="61.0" />
-            <TextField layoutX="60.0" layoutY="588.0" prefHeight="26.0" prefWidth="213.0" />
          </children></Pane>
    </children>
 </Pane>

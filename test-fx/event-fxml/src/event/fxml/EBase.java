@@ -1,8 +1,9 @@
 package event.fxml;
 
+//import com.gluonhq.charm.glisten.control.DropdownButton;
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -10,7 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public abstract class FXMLDocumentBase extends Pane {
+public abstract class EBase extends Pane {
 
     protected final Pane pane;
     protected final Text text;
@@ -40,9 +41,6 @@ public abstract class FXMLDocumentBase extends Pane {
     protected final Text text10;
     protected final Text text11;
     protected final Text text12;
-    protected final JFXDatePicker jFXDatePicker;
-    protected final JFXDatePicker jFXDatePicker0;
-    protected final Text text13;
     protected final JFXButton jFXButton;
     protected final TextField textField;
     protected final TextField textField0;
@@ -52,8 +50,13 @@ public abstract class FXMLDocumentBase extends Pane {
     protected final TextField textField4;
     protected final TextField textField5;
     protected final TextField textField6;
+//    protected final DropdownButton dropdownButton;
+    protected final MenuItem menuItem;
+    protected final MenuItem menuItem0;
+    protected final MenuItem menuItem1;
+    protected final Text text13;
 
-    public FXMLDocumentBase() {
+    public EBase() {
 
         pane = new Pane();
         text = new Text();
@@ -83,9 +86,6 @@ public abstract class FXMLDocumentBase extends Pane {
         text10 = new Text();
         text11 = new Text();
         text12 = new Text();
-        jFXDatePicker = new JFXDatePicker();
-        jFXDatePicker0 = new JFXDatePicker();
-        text13 = new Text();
         jFXButton = new JFXButton();
         textField = new TextField();
         textField0 = new TextField();
@@ -95,6 +95,11 @@ public abstract class FXMLDocumentBase extends Pane {
         textField4 = new TextField();
         textField5 = new TextField();
         textField6 = new TextField();
+        //dropdownButton = new DropdownButton();
+        menuItem = new MenuItem();
+        menuItem0 = new MenuItem();
+        menuItem1 = new MenuItem();
+        text13 = new Text();
 
         setMaxHeight(USE_PREF_SIZE);
         setMaxWidth(USE_PREF_SIZE);
@@ -207,126 +212,129 @@ public abstract class FXMLDocumentBase extends Pane {
         pane5.setStyle("-fx-background-color: #ffffff;");
 
         text4.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text4.setLayoutX(60.0);
-        text4.setLayoutY(110.0);
+        text4.setLayoutX(56.0);
+        text4.setLayoutY(159.0);
         text4.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text4.setStrokeWidth(0.0);
-        text4.setText("Event Name");
+        text4.setText("Name");
         text4.setFont(new Font(17.0));
 
         text5.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text5.setLayoutX(60.0);
-        text5.setLayoutY(158.0);
+        text5.setLayoutX(58.0);
+        text5.setLayoutY(211.0);
         text5.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text5.setStrokeWidth(0.0);
-        text5.setText("Organization");
+        text5.setText("Last Name");
         text5.setFont(new Font(17.0));
 
         text6.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text6.setLayoutX(60.0);
-        text6.setLayoutY(211.0);
+        text6.setLayoutX(58.0);
+        text6.setLayoutY(275.0);
         text6.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text6.setStrokeWidth(0.0);
-        text6.setText("Advisor");
+        text6.setText("MDC ID");
         text6.setFont(new Font(17.0));
 
         text7.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text7.setLayoutX(60.0);
-        text7.setLayoutY(262.0);
+        text7.setLayoutX(58.0);
+        text7.setLayoutY(339.0);
         text7.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text7.setStrokeWidth(0.0);
-        text7.setText("Transportation");
+        text7.setText("Phone");
         text7.setFont(new Font(17.0));
 
         text8.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         text8.setLayoutX(60.0);
-        text8.setLayoutY(319.0);
+        text8.setLayoutY(392.0);
         text8.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text8.setStrokeWidth(0.0);
-        text8.setText("Number of Students in Organization");
+        text8.setText("Email");
         text8.setFont(new Font(17.0));
 
         text9.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         text9.setLayoutX(60.0);
-        text9.setLayoutY(382.0);
+        text9.setLayoutY(448.0);
         text9.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text9.setStrokeWidth(0.0);
-        text9.setText("Number of Students Attending Event");
+        text9.setText("Address");
         text9.setFont(new Font(17.0));
 
         text10.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         text10.setLayoutX(60.0);
-        text10.setLayoutY(443.0);
+        text10.setLayoutY(505.0);
         text10.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text10.setStrokeWidth(0.0);
-        text10.setText("Number of Chaperones Attending Event");
+        text10.setText("City");
         text10.setFont(new Font(17.0));
 
         text11.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         text11.setLayoutX(60.0);
-        text11.setLayoutY(512.0);
+        text11.setLayoutY(565.0);
         text11.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text11.setStrokeWidth(0.0);
-        text11.setText("Date");
+        text11.setText("Main Campus");
         text11.setFont(new Font(17.0));
 
         text12.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text12.setLayoutX(299.0);
-        text12.setLayoutY(509.0);
+        text12.setLayoutX(279.0);
+        text12.setLayoutY(505.0);
         text12.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text12.setStrokeWidth(0.0);
-        text12.setText("to");
-        text12.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text12.setText("Zip Code");
         text12.setFont(new Font(17.0));
-
-        jFXDatePicker.setLayoutX(122.0);
-        jFXDatePicker.setLayoutY(489.0);
-
-        jFXDatePicker0.setLayoutX(335.0);
-        jFXDatePicker0.setLayoutY(491.0);
-
-        text13.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text13.setLayoutX(63.0);
-        text13.setLayoutY(574.0);
-        text13.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text13.setStrokeWidth(0.0);
-        text13.setText("Location");
-        text13.setFont(new Font(17.0));
 
         jFXButton.setLayoutX(479.0);
         jFXButton.setLayoutY(614.0);
 
-        textField.setLayoutX(207.0);
-        textField.setLayoutY(83.0);
+        textField.setLayoutX(181.0);
+        textField.setLayoutY(131.0);
 
-        textField0.setLayoutX(207.0);
-        textField0.setLayoutY(126.0);
+        textField0.setLayoutX(183.0);
+        textField0.setLayoutY(179.0);
 
-        textField1.setLayoutX(207.0);
-        textField1.setLayoutY(182.0);
+        textField1.setLayoutX(183.0);
+        textField1.setLayoutY(246.0);
 
-        textField2.setLayoutX(207.0);
-        textField2.setLayoutY(233.0);
+        textField2.setLayoutX(183.0);
+        textField2.setLayoutY(310.0);
 
-        textField3.setLayoutX(405.0);
-        textField3.setLayoutY(290.0);
+        textField3.setLayoutX(152.0);
+        textField3.setLayoutY(363.0);
         textField3.setPrefHeight(26.0);
-        textField3.setPrefWidth(61.0);
+        textField3.setPrefWidth(264.0);
 
-        textField4.setLayoutX(405.0);
-        textField4.setLayoutY(353.0);
+        textField4.setLayoutX(152.0);
+        textField4.setLayoutY(419.0);
         textField4.setPrefHeight(26.0);
-        textField4.setPrefWidth(61.0);
+        textField4.setPrefWidth(264.0);
 
-        textField5.setLayoutX(405.0);
-        textField5.setLayoutY(414.0);
+        textField5.setLayoutX(120.0);
+        textField5.setLayoutY(478.0);
         textField5.setPrefHeight(26.0);
-        textField5.setPrefWidth(61.0);
+        textField5.setPrefWidth(120.0);
 
-        textField6.setLayoutX(60.0);
-        textField6.setLayoutY(588.0);
+        textField6.setLayoutX(379.0);
+        textField6.setLayoutY(478.0);
         textField6.setPrefHeight(26.0);
-        textField6.setPrefWidth(213.0);
+        textField6.setPrefWidth(183.0);
+
+//        dropdownButton.setLayoutX(240.0);
+//        dropdownButton.setLayoutY(543.0);
+
+        menuItem.setText("Choice 1");
+
+        menuItem0.setText("Choice 2");
+
+        menuItem1.setText("Choice 3");
+
+        text13.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
+        text13.setLayoutX(58.0);
+        text13.setLayoutY(93.0);
+        text13.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text13.setStrokeWidth(0.0);
+        text13.setText("Add Traveler");
+        text13.setWrappingWidth(151.5982458628714);
+        text13.setFont(new Font("System Bold", 22.0));
 
         pane.getChildren().add(text);
         pane.getChildren().add(imageView);
@@ -355,9 +363,6 @@ public abstract class FXMLDocumentBase extends Pane {
         pane5.getChildren().add(text10);
         pane5.getChildren().add(text11);
         pane5.getChildren().add(text12);
-        pane5.getChildren().add(jFXDatePicker);
-        pane5.getChildren().add(jFXDatePicker0);
-        pane5.getChildren().add(text13);
         pane5.getChildren().add(jFXButton);
         pane5.getChildren().add(textField);
         pane5.getChildren().add(textField0);
@@ -367,6 +372,11 @@ public abstract class FXMLDocumentBase extends Pane {
         pane5.getChildren().add(textField4);
         pane5.getChildren().add(textField5);
         pane5.getChildren().add(textField6);
+//        dropdownButton.getItems().add(menuItem);
+//        dropdownButton.getItems().add(menuItem0);
+//        dropdownButton.getItems().add(menuItem1);
+//        pane5.getChildren().add(dropdownButton);
+        pane5.getChildren().add(text13);
         getChildren().add(pane5);
 
     }
