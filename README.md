@@ -1,7 +1,3 @@
----
-description: Making your events easier!
----
-
 # Event
 
 ![Event Logo](.gitbook/assets/event%20%281%29.png)
