@@ -10,19 +10,18 @@ description: Making events easier ✈️
 
 **\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
-# Reference
+## Reference
 
-- **Event** App website: [eventgenerator.ga](https://eventgenerator.ga)
-- Documentation: [docs.eventgenerator.ga](https://docs.eventgenerator.ga)
-
+* **Event** App website: [eventgenerator.ga](https://eventgenerator.ga)
+* Documentation: [docs.eventgenerator.ga](https://docs.eventgenerator.ga)
 
 ![Event](.gitbook/assets/event-ui.png)
 
 **\#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
-## Installing
+### Installing
 
-#### Prerequisites
+**Prerequisites**
 
 * Windows 7 or higher.
 * JDK 8.
@@ -30,23 +29,23 @@ description: Making events easier ✈️
 * [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library.
 * [JavaFX Material Design](http://www.jfoenix.com/) library.
 
-### Window
+#### Window
 
 Download the latest [**\#Event**](./) release.
 
-## Contributing
+### Contributing
 
 Please note that this project is licensed under MIT License. By participating in this project you agree to abide by its terms.
 
 See [Contributing Guide](./)
 
-## Contributors
+### Contributors
 
 | ![Carlos Abraham ](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4) | ![Emanuel](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4) | image | image |
 | --- | --- | --- | --- |
 | [Abraham](https://github.com/19cah) | [Emanuel](https://github.com/Jikiyama) | [Luis F.](https://github.com/LuisRobaina) | [Adriel](https://github.com/Adriel1221) |
 
-## License
+### License
 
 [MDC Blue](https://github.com/MDCblue) © 2018 [MIT License](https://github.com/MDCblue/event/tree/78e5fa6e290fc5fd2fc706f311fbe96769a589e8/LICENSE/README.md)
 
