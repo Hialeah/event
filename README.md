@@ -10,6 +10,12 @@ description: Making events easier ✈️
 
 **\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
+# Reference
+
+- **Event** App website: [eventgenerator.ga](https://eventgenerator.ga)
+- Documentation: [docs.eventgenerator.ga](https://docs.eventgenerator.ga)
+
+
 ![Event](.gitbook/assets/event-ui.png)
 
 **\#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
@@ -19,9 +25,10 @@ description: Making events easier ✈️
 #### Prerequisites
 
 * Windows 7 or higher.
-* Access 2012 \(Office Product\) or higher installed
-* [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library
-* [JavaFX Material Design](http://www.jfoenix.com/) library
+* JDK 8.
+* Microsoft Access Database.
+* [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library.
+* [JavaFX Material Design](http://www.jfoenix.com/) library.
 
 ### Window
 
