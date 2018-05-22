@@ -1,9 +1,9 @@
 # Table of contents
 
 * [Event](README.md)
-* [Introduction](introduction/README.md)
-  * [GETTING STARTED](introduction/getting-started/README.md)
-    * [Installing](introduction/getting-started/requirements.md)
+* [Introduction](introduction.md)
+* [GETTING STARTED](getting-started/README.md)
+  * [Installing](getting-started/requirements.md)
 * [CONTRIBUTING](contribution-guidelines/README.md)
   * [Forking Repository](contribution-guidelines/forking-repository.md)
   * [Creating New Branch](contribution-guidelines/creating-new-branch.md)
