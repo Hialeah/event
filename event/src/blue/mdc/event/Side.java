@@ -9,7 +9,20 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 /**
- *  Pane that represents the left blue Sidebar of the Event Application
+ * Pane that represents the left blue Side bar of the Event Application.
+ * The side bar contains seven buttons created with panes, those are:
+ * 
+ * <ol>
+ *  <li>Search</li>
+ *  <li>Add New Event</li>
+ *  <li>Edit Event</li>
+ *  <li>Add Traveler</li>
+ *  <li>Edit Traveler</li>
+ *  <li>View Event</li>
+ *  <li>Information</li>
+ * </ol>
+ * 
+ * The side bar also contains the organization logo and copyright test at the button.
  * 
  * @author Carlos Abraham
  * @see <a href="http://eventgenerator.ga">eventgenerator.ga</a>
@@ -48,7 +61,7 @@ public class Side extends Pane{
         /* Search Icon */
         searchImg.setLayoutX(27.0);
         searchImg.setLayoutY(12.0);
-        searchImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/icons8-search.png").toExternalForm()));
+        searchImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/search.png").toExternalForm()));
         
         /* Style for Text Field Search */
         searchField.setLayoutX(68.0);
@@ -79,7 +92,7 @@ public class Side extends Pane{
         /* Create new Event Icon */
         newEventImg.setLayoutX(45.0);
         newEventImg.setLayoutY(11.0);
-        newEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/icons8-joyent.png").toExternalForm()));
+        newEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/add.png").toExternalForm()));
 
         /* Edit Event Button */
         editEvent.setLayoutY(198.0);
@@ -100,11 +113,9 @@ public class Side extends Pane{
         /* Edit Evet Icon */
         editEventImg.setLayoutX(45.0);
         editEventImg.setLayoutY(9.0);
-        editEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/icons8-pencil_tip.png").toExternalForm()));
+        editEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/edit.png").toExternalForm()));
         
-       
         
-
         pane3.setLayoutY(259.0);
         pane3.setPrefHeight(46.0);
         pane3.setPrefWidth(303.0);
@@ -121,7 +132,7 @@ public class Side extends Pane{
 
         imageView3.setLayoutX(45.0);
         imageView3.setLayoutY(9.0);
-        imageView3.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/icons8-bulleted_list.png").toExternalForm()));
+        imageView3.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/bulleted_list.png").toExternalForm()));
         
         pane4.setLayoutY(312.0);
         pane4.setPrefHeight(46.0);
@@ -139,8 +150,11 @@ public class Side extends Pane{
 
         imageView4.setLayoutX(45.0);
         imageView4.setLayoutY(9.0);
-        imageView4.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/icons8-star.png").toExternalForm()));
+        imageView4.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/star.png").toExternalForm()));
 
+        
+        search.getChildren().addAll(searchImg, searchField);
+        getChildren().add(search);
         
         newEvent.getChildren().addAll(newEventText, newEventImg);
         getChildren().add(newEvent);
@@ -148,13 +162,10 @@ public class Side extends Pane{
         editEvent.getChildren().addAll(editEventText, editEventImg);
         getChildren().add(editEvent);
         
-        search.getChildren().addAll(searchImg, searchField);
-        getChildren().add(search);
-        
         pane3.getChildren().addAll(text2, imageView3);
         getChildren().add(pane3);
         
         pane4.getChildren().addAll(text3, imageView4);
         getChildren().add(pane4);
-        }
+    }
 }
