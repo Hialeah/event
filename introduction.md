@@ -4,6 +4,8 @@ description: Making your events easier ✈️
 
 # Introduction
 
+![](.gitbook/assets/event.png)
+
 ## Introduction
 
 Event helps you organize your funds and your team when it comes to prepare events.
