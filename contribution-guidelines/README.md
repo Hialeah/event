@@ -6,11 +6,11 @@ You won't be able to contribute without a GitHub account, so start by [joining G
 
 ## Table of Contents
 
-* [Forking Repository](./#forking-repository)
-* [Creating your new branch](./#creating-your-new-branch)
-* [Adding your code to the repository](./#adding-your-code-to-the-repository)
+* [Forking Repository](https://docs.eventgenerator.ga/contribution-guidelines/forking-repository)
+* [Creating your new branch](https://docs.eventgenerator.ga/contribution-guidelines/creating-new-branch)
+* [Adding your code to the repository](https://docs.eventgenerator.ga/contribution-guidelines/adding-code)
 * [Creating your Pull Request](./#creating-your-pull-request)
-* [Merging to `master` branch](./#merging-to-master-branch)
+* [Merging to `master` branch](https://docs.eventgenerator.ga/contribution-guidelines/merging-to-master)
 * [Helpful links](./#helpful-links)
 
 
