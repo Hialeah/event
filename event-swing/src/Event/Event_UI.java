@@ -31,138 +31,134 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.util.Date;
 import java.text.DateFormat;
 import javax.swing.JFileChooser;
 import java.text.SimpleDateFormat;
-
+import javax.swing.table.DefaultTableModel;
 
 /**
- * Designed to create your live easier when it
- * comes to organize your needs for an event.
- * Making Your Events Easier!
- * 
+ * Designed to make your live easier when it comes to organize your needs for
+ * an event. Making Your Events Easier!
+ *
  * @author MDC Blue
  */
 public class Event_UI extends JFrame {
-    
-static Statement statement;
-static Connection connection;
-static Connection Find;
-static Connection Update;
-static Connection Eliminate;
-static Connection find_Emergency;
-String Path;
-boolean Empty = false;
-boolean thereIsConnection = false;
-javax.swing.Timer timer;
 
-/**
- * Constructs initialize components of the JFrame
- * Sets message to tell the user to Connect to database
- */
- public Event_UI() {
-       
+    static Statement statement;
+    static Connection connection;
+    static Connection Find;
+    static Connection Update;
+    static Connection Eliminate;
+    static Connection find_Emergency;
+    String Path;
+    boolean Empty = false;
+    boolean thereIsConnection = false;
+    javax.swing.Timer timer;
+
+    /**
+     * Constructs initialize components of the JFrame Sets message to tell the
+     * user to Connect to database
+     */
+    public Event_UI() {
+
         initComponents();
         Yes.setVisible(false);
         Update_Event.setVisible(false);
         Allow_Remove.setVisible(false);
         Add_New.setVisible(false);
         blink();
-        
- }
 
-public void connection(){  
-        try{
-           
-           connection = DriverManager.getConnection("jdbc:ucanaccess://" + Path);
-           connection_label.setText("Database Connected");
-           connection_status.setBackground(Color.GREEN);
-           thereIsConnection = true;
-           
-           Statement statement = connection.createStatement();  
-           
-           
-           ResultSet Result = statement.executeQuery("select Event from Event_Info where ID = 10");
-           if(Result.next()) {
-           Event_Name_box.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select Organization from Event_Info where ID = 10");
-           if(Result.next()) {
-           Org_Box.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select Advisor from Event_Info where ID = 10");
-           if(Result.next()) {
-           Adv_Box.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select Transportation from Event_Info where ID = 10");
-           if(Result.next()) {
-           Transp_box.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select Location from Event_Info where ID = 10");
-           if(Result.next()) {
-           Location.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select Students_in_Org from Event_Info where ID = 10");
-           if(Result.next()) {
-           Students_in_org_Box.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select Students_Attending from Event_Info where ID = 10");
-           if(Result.next()) {
-           Students_Attending_Box.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select Chaperones from Event_Info where ID = 10");
-           if(Result.next()) {
-           Chaperones.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select from_date from Event_Info where ID = 10");
-           if(Result.next()) {
-           date_from_box.setText(Result.getString(1));
-           }
-           Result = statement.executeQuery("select To_date from Event_Info where ID = 10");
-           if(Result.next()) {
-           To_box.setText(Result.getString(1));
-           
-           if(!Event_Name_box.getText().isEmpty()) {
-               Exceptions_box.setText("Current Event : "+ Event_Name_box.getText());
-           }
-           
-           }
-           
-           if(
-             Event_Name_box.getText().equals("") &&
-             Org_Box.getText().equals("") &&
-             Adv_Box.getText().equals("") && 
-             Transp_box.getText().equals("") &&      
-             Location.getText().equals("") &&
-             Students_in_org_Box.getText().equals("") &&
-             Students_Attending_Box.getText().equals("") &&
-             Chaperones.getText().equals("") &&
-             date_from_box.getText().equals("") &&
-             To_box.getText().equals("")
-             ){
-             Exceptions_box.setText("Start by Filling Event Information"); 
-             jPanel4.setVisible(false);
-             Empty = true;
+    }
+    // connection, to the database  
+
+    public void connection() {
+
+        try {
+            connection = DriverManager.getConnection("jdbc:ucanaccess://" + Path);
+            System.out.println("Path check");
+            connection_label.setText("Database Connected");
+
+            connection_status.setBackground(Color.GREEN);
+            thereIsConnection = true;
+
+            Statement statement = connection.createStatement();
+
+            ResultSet Result = statement.executeQuery("select Event from Event_Info where ID = 10");
+            if (Result.next()) {
+                Event_Name_box.setText(Result.getString(1));
             }
-           
-           
-            
-        }
-         
-        // Errors in Connection display red box and Error Message
-        catch(SQLException e) {
-            
+            Result = statement.executeQuery("select Organization from Event_Info where ID = 10");
+            if (Result.next()) {
+                Org_Box.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select Advisor from Event_Info where ID = 10");
+            if (Result.next()) {
+                Adv_Box.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select Transportation from Event_Info where ID = 10");
+            if (Result.next()) {
+                Transp_box.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select Location from Event_Info where ID = 10");
+            if (Result.next()) {
+                Location.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select Students_in_Org from Event_Info where ID = 10");
+            if (Result.next()) {
+                Students_in_org_Box.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select Students_Attending from Event_Info where ID = 10");
+            if (Result.next()) {
+                Students_Attending_Box.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select Chaperones from Event_Info where ID = 10");
+            if (Result.next()) {
+                Chaperones.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select from_date from Event_Info where ID = 10");
+            if (Result.next()) {
+                date_from_box.setText(Result.getString(1));
+            }
+            Result = statement.executeQuery("select To_date from Event_Info where ID = 10");
+            if (Result.next()) {
+                To_box.setText(Result.getString(1));
+
+                if (!Event_Name_box.getText().isEmpty()) {
+                    Exceptions_box.setText("Current Event : " + Event_Name_box.getText());
+                }
+
+            }
+
+            if (Event_Name_box.getText().equals("")
+                    && Org_Box.getText().equals("")
+                    && Adv_Box.getText().equals("")
+                    && Transp_box.getText().equals("")
+                    && Location.getText().equals("")
+                    && Students_in_org_Box.getText().equals("")
+                    && Students_Attending_Box.getText().equals("")
+                    && Chaperones.getText().equals("")
+                    && date_from_box.getText().equals("")
+                    && To_box.getText().equals("")) {
+                Exceptions_box.setText("Start by Filling Event Information");
+                jPanel4.setVisible(false);
+                Empty = true;
+            }
+
+        } // Errors in Connection display red box and Error Message
+        catch (SQLException e) {
+
             connection_label.setText("Connection failed");
-            connection_status.setBackground(Color.red); 
-            
+            connection_status.setBackground(Color.red);
+
             String Error = e.getMessage();
-            Exceptions_box.setText(Error);          
+            Exceptions_box.setText(Error);
         }
- }
+    }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -202,7 +198,6 @@ public void connection(){
         jLabel6 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         Student_Last = new javax.swing.JTextField();
-        Student_Name_box = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         Mdc_Id_box = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
@@ -211,7 +206,6 @@ public void connection(){
         Email_box = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         Campus_box = new javax.swing.JComboBox<>();
-        jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
@@ -262,39 +256,14 @@ public void connection(){
         jPanel6 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         Add_student_button = new javax.swing.JButton();
-        jLabel54 = new javax.swing.JLabel();
-        find_last_name_box = new javax.swing.JTextField();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
-        find_button = new javax.swing.JButton();
-        find_student_name_box = new javax.swing.JTextField();
-        Get_Box_6 = new javax.swing.JTextField();
-        Get_Box_4 = new javax.swing.JTextField();
-        Get_Box_3 = new javax.swing.JTextField();
-        Get_Box_2 = new javax.swing.JTextField();
-        Get_Name_box = new javax.swing.JTextField();
-        Get_Box_5 = new javax.swing.JTextField();
-        Traveler_Update = new javax.swing.JButton();
-        Remove = new javax.swing.JButton();
-        jLabel62 = new javax.swing.JLabel();
-        Get_Box_7 = new javax.swing.JTextField();
-        jPanel11 = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        Emergency_Box_5 = new javax.swing.JTextField();
-        Emergency_Box_4 = new javax.swing.JTextField();
-        Emergency_Box_3 = new javax.swing.JTextField();
-        Emergency_Box_2 = new javax.swing.JTextField();
-        Emergency_Box_1 = new javax.swing.JTextField();
-        Emergency_Box_6 = new javax.swing.JTextField();
         copyrigth_label = new javax.swing.JLabel();
         copyrigth_label1 = new javax.swing.JLabel();
+        Student_Name_box = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -491,20 +460,6 @@ public void connection(){
         Student_Last.setNextFocusableComponent(Mdc_Id_box);
         jPanel4.add(Student_Last, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 160, -1));
 
-        Student_Name_box.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        Student_Name_box.setNextFocusableComponent(Student_Last);
-        Student_Name_box.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Student_Name_boxMouseClicked(evt);
-            }
-        });
-        Student_Name_box.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Student_Name_boxActionPerformed(evt);
-            }
-        });
-        jPanel4.add(Student_Name_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 160, -1));
-
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("MDC ID");
@@ -537,11 +492,6 @@ public void connection(){
         Campus_box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selelct ", "Hialeah Campus", "North Campus", "Interamerican Campus", "Homestead Campus" }));
         Campus_box.setNextFocusableComponent(Contact_Box_1);
         jPanel4.add(Campus_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 157, -1));
-
-        jLabel22.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Last Name");
-        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 290, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
@@ -772,59 +722,12 @@ public void connection(){
 
         Add_student_button.setText("Add");
         Add_student_button.setActionCommand("Find");
-        Add_student_button.setNextFocusableComponent(find_student_name_box);
         Add_student_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Add_student_buttonActionPerformed(evt);
             }
         });
         jPanel4.add(Add_student_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 600, 100, 40));
-
-        jLabel54.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
-        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel54.setText("Emergency Contact");
-        jPanel4.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 210, -1, -1));
-
-        find_last_name_box.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        find_last_name_box.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        find_last_name_box.setText("Last Name");
-        find_last_name_box.setNextFocusableComponent(find_button);
-        find_last_name_box.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                find_last_name_boxMouseClicked(evt);
-            }
-        });
-        jPanel4.add(find_last_name_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 120, 190, 30));
-
-        jLabel55.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel55.setText("Edit/Remove Traveler");
-        jPanel4.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 40, -1, -1));
-
-        jLabel56.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel56.setText("Name");
-        jPanel4.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, -1, -1));
-
-        jLabel57.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel57.setText("MDC ID");
-        jPanel4.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, -1, -1));
-
-        jLabel58.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel58.setText("Phone");
-        jPanel4.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 380, -1, -1));
-
-        jLabel59.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel59.setText("Email");
-        jPanel4.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, -1, -1));
-
-        jLabel60.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel60.setText("Campus");
-        jPanel4.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 500, -1, -1));
 
         jLabel61.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel61.setForeground(new java.awt.Color(255, 255, 255));
@@ -844,116 +747,10 @@ public void connection(){
 
         jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, 720));
 
-        find_button.setText("Find");
-        find_button.setNextFocusableComponent(Get_Name_box);
-        find_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                find_buttonActionPerformed(evt);
-            }
-        });
-        jPanel4.add(find_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 170, 100, 40));
-
-        find_student_name_box.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        find_student_name_box.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        find_student_name_box.setText("Name");
-        find_student_name_box.setNextFocusableComponent(find_last_name_box);
-        find_student_name_box.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                find_student_name_boxMouseClicked(evt);
-            }
-        });
-        find_student_name_box.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                find_student_name_boxActionPerformed(evt);
-            }
-        });
-        jPanel4.add(find_student_name_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 80, 190, 30));
-
-        Get_Box_6.setNextFocusableComponent(Get_Box_7);
-        jPanel4.add(Get_Box_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 160, -1));
-
-        Get_Box_4.setNextFocusableComponent(Get_Box_5);
-        jPanel4.add(Get_Box_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, 160, -1));
-
-        Get_Box_3.setNextFocusableComponent(Get_Box_4);
-        jPanel4.add(Get_Box_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 160, -1));
-
-        Get_Box_2.setNextFocusableComponent(Get_Box_3);
-        jPanel4.add(Get_Box_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, 160, -1));
-
-        Get_Name_box.setNextFocusableComponent(Get_Box_2);
-        jPanel4.add(Get_Name_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, 160, -1));
-
-        Get_Box_5.setNextFocusableComponent(Get_Box_6);
-        jPanel4.add(Get_Box_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 160, -1));
-
-        Traveler_Update.setText("Update");
-        Traveler_Update.setNextFocusableComponent(Remove);
-        Traveler_Update.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Traveler_UpdateActionPerformed(evt);
-            }
-        });
-        jPanel4.add(Traveler_Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 90, -1));
-
-        Remove.setText("Remove");
-        Remove.setToolTipText("");
-        Remove.setNextFocusableComponent(stdt_quant_box);
-        Remove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RemoveActionPerformed(evt);
-            }
-        });
-        jPanel4.add(Remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 600, 90, -1));
-
-        jLabel62.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel62.setText("Address");
-        jPanel4.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, -1, -1));
-
-        Get_Box_7.setNextFocusableComponent(Emergency_Box_1);
-        jPanel4.add(Get_Box_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 500, 160, -1));
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 280, Short.MAX_VALUE)
-        );
-
-        jPanel4.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 250, 5, 280));
-
         jLabel63.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(255, 255, 255));
         jLabel63.setText("Add Traveler");
         jPanel4.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
-
-        jLabel64.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setText("Traveler");
-        jPanel4.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 210, -1, -1));
-
-        Emergency_Box_5.setNextFocusableComponent(Emergency_Box_6);
-        jPanel4.add(Emergency_Box_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 460, 170, -1));
-
-        Emergency_Box_4.setNextFocusableComponent(Emergency_Box_5);
-        jPanel4.add(Emergency_Box_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 410, 170, -1));
-
-        Emergency_Box_3.setNextFocusableComponent(Emergency_Box_4);
-        jPanel4.add(Emergency_Box_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 370, 170, -1));
-
-        Emergency_Box_2.setNextFocusableComponent(Emergency_Box_3);
-        jPanel4.add(Emergency_Box_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 290, 170, -1));
-
-        Emergency_Box_1.setNextFocusableComponent(Emergency_Box_2);
-        jPanel4.add(Emergency_Box_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 250, 170, -1));
-
-        Emergency_Box_6.setNextFocusableComponent(Traveler_Update);
-        jPanel4.add(Emergency_Box_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 500, 170, -1));
 
         copyrigth_label.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         copyrigth_label.setForeground(new java.awt.Color(102, 153, 255));
@@ -975,6 +772,33 @@ public void connection(){
         copyrigth_label1.setForeground(new java.awt.Color(240, 240, 240));
         copyrigth_label1.setText("<html>\nEvent# &copy;\n</html>");
         jPanel4.add(copyrigth_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1620, 660, -1, -1));
+        jPanel4.add(Student_Name_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 160, 20));
+
+        jTable1.setBackground(new java.awt.Color(0, 51, 102));
+        jTable1.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Name", "Last Name", "MDC ID", "Phone"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable1.setGridColor(new java.awt.Color(0, 51, 102));
+        jTable1.setSelectionBackground(new java.awt.Color(0, 51, 102));
+        jTable1.setSelectionForeground(new java.awt.Color(0, 51, 102));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 710, 690));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 1830, 700));
 
@@ -994,386 +818,180 @@ public void connection(){
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 920));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-   
-    private void Update_button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Update_button1MouseClicked
+
+    private void Update_button1MouseClicked(java.awt.event.MouseEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_Update_button1MouseClicked
+    }                                           
 
-    private void Update_button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Update_button1ActionPerformed
-        
+    private void Update_button1ActionPerformed(java.awt.event.ActionEvent evt) {                                               
+
         if (Empty) {
-        if(
-             Event_Name_box.getText().equals("") ||
-             Org_Box.getText().equals("") ||
-             Adv_Box.getText().equals("") || 
-             Transp_box.getText().equals("") ||      
-             Location.getText().equals("") ||
-             Students_in_org_Box.getText().equals("") ||
-             Students_Attending_Box.getText().equals("") ||
-             Chaperones.getText().equals("") ||
-             date_from_box.getText().equals("") ||
-             To_box.getText().equals("")
-             ) {
-             Exceptions_box.setText("Fill All Event Information"); 
+            if (Event_Name_box.getText().equals("")
+                    || Org_Box.getText().equals("")
+                    || Adv_Box.getText().equals("")
+                    || Transp_box.getText().equals("")
+                    || Location.getText().equals("")
+                    || Students_in_org_Box.getText().equals("")
+                    || Students_Attending_Box.getText().equals("")
+                    || Chaperones.getText().equals("")
+                    || date_from_box.getText().equals("")
+                    || To_box.getText().equals("")) {
+                Exceptions_box.setText("Fill All Event Information");
+            } else {
+                try {
+                    Statement state = connection.createStatement();
+                    Date date = new Date();
+                    DateFormat dateFormat = new SimpleDateFormat(date_from_box.getText());
+                    String from_date = dateFormat.format(date);
+                    dateFormat = new SimpleDateFormat(date_from_box.getText());
+                    String to_date = dateFormat.format(date);
+
+                    state.executeUpdate("update Event_Info set Event =" + "'" + Event_Name_box.getText() + "'");
+                    state.executeUpdate("update Event_Info set Organization =" + "'" + Org_Box.getText() + "'");
+                    state.executeUpdate("update Event_Info set Advisor =" + "'" + Adv_Box.getText() + "'");
+                    state.executeUpdate("update Event_Info set Transportation =" + "'" + Transp_box.getText() + "'");
+                    state.executeUpdate("update Event_Info set Location =" + "'" + Location.getText() + "'");
+                    state.executeUpdate("update Event_Info set Students_in_Org =" + "'" + Students_in_org_Box.getText() + "'");
+                    state.executeUpdate("update Event_Info set Students_Attending =" + "'" + Students_Attending_Box.getText() + "'");
+                    state.executeUpdate("update Event_Info set Chaperones =" + "'" + Chaperones.getText() + "'");
+                    state.executeUpdate("update Event_Info set from_date =" + "'" + from_date + "'");
+                    state.executeUpdate("update Event_Info set To_date =" + "'" + to_date + "'");
+
+                    Exceptions_box.setText("Event Created , Add Travelers Now");
+                    jPanel4.setVisible(true);
+                    Empty = false;
+
+                } catch (Exception e) {
+                    connection_label.setText(e.getMessage());
+                    connection_status.setBackground(Color.red);
+                }
             }
-            
-        else {  
-        try {
-        Statement state = connection.createStatement(); 
-        Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat(date_from_box.getText());
-        String from_date = dateFormat.format(date);
-        dateFormat = new SimpleDateFormat(date_from_box.getText());
-        String to_date = dateFormat.format(date);
-        
-       state.executeUpdate("update Event_Info set Event =" + "'" +Event_Name_box.getText()+ "'");
-       state.executeUpdate("update Event_Info set Organization =" + "'" +Org_Box.getText()+ "'");
-       state.executeUpdate("update Event_Info set Advisor =" + "'" +Adv_Box.getText()+ "'");
-       state.executeUpdate("update Event_Info set Transportation =" + "'" +Transp_box.getText() + "'");
-       state.executeUpdate("update Event_Info set Location =" + "'" +Location.getText()+ "'");
-       state.executeUpdate("update Event_Info set Students_in_Org =" + "'" +Students_in_org_Box.getText()+ "'");
-       state.executeUpdate("update Event_Info set Students_Attending =" + "'" +Students_Attending_Box.getText()+ "'");
-       state.executeUpdate("update Event_Info set Chaperones =" + "'" +Chaperones.getText()+ "'");
-       state.executeUpdate("update Event_Info set from_date =" + "'" +from_date+ "'");
-       state.executeUpdate("update Event_Info set To_date =" + "'" +to_date+ "'"); 
-       
-        Exceptions_box.setText("Event Created , Add Travelers Now");
-        jPanel4.setVisible(true);
-        Empty = false;
-        
-        }catch(Exception e) {
-        connection_label.setText(e.getMessage());
-        connection_status.setBackground(Color.red); 
+        } else {
+            Yes.setVisible(true);
+            Update_Event.setVisible(true);
+            Exceptions_box.setText("New to create new Event , Update to update Excisting Event");
         }
-        }
-        } 
-        
-        else {    
-        Yes.setVisible(true);
-        Update_Event.setVisible(true);
-        Exceptions_box.setText("New to create new Event , Update to update Excisting Event");  
-         }
-    }//GEN-LAST:event_Update_button1ActionPerformed
+    }                                              
 
-    
-    
     // Add student button
-    private void Add_student_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add_student_buttonActionPerformed
-    Update_button1.setVisible(false);        
-   
-    if(Student_Name_box.getText().equals("") ||Student_Last.getText().equals("") || Mdc_Id_box.getText().equals("") || Student_Phone_box.getText().equals("")||
-    Email_box.getText().equals("") || Address_box.getText().equals("") || Contact_Box_1.getText().equals("")|| Contact_Box_2.getText().equals("")||
-    Contact_Box_3.getText().equals("")|| Contact_Box_4.getText().equals("")|| Contact_Box_5.getText().equals("")|| Contact_Box_6.getText().equals("")) 
-    {       
-    Exceptions_box.setText("|Please fill all the Information and Try Again|");
-    }   
-    
-    else  {
+    private void Add_student_buttonActionPerformed(java.awt.event.ActionEvent evt) {                                                   
+        Update_button1.setVisible(false);
+
+        if (Student_Name_box.getText().equals("") || Student_Last.getText().equals("") || Mdc_Id_box.getText().equals("") || Student_Phone_box.getText().equals("")
+                || Email_box.getText().equals("") || Address_box.getText().equals("") || Contact_Box_1.getText().equals("") || Contact_Box_2.getText().equals("")
+                || Contact_Box_3.getText().equals("") || Contact_Box_4.getText().equals("") || Contact_Box_5.getText().equals("") || Contact_Box_6.getText().equals("")) {
+            Exceptions_box.setText("|Please fill all the Information and Try Again|");
+        } else {
             Exceptions_box.setText("");
-            try {            
-            Statement Add = connection.createStatement();
-            String name = Student_Name_box.getText();
-            String Last = Student_Last.getText();
-            String Mdc_id = Mdc_Id_box.getText();
-            String Phone = Student_Phone_box.getText();
-            String email = Email_box.getText();
-            String Address = Address_box.getText();       
+            try {
+                Statement Add = connection.createStatement();
+                String name = Student_Name_box.getText();
+                String Last = Student_Last.getText();
+                String Mdc_id = Mdc_Id_box.getText();
+                String Phone = Student_Phone_box.getText();
+                String email = Email_box.getText();
+                String Address = Address_box.getText();
 
-        // Excecute Insertion Update to Students-Info Table        
-        Add.executeUpdate(
-        " insert into Students_info( Name , Last_Name , MDC_id ,Phone , Email , Address, Campus)" + "values(" + "'" +name+ "'," + "'" +Last+ "'," +
-        "'" +Mdc_id+ "'," + "'" + Phone + "'," + "'" + email + "'," + "'" + Address + "'," + "'" + Campus_box.getSelectedItem() + "')" );
+                // Excecute Insertion Update to Students-Info Table        
+                Add.executeUpdate(
+                        " insert into Students_info( Name , Last_Name , MDC_id ,Phone , Email , Address, Campus)" + "values(" + "'" + name + "'," + "'" + Last + "',"
+                        + "'" + Mdc_id + "'," + "'" + Phone + "'," + "'" + email + "'," + "'" + Address + "'," + "'" + Campus_box.getSelectedItem() + "')");
 
-        name = Contact_Box_1.getText();
-        Last = Contact_Box_2.getText();
-        Phone = Contact_Box_3.getText();
-        email = Contact_Box_4.getText();
-        Address = Contact_Box_6.getText();       
+                name = Contact_Box_1.getText();
+                Last = Contact_Box_2.getText();
+                Phone = Contact_Box_3.getText();
+                email = Contact_Box_4.getText();
+                Address = Contact_Box_6.getText();
 
-        // Excecute Insertion Update to Emergency_Info Table
-       
-        Add.executeUpdate(
-        "insert into Emergency_Info (Name ,Last_Name ,Phone ,Email ,Relationship ,Address)" + "values(" + "'" +name+ "'," + "'" +Last+ "'," +
-        "'" +Phone+ "'," + "'" + email + "'," + "'" + Contact_Box_5.getText() + "'," + "'" + Address + "')");
-        
-        // Prompt Message
-        Exceptions_box.setText("Traveler Added");
-        
-        // Set text_boxes to clear mode 
-        Student_Name_box.setText("");
-        Student_Last.setText("");
-        Mdc_Id_box.setText("");
-        Student_Phone_box.setText("");
-        Email_box.setText("");
-        Address_box.setText("");
-        Contact_Box_1.setText("");
-        Contact_Box_2.setText("");
-        Contact_Box_3.setText("");
-        Contact_Box_4.setText("");
-        Contact_Box_5.setText("");
-        Contact_Box_6.setText("");
-        
-        }
-        catch(Exception e) {
-        String error = e.getMessage();
-        Exceptions_box.setText(error);
-        connection_status.setBackground(Color.red); 
-        }            
-    }//GEN-LAST:event_Add_student_buttonActionPerformed
-}
+                // Excecute Insertion Update to Emergency_Info Table
+                Add.executeUpdate(
+                        "insert into Emergency_Info (Name ,Last_Name ,Phone ,Email ,Relationship ,Address)" + "values(" + "'" + name + "'," + "'" + Last + "',"
+                        + "'" + Phone + "'," + "'" + email + "'," + "'" + Contact_Box_5.getText() + "'," + "'" + Address + "')");
+
+                // Prompt Message
+                Exceptions_box.setText("Traveler Added");
+
+                // Set text_boxes to clear mode 
+                Student_Name_box.setText("");
+                Student_Last.setText("");
+                Mdc_Id_box.setText("");
+                Student_Phone_box.setText("");
+                Email_box.setText("");
+                Address_box.setText("");
+                Contact_Box_1.setText("");
+                Contact_Box_2.setText("");
+                Contact_Box_3.setText("");
+                Contact_Box_4.setText("");
+                Contact_Box_5.setText("");
+                Contact_Box_6.setText("");
+                
+            } catch (Exception e) {
+                String error = e.getMessage();
+                Exceptions_box.setText(error);
+                connection_status.setBackground(Color.red);
+            }
+     FillTable();
+    }                                                  
+
+    }
+
+    /*    */
     
-    
-    // Find student button
-    private void find_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_find_buttonActionPerformed
-
-        Exceptions_box.setText("");
-        int id = 0;        
-        try {
-        
-        Find = DriverManager.getConnection("jdbc:ucanaccess://" + Path); 
-        Statement find = Find.createStatement();
-        Statement find_Emergency_Contact = Find.createStatement();
-        String nombre = find_student_name_box.getText();
-        String Last = find_last_name_box.getText();
-         
-        ResultSet Result = find.executeQuery("select Name from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
-        
-        if(Result.next()) {
-        Get_Name_box.setText(Result.getString(1)); 
-        }
-        Result = find.executeQuery("select Last_Name from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
-       
-        if(Result.next()) {
-        Get_Box_2.setText(Result.getString(1));
-        }
-        Result = find.executeQuery("select MDC_id from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
-       
-        if(Result.next()) {
-        Get_Box_3.setText(Result.getString(1));
-        }
-        Result = find.executeQuery("select Phone from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
-       
-        if(Result.next()) {
-        Get_Box_4.setText(Result.getString(1));
-        }
-        Result = find.executeQuery("select Email from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
-       
-        if(Result.next()) {
-        Get_Box_5.setText(Result.getString(1));
-        }
-        Result = find.executeQuery("select Address from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
-        
-        if(Result.next()) {
-        Get_Box_6.setText(Result.getString(1));
-        }
-       
-       find_Emergency = DriverManager.getConnection("jdbc:ucanaccess://" + Path);   
-       Statement Emergency_Lookup = find_Emergency.createStatement();
-       ResultSet Index = Emergency_Lookup.executeQuery("select ID from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
-       if(Index.next()) {
-       id = Index.getInt(1);
-       }
-       // Emergency Contact LOOKUP
-       
-        ResultSet Emergency_Result = find_Emergency_Contact.executeQuery("select Name from Emergency_Info where ID ="+id);
-        
-        if(Emergency_Result.next()) {
-            Emergency_Box_1.setText(Emergency_Result.getString(1));
-        }
-        
-        Emergency_Result = find_Emergency_Contact.executeQuery("select Last_Name from Emergency_Info where ID ="+id);
-        
-        if(Emergency_Result.next()) {
-            Emergency_Box_2.setText(Emergency_Result.getString(1));
-        }
-        
-       Emergency_Result = find_Emergency_Contact.executeQuery("select Phone from Emergency_Info where ID ="+id);
-        if(Emergency_Result.next()) {
-            Emergency_Box_3.setText(Emergency_Result.getString(1));
-        }
-        
-       Emergency_Result = find_Emergency_Contact.executeQuery("select Email from Emergency_Info where ID ="+id);
-        if(Emergency_Result.next()) {
-            Emergency_Box_4.setText(Emergency_Result.getString(1));
-        }
-        
-        Emergency_Result = find_Emergency_Contact.executeQuery("select Relationship from Emergency_Info where ID ="+id);
-        if(Emergency_Result.next()) {
-            Emergency_Box_5.setText(Emergency_Result.getString(1));
-        }
-        Emergency_Result = find_Emergency_Contact.executeQuery("select Address from Emergency_Info where ID ="+id);
-        if(Emergency_Result.next()) {
-            Emergency_Box_6.setText(Emergency_Result.getString(1));
-        }
-        else {
-         Exceptions_box.setText("|Traveler Not found|");
-         Get_Name_box.setText("");
-         Get_Box_2.setText("");
-         Get_Box_3.setText("");
-         Get_Box_4.setText("");
-         Get_Box_5.setText("");
-         Get_Box_6.setText("");
-         Emergency_Box_1.setText("");
-         Emergency_Box_2.setText("");
-         Emergency_Box_3.setText("");
-         Emergency_Box_4.setText("");
-         Emergency_Box_5.setText("");
-         Emergency_Box_6.setText("");
-        }
-        }catch(Exception e) {
-        String error = e.getMessage();
-        Exceptions_box.setText(error);
-        }
-    }//GEN-LAST:event_find_buttonActionPerformed
-
-    private void Student_Name_boxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Student_Name_boxMouseClicked
-       Student_Name_box.setText("");
-       find_last_name_box.setText("");
-    }//GEN-LAST:event_Student_Name_boxMouseClicked
-
-    private void find_last_name_boxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_find_last_name_boxMouseClicked
-       find_last_name_box.setText("");
-       Student_Name_box.setText("");
-    }//GEN-LAST:event_find_last_name_boxMouseClicked
-
-    private void Student_Name_boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Student_Name_boxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Student_Name_boxActionPerformed
-
-    private void find_student_name_boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_find_student_name_boxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_find_student_name_boxActionPerformed
-
-    private void find_student_name_boxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_find_student_name_boxMouseClicked
-        find_student_name_box.setText("");
-    }//GEN-LAST:event_find_student_name_boxMouseClicked
-
-    // Update Students Information Method
-    private void Traveler_UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Traveler_UpdateActionPerformed
-       
-        try {
-        // Lookup  Text_boxes    
-        String Name = find_student_name_box.getText();
-        String Last = find_last_name_box.getText();
-        int id = 0;
-             
-        Update = DriverManager.getConnection("jdbc:ucanaccess://" + Path);   
-        Statement Actualization = Update.createStatement();
-        ResultSet Result =  Actualization.executeQuery("select ID from Students_Info where Name = \'" + Name + "\'" + "and Last_Name = \'" + Last + "\'");
-        
-        if(Result.next()) {
-        id  = Result.getInt(1);
-        }
-        Actualization.executeUpdate("update Students_Info set Name = \'" + Get_Name_box.getText() + "\'" + " where ID = " + id );
-        Actualization.executeUpdate("update Students_Info set Last_Name = \'" + Get_Box_2.getText() + "\'" + " where ID = " + id );
-        Actualization.executeUpdate("update Students_Info set MDC_id = \'" + Get_Box_3.getText() + "\'" + " where ID = " + id );
-        Actualization.executeUpdate("update Students_Info set Phone = \'" + Get_Box_4.getText() + "\'" + " where ID = " + id );
-        Actualization.executeUpdate("update Students_Info set Email = \'" + Get_Box_5.getText() + "\'" + " where ID =" + id );
-        Actualization.executeUpdate("update Students_Info set Address = \'" + Get_Box_6.getText() + "\'" + " where ID =" + id );
-        Actualization.executeUpdate("update Students_Info set Campus = \'" + Get_Box_7.getText() + "\'" + " where ID =" + id );
-        
-        Update = DriverManager.getConnection("jdbc:ucanaccess://" + Path);   
-        Actualization = Update.createStatement();
-        Actualization.executeUpdate("update Emergency_Info set Name = \'" + Emergency_Box_1.getText() + "\'" + " where ID = " + id );
-        Actualization.executeUpdate("update Emergency_Info set Last_Name = \'" + Emergency_Box_2.getText() + "\'" + " where ID = " + id );
-        Actualization.executeUpdate("update Emergency_Info set Phone = \'" + Emergency_Box_3.getText() + "\'" + " where ID = " + id );
-        Actualization.executeUpdate("update Emergency_Info set Email = \'" + Emergency_Box_4.getText() + "\'" + " where ID =" + id );
-        Actualization.executeUpdate("update Emergency_Info set Address = \'" + Emergency_Box_5.getText() + "\'" + " where ID =" + id );
-        Actualization.executeUpdate("update Emergency_Info set Relationship = \'" + Emergency_Box_6.getText() + "\'" + " where ID =" + id );
-        
-        Exceptions_box.setText("|Traveler Information Updated|");
-        }
-        
-        catch(Exception e) {
-        String error = e.getMessage();
-        Exceptions_box.setText(error);
-        }
-    }//GEN-LAST:event_Traveler_UpdateActionPerformed
-
-    private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
-
-        String Name = find_student_name_box.getText();
-        String Last = find_last_name_box.getText();
-        int id = 0;
-        
-        try {
-            
-        Eliminate = DriverManager.getConnection("jdbc:ucanaccess://" + Path);   
-        Statement remove = Eliminate.createStatement();
-        ResultSet Result = remove.executeQuery("select ID from Students_Info where Name = \'" + Name + "\'" + "and Last_Name = \'" + Last + "\'");
-        if(Result.next()) {
-            id = Result.getInt(1);
-        }
-        remove.executeUpdate("delete from Students_Info where ID ="+id);
-        remove.executeUpdate("delete from Emergency_Info where ID ="+id);
-        
-        Exceptions_box.setText("|Traveler Removed|");
-        
-        }catch(Exception e) {
-        Exceptions_box.setText("|Error Removing Traveler|");
-        }
-    }//GEN-LAST:event_RemoveActionPerformed
-
     // Update Event Info 
-    private void Update_EventActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Update_EventActionPerformed
-        if ( 
-           Event_Name_box.getText().equals("") ||
-           Org_Box.getText().equals("")||
-           Adv_Box.getText().equals("")||
-           Transp_box.getText().equals("")||
-           Location.getText().equals("")||
-           Students_in_org_Box.getText().equals("")||
-           Students_Attending_Box.getText().equals("")||
-           Chaperones.getText().equals("") ||
-           date_from_box.getText().equals("") ||
-           To_box.getText().equals("")
-           ) 
-        {
+    private void Update_EventActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        if (Event_Name_box.getText().equals("")
+                || Org_Box.getText().equals("")
+                || Adv_Box.getText().equals("")
+                || Transp_box.getText().equals("")
+                || Location.getText().equals("")
+                || Students_in_org_Box.getText().equals("")
+                || Students_Attending_Box.getText().equals("")
+                || Chaperones.getText().equals("")
+                || date_from_box.getText().equals("")
+                || To_box.getText().equals("")) {
             Exceptions_box.setText("Please fill all the information");
-        }
-        
-        else {
-        try {
-        Statement state = connection.createStatement(); 
-        state.executeUpdate("update Event_Info set Event = "+ "'"  + Event_Name_box.getText()+"'");
-        state.executeUpdate("update Event_Info set Advisor = "+ "'"  + Adv_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Chaperones = "+ "'"  + Chaperones.getText()+"'"); 
-        state.executeUpdate("update Event_Info set Location = "+ "'"  + Location.getText()+"'");
-        state.executeUpdate("update Event_Info set Organization = "+ "'"  + Org_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Students_Attending = "+ "'"  + Students_Attending_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Students_in_Org = "+ "'"  + Students_in_org_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Transportation = "+ "'"  + Transp_box.getText()+"'");
-       
-        Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat(date_from_box.getText());
-        String from_date = dateFormat.format(date);
-        state.executeUpdate("update Event_Info set from_date = "+ "'"  + from_date +"'");
-        
-        dateFormat = new SimpleDateFormat(date_from_box.getText());
-        String to_date = dateFormat.format(date);
-        state.executeUpdate("update Event_Info set To_date = "+ "'"  + to_date +"'");
-        
-        Exceptions_box.setText("Event Updated");
-        jPanel4.setVisible(true);
-        }catch(Exception e) {
-        connection_label.setText("Error Creating Event");
-        connection_status.setBackground(Color.red); 
-        }
-        Update_Event.setVisible(false);
-        Yes.setVisible(false);
-        }
-    }//GEN-LAST:event_Update_EventActionPerformed
+        } else {
+            try {
+                Statement state = connection.createStatement();
+                state.executeUpdate("update Event_Info set Event = " + "'" + Event_Name_box.getText() + "'");
+                state.executeUpdate("update Event_Info set Advisor = " + "'" + Adv_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Chaperones = " + "'" + Chaperones.getText() + "'");
+                state.executeUpdate("update Event_Info set Location = " + "'" + Location.getText() + "'");
+                state.executeUpdate("update Event_Info set Organization = " + "'" + Org_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Students_Attending = " + "'" + Students_Attending_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Students_in_Org = " + "'" + Students_in_org_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Transportation = " + "'" + Transp_box.getText() + "'");
 
-    private void YesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesActionPerformed
+                Date date = new Date();
+                DateFormat dateFormat = new SimpleDateFormat(date_from_box.getText());
+                String from_date = dateFormat.format(date);
+                state.executeUpdate("update Event_Info set from_date = " + "'" + from_date + "'");
+
+                dateFormat = new SimpleDateFormat(date_from_box.getText());
+                String to_date = dateFormat.format(date);
+                state.executeUpdate("update Event_Info set To_date = " + "'" + to_date + "'");
+
+                Exceptions_box.setText("Event Updated");
+                jPanel4.setVisible(true);
+            } catch (Exception e) {
+                connection_label.setText("Error Creating Event");
+                connection_status.setBackground(Color.red);
+            }
+            Update_Event.setVisible(false);
+            Yes.setVisible(false);
+        }
+    }                                            
+
+    private void YesActionPerformed(java.awt.event.ActionEvent evt) {                                    
         Update_Event.setVisible(false);
         Yes.setVisible(false);
         Exceptions_box.setText("Current Event Information will be lost . Are you Sure");
         Allow_Remove.setVisible(true);
-    }//GEN-LAST:event_YesActionPerformed
+    }                                   
 
-    private void Allow_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Allow_RemoveActionPerformed
+    private void Allow_RemoveActionPerformed(java.awt.event.ActionEvent evt) {                                             
         Event_Name_box.setText("");
         Org_Box.setText("");
         Adv_Box.setText("");
@@ -1385,156 +1003,290 @@ public void connection(){
         date_from_box.setText("");
         To_box.setText("");
         Add_New.setVisible(true);
-       
+
         Allow_Remove.setVisible(false);
         Exceptions_box.setText("Fill Info for New Event");
         Update_button1.setVisible(false);
         try {
-        Statement remove = connection.createStatement();
-        remove.executeUpdate("delete * from Students_Info");
-        remove.executeUpdate("delete * from Emergency_Info");
-        }
-        catch(Exception e) {
-            
-            
-        }   
-    }//GEN-LAST:event_Allow_RemoveActionPerformed
+            Statement remove = connection.createStatement();
+            remove.executeUpdate("delete * from Students_Info");
+            remove.executeUpdate("delete * from Emergency_Info");
+        } catch (Exception e) {
 
-    private void Add_NewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add_NewActionPerformed
-        if ( 
-           Event_Name_box.getText().equals("") ||
-           Org_Box.getText().equals("")||
-           Adv_Box.getText().equals("")||
-           Transp_box.getText().equals("")||
-           Location.getText().equals("")||
-           Students_in_org_Box.getText().equals("")||
-           Students_Attending_Box.getText().equals("")||
-           Chaperones.getText().equals("") ||
-           date_from_box.getText().equals("") ||
-           To_box.getText().equals("")
-           ) 
-        {
-        Exceptions_box.setText("Please fill all the information");
         }
-        
-        else {
-        try {
-        Statement state = connection.createStatement(); 
-        state.executeUpdate("update Event_Info set Event = "+ "'"  + Event_Name_box.getText()+"'");
-        state.executeUpdate("update Event_Info set Advisor = "+ "'"  + Adv_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Chaperones = "+ "'"  + Chaperones.getText()+"'"); 
-        state.executeUpdate("update Event_Info set Location = "+ "'"  + Location.getText()+"'");
-        state.executeUpdate("update Event_Info set Organization = "+ "'"  + Org_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Students_Attending = "+ "'"  + Students_Attending_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Students_in_Org = "+ "'"  + Students_in_org_Box.getText()+"'");
-        state.executeUpdate("update Event_Info set Transportation = "+ "'"  + Transp_box.getText()+"'");
-       
-        Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat(date_from_box.getText());
-        String from_date = dateFormat.format(date);
-        state.executeUpdate("update Event_Info set from_date = "+ "'"  + from_date +"'");
-        
-        dateFormat = new SimpleDateFormat(date_from_box.getText());
-        String to_date = dateFormat.format(date);
-        state.executeUpdate("update Event_Info set To_date = "+ "'"  + to_date +"'");
-        
-        Exceptions_box.setText("New Event Created");
-        jPanel4.setVisible(true);
-        }catch(Exception e) {
-        connection_label.setText("Error Creating Event");
-        connection_status.setBackground(Color.red); 
-        }
+    }                                            
+
+    private void Add_NewActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        if (Event_Name_box.getText().equals("")
+                || Org_Box.getText().equals("")
+                || Adv_Box.getText().equals("")
+                || Transp_box.getText().equals("")
+                || Location.getText().equals("")
+                || Students_in_org_Box.getText().equals("")
+                || Students_Attending_Box.getText().equals("")
+                || Chaperones.getText().equals("")
+                || date_from_box.getText().equals("")
+                || To_box.getText().equals("")) {
+            Exceptions_box.setText("Please fill all the information");
+        } else {
+            try {
+                Statement state = connection.createStatement();
+                state.executeUpdate("update Event_Info set Event = " + "'" + Event_Name_box.getText() + "'");
+                state.executeUpdate("update Event_Info set Advisor = " + "'" + Adv_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Chaperones = " + "'" + Chaperones.getText() + "'");
+                state.executeUpdate("update Event_Info set Location = " + "'" + Location.getText() + "'");
+                state.executeUpdate("update Event_Info set Organization = " + "'" + Org_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Students_Attending = " + "'" + Students_Attending_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Students_in_Org = " + "'" + Students_in_org_Box.getText() + "'");
+                state.executeUpdate("update Event_Info set Transportation = " + "'" + Transp_box.getText() + "'");
+
+                Date date = new Date();
+                DateFormat dateFormat = new SimpleDateFormat(date_from_box.getText());
+                String from_date = dateFormat.format(date);
+                state.executeUpdate("update Event_Info set from_date = " + "'" + from_date + "'");
+
+                dateFormat = new SimpleDateFormat(date_from_box.getText());
+                String to_date = dateFormat.format(date);
+                state.executeUpdate("update Event_Info set To_date = " + "'" + to_date + "'");
+
+                Exceptions_box.setText("New Event Created");
+                jPanel4.setVisible(true);
+            } catch (Exception e) {
+                connection_label.setText("Error Creating Event");
+                connection_status.setBackground(Color.red);
             }
+        }
 
 
-    }//GEN-LAST:event_Add_NewActionPerformed
+    }                                       
 
-    
     /**
-     * Ask for your local Access DataBase on your computer and set the
-     * variable Path to the location of the file using  JFileChooser
-     * 
-     * @param evt 
+     * Ask for your local Access DataBase on your computer and set the variable
+     * Path to the location of the file using JFileChooser
+     *
+     * @param evt
      */
-    
-    private void connect_DB_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connect_DB_buttonActionPerformed
-            JFileChooser chooser = new JFileChooser();
-            chooser.setDialogTitle("Where is your Access Database");
 
-        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-            File accessDB = chooser.getSelectedFile();
-                Path = accessDB.getAbsolutePath();
-            }
-        connection();
-    }//GEN-LAST:event_connect_DB_buttonActionPerformed
-    
+    private void connect_DB_buttonActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+        JFileChooser chooser = new JFileChooser();
+        chooser.setDialogTitle("Where is your Access Database");
+
+        chooser.showOpenDialog(null);//== JFileChooser.APPROVE_OPTION) {
+        File accessDB = chooser.getSelectedFile();
+        Path = accessDB.getAbsolutePath();
+        
+        FillTable();
+    }                                                 
+
+    private void FillTable() {
+     connection();
+       DefaultTableModel toRemove = (DefaultTableModel) jTable1.getModel();
+       toRemove.setRowCount(0);
+       DefaultTableModel model;
+       
+       
+        try {
+         connection = DriverManager.getConnection("jdbc:ucanaccess://" + Path);
+         Statement statement = connection.createStatement();
+         
+         ResultSet Results = statement.executeQuery("select Name, Last_Name, MDC_id, Phone from Students_Info");
+         
+         while(Results.next()) {
+         String value1 = Results.getString(1);
+         String value2 = Results.getString(2);
+         String value3 = Results.getString(3);
+         String value4 = Results.getString(4);
+         Object[] row = {value1 , value2 , value3 , value4};
+         
+         model = (DefaultTableModel) jTable1.getModel();
+         
+         model.addRow(row);
+         }       
+         }catch(Exception e) {
+         System.out.println("Problem filling the Table ,"+ e.getMessage());        
+         }
+    }
     /**
      * Open www.MDC.blue when clicked
-     * @param evt 
+     *
+     * @param evt
      */
-    private void copyrigth_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_copyrigth_labelMouseClicked
-            String url = "https://www.mdc.blue";
-            
-            try {
-                java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
-            } catch (IOException ex) {
-            }
-    }//GEN-LAST:event_copyrigth_labelMouseClicked
+    private void copyrigth_labelMouseClicked(java.awt.event.MouseEvent evt) {                                             
+        String url = "https://www.mdc.blue";
+
+        try {
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        } catch (IOException ex) {
+        }
+    }                                            
 
     /**
      * Set color of the <b>MDC Blue</b> label to white
-     * @param evt 
+     *
+     * @param evt
      */
-    private void copyrigth_labelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_copyrigth_labelMouseEntered
+    private void copyrigth_labelMouseEntered(java.awt.event.MouseEvent evt) {                                             
         copyrigth_label.setForeground(new java.awt.Color(240, 240, 240));
-    }//GEN-LAST:event_copyrigth_labelMouseEntered
+    }                                            
 
     /**
-     * Set color of the <b>MDC Blue</b> label to light blue 
-     * @param evt 
+     * Set color of the <b>MDC Blue</b> label to light blue
+     *
+     * @param evt
      */
-    private void copyrigth_labelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_copyrigth_labelMouseExited
+    private void copyrigth_labelMouseExited(java.awt.event.MouseEvent evt) {                                            
         copyrigth_label.setForeground(new java.awt.Color(102, 153, 255));
-    }//GEN-LAST:event_copyrigth_labelMouseExited
+    }                                           
+
+    /*    */
+ /*
+    // Update Students Information Method*/
+ /*    
+    // Find student button
+    private void find_buttonActionPerformed(java.awt.event.ActionEvent evt) {                                            
+
+        Exceptions_box.setText("");
+        int id = 0;
+        try {
+
+            Find = DriverManager.getConnection("jdbc:ucanaccess://" + Path);
+            Statement find = Find.createStatement();
+            Statement find_Emergency_Contact = Find.createStatement();
+            String nombre = find_student_name_box.getText();
+            String Last = find_last_name_box.getText();
+
+            ResultSet Result = find.executeQuery("select Name from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
+
+            if(Result.next()) {
+                Get_Name_box.setText(Result.getString(1));
+            }
+            Result = find.executeQuery("select Last_Name from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
+
+            if(Result.next()) {
+                Get_Box_2.setText(Result.getString(1));
+            }
+            Result = find.executeQuery("select MDC_id from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
+
+            if(Result.next()) {
+                Get_Box_3.setText(Result.getString(1));
+            }
+            Result = find.executeQuery("select Phone from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
+
+            if(Result.next()) {
+                Get_Box_4.setText(Result.getString(1));
+            }
+            Result = find.executeQuery("select Email from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
+
+            if(Result.next()) {
+                Get_Box_5.setText(Result.getString(1));
+            }
+            Result = find.executeQuery("select Address from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
+
+            if(Result.next()) {
+                Get_Box_6.setText(Result.getString(1));
+            }
+
+            find_Emergency = DriverManager.getConnection("jdbc:ucanaccess://" + Path);
+            Statement Emergency_Lookup = find_Emergency.createStatement();
+            ResultSet Index = Emergency_Lookup.executeQuery("select ID from Students_Info where Name = \'" + nombre + "\'" + "and Last_Name = \'" + Last + "\'");
+            if(Index.next()) {
+                id = Index.getInt(1);
+            }
+            // Emergency Contact LOOKUP
+
+            ResultSet Emergency_Result = find_Emergency_Contact.executeQuery("select Name from Emergency_Info where ID ="+id);
+
+            if(Emergency_Result.next()) {
+                Emergency_Box_1.setText(Emergency_Result.getString(1));
+            }
+
+            Emergency_Result = find_Emergency_Contact.executeQuery("select Last_Name from Emergency_Info where ID ="+id);
+
+            if(Emergency_Result.next()) {
+                Emergency_Box_2.setText(Emergency_Result.getString(1));
+            }
+
+            Emergency_Result = find_Emergency_Contact.executeQuery("select Phone from Emergency_Info where ID ="+id);
+            if(Emergency_Result.next()) {
+                Emergency_Box_3.setText(Emergency_Result.getString(1));
+            }
+
+            Emergency_Result = find_Emergency_Contact.executeQuery("select Email from Emergency_Info where ID ="+id);
+            if(Emergency_Result.next()) {
+                Emergency_Box_4.setText(Emergency_Result.getString(1));
+            }
+
+            Emergency_Result = find_Emergency_Contact.executeQuery("select Relationship from Emergency_Info where ID ="+id);
+            if(Emergency_Result.next()) {
+                Emergency_Box_5.setText(Emergency_Result.getString(1));
+            }
+            Emergency_Result = find_Emergency_Contact.executeQuery("select Address from Emergency_Info where ID ="+id);
+            if(Emergency_Result.next()) {
+                Emergency_Box_6.setText(Emergency_Result.getString(1));
+            }
+            else {
+                Exceptions_box.setText("|Traveler Not found|");
+                Get_Name_box.setText("");
+                Get_Box_2.setText("");
+                Get_Box_3.setText("");
+                Get_Box_4.setText("");
+                Get_Box_5.setText("");
+                Get_Box_6.setText("");
+                Emergency_Box_1.setText("");
+                Emergency_Box_2.setText("");
+                Emergency_Box_3.setText("");
+                Emergency_Box_4.setText("");
+                Emergency_Box_5.setText("");
+                Emergency_Box_6.setText("");
+            }
+        }catch(Exception e) {
+            String error = e.getMessage();
+            Exceptions_box.setText(error);
+        }
     
-    /**
-     * Makes the text blink every 1s asking the user
-     * to connect database.
+    }                                           
      */
-    private void blink(){
-        timer = new Timer( 1000, new TimerListenerTwo());
+    /**
+     * Makes the text blink every 1s asking the user to connect database.
+     */
+    private void blink() {
+        timer = new Timer(1000, new TimerListenerTwo());
         timer.setInitialDelay(0);
         timer.start();
     }
- 
- /**
-  * Implements TimeListenerTwo class.
-  * 
-  * Sets Text with color <b>RED</b> or
-  * color <b>WHITE</b>. 
-  * 
-  * It will stop blinking until the database is connected.
-  */
-    class TimerListenerTwo implements ActionListener{
+
+    /**
+     * Implements TimeListenerTwo class.
+     *
+     * Sets Text with color <b>RED</b> or color <b>WHITE</b>.
+     *
+     * It will stop blinking until the database is connected.
+     */
+    class TimerListenerTwo implements ActionListener {
+
         int count = 0;
-        public TimerListenerTwo(){}
-               
+
+        public TimerListenerTwo() {
+        }
+
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(count % 2 == 0) //Print for even numbers
-                Exceptions_box.setText("<html><div color='#FFFFFF';>Please Connect Database</blink></div><html>");    
-            else
+            if (count % 2 == 0) //Print for even numbers
+            {
+                Exceptions_box.setText("<html><div color='#FFFFFF';>Please Connect Database</blink></div><html>");
+            } else {
                 Exceptions_box.setText("<html><div color='red';>Please Connect Database</blink></div><html>");
-            
+            }
+
             count++;
-            
-            if(thereIsConnection){
+
+            if (thereIsConnection) {
                 Exceptions_box.setText("");
                 timer.stop();
-            }        
+            }
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -1545,9 +1297,9 @@ public void connection(){
             new Event_UI().setVisible(true);
         });
     }
-    
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
+    // Variables declaration - do not modify                     
     public static javax.swing.JButton Add_New;
     public static javax.swing.JButton Add_student_button;
     public static javax.swing.JTextField Address_box;
@@ -1562,33 +1314,18 @@ public void connection(){
     public static javax.swing.JTextField Contact_Box_5;
     public static javax.swing.JTextField Contact_Box_6;
     public static javax.swing.JTextField Email_box;
-    public static javax.swing.JTextField Emergency_Box_1;
-    public static javax.swing.JTextField Emergency_Box_2;
-    public static javax.swing.JTextField Emergency_Box_3;
-    public static javax.swing.JTextField Emergency_Box_4;
-    public static javax.swing.JTextField Emergency_Box_5;
-    public static javax.swing.JTextField Emergency_Box_6;
     public static javax.swing.JTextField Event_Name_box;
     public static javax.swing.JLabel Exceptions_box;
-    public static javax.swing.JTextField Get_Box_2;
-    public static javax.swing.JTextField Get_Box_3;
-    public static javax.swing.JTextField Get_Box_4;
-    public static javax.swing.JTextField Get_Box_5;
-    public static javax.swing.JTextField Get_Box_6;
-    public static javax.swing.JTextField Get_Box_7;
-    public static javax.swing.JTextField Get_Name_box;
     public static javax.swing.JTextField Location;
     public static javax.swing.JTextField Mdc_Id_box;
     public static javax.swing.JTextField Org_Box;
-    public static javax.swing.JButton Remove;
     public static javax.swing.JTextField Student_Last;
-    public static javax.swing.JTextField Student_Name_box;
+    private javax.swing.JTextField Student_Name_box;
     public static javax.swing.JTextField Student_Phone_box;
     public static javax.swing.JTextField Students_Attending_Box;
     public static javax.swing.JTextField Students_in_org_Box;
     public static javax.swing.JTextField To_box;
     public static javax.swing.JTextField Transp_box;
-    public static javax.swing.JButton Traveler_Update;
     public static javax.swing.JButton Update_Event;
     public static javax.swing.JButton Update_button1;
     public static javax.swing.JButton Yes;
@@ -1602,9 +1339,6 @@ public void connection(){
     private javax.swing.JLabel copyrigth_label1;
     public static javax.swing.JTextField date_from_box;
     private javax.swing.JLabel expenses;
-    public static javax.swing.JButton find_button;
-    public static javax.swing.JTextField find_last_name_box;
-    public static javax.swing.JTextField find_student_name_box;
     public static javax.swing.JTextField gas_fee_box;
     public static javax.swing.JTextField gas_quant_box;
     private javax.swing.JLabel jLabel1;
@@ -1618,7 +1352,6 @@ public void connection(){
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -1644,24 +1377,14 @@ public void connection(){
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     public static javax.swing.JPanel jPanel4;
@@ -1669,6 +1392,8 @@ public void connection(){
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     public static javax.swing.JTextField lodging_fee_box;
     public static javax.swing.JTextField lodging_quant_box;
     public static javax.swing.JTextField meals_fee_box;
@@ -1679,8 +1404,8 @@ public void connection(){
     public static javax.swing.JTextField stdt_quant_box;
     public static javax.swing.JTextField taxis_fee_box;
     public static javax.swing.JTextField taxis_qualit_box;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
-    /**
-     * Creates new form Event_UI
-     */
+/**
+ * Creates new form Event_UI
+ */
