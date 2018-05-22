@@ -1,10 +1,11 @@
 # Table of contents
 
 * [Event](README.md)
-* [Introduction](contributing/README.md)
-  * GETTING STARTED
-  * [Please compleate the information before opening an issue](contributing/please-compleate-the-information-before-opening-an-issue.md)
-  * [Code of Conduct](contributing/code-of-conduct.md)
-  * [Contribution Guidelines](contributing/contribution-guidelines.md)
+* [Introduction](introduction/README.md)
+  * [GETTING STARTED](introduction/getting-started/README.md)
+    * [Requirements](introduction/getting-started/requirements.md)
+* [Please compleate the information before opening an issue](please-compleate-the-information-before-opening-an-issue.md)
+* [Contribution Guidelines](contribution-guidelines.md)
+* [Code of Conduct](code-of-conduct.md)
 * [Changelog](changelog.md)
 
