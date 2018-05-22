@@ -39,7 +39,7 @@ import java.text.SimpleDateFormat;
 import javax.swing.table.DefaultTableModel;
 
 /**
- * Designed to make your live easier when it comes to organize your needs for
+ * Designed to create your live easier when it comes to organize your needs for
  * an event. Making Your Events Easier!
  *
  * @author MDC Blue
@@ -788,14 +788,21 @@ public class Event_UI extends JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        jTable1.setGridColor(new java.awt.Color(0, 51, 102));
-        jTable1.setSelectionBackground(new java.awt.Color(0, 51, 102));
-        jTable1.setSelectionForeground(new java.awt.Color(0, 51, 102));
+        jTable1.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable1.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 710, 690));
