@@ -8,7 +8,7 @@
   * [Forking Repository](contribution-guidelines/forking-repository.md)
   * [Creating New Branch](contribution-guidelines/creating-new-branch.md)
   * [Adding Code](contribution-guidelines/adding-code.md)
-  * [Creating pull request](contribution-guidelines/untitled.md)
+  * [Creating pull request](contribution-guidelines/creating-pull-request.md)
   * [Merging to master](contribution-guidelines/merging-to-master.md)
 * [Code of Conduct](code-of-conduct.md)
 * [Release Notes](changelog.md)

@@ -10,7 +10,7 @@ You won't be able to contribute without a GitHub account, so start by [joining G
 * [Creating your new branch](https://docs.eventgenerator.ga/contribution-guidelines/creating-new-branch)
 * [Adding your code to the repository](https://docs.eventgenerator.ga/contribution-guidelines/adding-code)
 * [Creating your Pull Request](./#creating-your-pull-request)
-* [Merging to `master` branch](https://docs.eventgenerator.ga/contribution-guidelines/merging-to-master)
+* [Merging to `master` branch](https://docs.eventgenerator.ga/contribution-guidelines/creating-pull-request)
 * [Helpful links](./#helpful-links)
 
 
