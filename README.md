@@ -1,10 +1,10 @@
-![Event Logo](.gitbook/assets/event%20%281%29.png)
+![Event Logo](https://eventgenerator.ga/assets/images/event.png)
 
 ![MDC Blue](https://mdc.blue/badge.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/mdcblue/event.svg) ![GitHub top language](https://img.shields.io/github/languages/top/mdcblue/event.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/mdcblue/event.svg) ![license](https://img.shields.io/github/license/mdcblue/event.svg) ![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg) ![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)
 
 **\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
-![Event](.gitbook/assets/event-ui.png)
+![Event](https://eventgenerator.ga/assets/images/desktop.png)
 
 **\#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
