@@ -116,7 +116,7 @@
             </Pane>
          </children>
       </Pane>
-      <Pane layoutX="304.0" prefHeight="700.0" prefWidth="599.0" style="-fx-background-color: #ffffff;">
+      <Pane layoutX="304.0" prefHeight="700.0" prefWidth="599.0" style="-fx-background-color: #ffffff;" visible="false">
          <children>
             <Text fill="#7c7979" layoutX="56.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
                <font>
@@ -179,5 +179,10 @@
             </Text>
             <JFXComboBox layoutX="191.0" layoutY="539.0" />
          </children></Pane>
+      <ImageView fitHeight="137.0" fitWidth="291.0" layoutX="371.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../event/src/blue/mdc/event/images/gif/vent.gif" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

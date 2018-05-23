@@ -8,11 +8,27 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 /**
- * Add Event Part 
+ * Add Event class create a pane and 
+ * adds text fields to the pane asking for:
+ * 
+ * <ul>
+ *  <li>Event Name</li>
+ *  <li>Organization Name</li>
+ *  <li>Advisor</li>
+ *  <li>Transportation</li>
+ *  <li>Number of Students in Organization</li>
+ *  <li>Number of Students attending event</li>
+ *  <li>Number of chaperones attending event</li>
+ *  <li>Start Date <small>and</small> End Date</li>
+ *  <li>Location</li>
+ * </ul>
+ * 
+ * Also it has a <b></b> button
+ * to save the information to the database
  * 
  * @author Carlos Abraham
+ * @see AddTraveler
  */
-
 public class AddEvent extends Pane {
 
    

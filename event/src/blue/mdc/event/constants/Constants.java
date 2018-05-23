@@ -4,6 +4,19 @@ package blue.mdc.event.constants;
  * A bunch of Constant all in one place
  * 
  * @author Carlos Abraham
+ * 
+ * Example:
+ * 
+ * <pre>
+ * {@code 
+ *      public static final int WIDTH = 900;
+ * }
+ * </pre>
+ * @see blue.mdc.event.Event
+ * @see blue.mdc.event.Intro
+ * @see blue.mdc.event.MainView
+ * @see blue.mdc.event.AddEvent
+ * @see blue.mdc.event.AddTraveler
  */
 
 public class Constants {

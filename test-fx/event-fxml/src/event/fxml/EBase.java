@@ -57,6 +57,7 @@ public abstract class EBase extends Pane {
     protected final TextField textField6;
     protected final Text text15;
     protected final JFXComboBox jFXComboBox;
+    protected final ImageView imageView7;
 
     public EBase() {
 
@@ -105,6 +106,7 @@ public abstract class EBase extends Pane {
         textField6 = new TextField();
         text15 = new Text();
         jFXComboBox = new JFXComboBox();
+        imageView7 = new ImageView();
 
         setMaxHeight(USE_PREF_SIZE);
         setMaxWidth(USE_PREF_SIZE);
@@ -250,6 +252,7 @@ public abstract class EBase extends Pane {
         pane7.setPrefHeight(700.0);
         pane7.setPrefWidth(599.0);
         pane7.setStyle("-fx-background-color: #ffffff;");
+        pane7.setVisible(false);
 
         text6.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         text6.setLayoutX(56.0);
@@ -370,6 +373,14 @@ public abstract class EBase extends Pane {
         jFXComboBox.setLayoutX(191.0);
         jFXComboBox.setLayoutY(539.0);
 
+        imageView7.setFitHeight(137.0);
+        imageView7.setFitWidth(291.0);
+        imageView7.setLayoutX(371.0);
+        imageView7.setLayoutY(252.0);
+        imageView7.setPickOnBounds(true);
+        imageView7.setPreserveRatio(true);
+        imageView7.setImage(new Image(getClass().getResource("../../../../../event/src/blue/mdc/event/images/gif/vent.gif").toExternalForm()));
+
         pane.getChildren().add(text);
         pane.getChildren().add(imageView);
         pane0.getChildren().add(imageView0);
@@ -415,6 +426,7 @@ public abstract class EBase extends Pane {
         pane7.getChildren().add(text15);
         pane7.getChildren().add(jFXComboBox);
         getChildren().add(pane7);
+        getChildren().add(imageView7);
 
     }
 }

@@ -9,9 +9,27 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 /**
- * Add Traveler class 
+ * Add Traveler class create a pane and 
+ * adds text fields to the pane asking for:
+ * 
+ * <ul>
+ *  <li>Name</li>
+ *  <li>Last Name</li>
+ *  <li>MDC IDC</li>
+ *  <li>Phone</li>
+ *  <li>Email</li>
+ *  <li>Address</li>
+ *  <li>City</li>
+ *  <li>Campus</li>
+ *  <li>Zip Code</li>
+ * </ul>
+ * 
+ * Also it has a button to add contact information
+ * of the student, and a <b>SAVE</b> button
+ * to save the information to the database
  * 
  * @author Carlos Abraham
+ * @see AddEvent
  */
 
 public class AddTraveler extends Pane {
@@ -52,7 +70,11 @@ public class AddTraveler extends Pane {
     
     JFXButton button;
     
-
+    /**
+     * Constructor to {@link AddTraveler} to the the {@link blue.mdc.event.MainView}.
+     *  
+     * @see #email
+     */
     public AddTraveler() {
         
         setStyle("-fx-background-color: #ffffff;");

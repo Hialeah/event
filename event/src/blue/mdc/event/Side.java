@@ -54,6 +54,11 @@ public class Side extends Pane{
         Text infoText = new Text();
         ImageView infoImg = new ImageView();
         
+        /**
+        * Constructor for {@link Side} class.
+        * 
+        * @see Side
+        */
         public Side(){
             
         setPrefHeight(Constants.SIDE_HEIGHT);
