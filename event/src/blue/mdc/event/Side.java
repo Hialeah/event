@@ -2,9 +2,6 @@ package blue.mdc.event;
 
 import blue.mdc.event.constants.Constants;
 import com.jfoenix.controls.JFXTextField;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -218,6 +215,11 @@ public class Side extends Pane{
         info.setPrefWidth(303.0);
         info.setOnMouseEntered(e -> {info.setStyle("-fx-background-color: #2185ff;");});
         info.setOnMouseExited(e -> {info.setStyle("-fx-background-color: #1175f7;");});
+        info.setOnMouseClicked(e ->{
+            Expenses expenses = new Expenses();
+            getChildren().add(expenses);
+        });
+        
         
         /* Information Text */
         infoText.setFill(javafx.scene.paint.Color.WHITE);
@@ -225,7 +227,7 @@ public class Side extends Pane{
         infoText.setLayoutY(30.0);
         infoText.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         infoText.setStrokeWidth(0.0);
-        infoText.setText("Instructions");
+        infoText.setText("Add Expenses");
         infoText.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
         
         /* Information Icon */
