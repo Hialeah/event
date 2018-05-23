@@ -2,11 +2,16 @@ package blue.mdc.event;
 
 import blue.mdc.event.constants.Constants;
 import com.jfoenix.controls.JFXTextField;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * Pane that represents the left blue Side bar of the Event Application.
@@ -182,6 +187,15 @@ public class Side extends Pane{
         viewEvent.setPrefWidth(303.0);
         viewEvent.setOnMouseEntered(e -> {viewEvent.setStyle("-fx-background-color: #2185ff;");});
         viewEvent.setOnMouseExited(e -> {viewEvent.setStyle("-fx-background-color: #1175f7;");});
+        viewEvent.setOnMouseClicked(e ->{
+                
+                Pane pane = new Pane();
+                Scene scene = new Scene(pane, 600, 400);
+                Stage stage = new Stage();
+                stage.setTitle("Preview");
+                stage.setScene(scene);
+                stage.show();
+        });
         
         
         /* View Event Text */
