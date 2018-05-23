@@ -1,7 +1,6 @@
 package event.fxml;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -45,7 +44,6 @@ public abstract class EBase extends Pane {
     protected final Text text11;
     protected final Text text12;
     protected final Text text13;
-    protected final Text text14;
     protected final JFXButton jFXButton;
     protected final TextField textField;
     protected final TextField textField0;
@@ -55,9 +53,7 @@ public abstract class EBase extends Pane {
     protected final TextField textField4;
     protected final TextField textField5;
     protected final TextField textField6;
-    protected final Text text15;
-    protected final JFXComboBox jFXComboBox;
-    protected final ImageView imageView7;
+    protected final Text text14;
 
     public EBase() {
 
@@ -94,7 +90,6 @@ public abstract class EBase extends Pane {
         text11 = new Text();
         text12 = new Text();
         text13 = new Text();
-        text14 = new Text();
         jFXButton = new JFXButton();
         textField = new TextField();
         textField0 = new TextField();
@@ -104,9 +99,7 @@ public abstract class EBase extends Pane {
         textField4 = new TextField();
         textField5 = new TextField();
         textField6 = new TextField();
-        text15 = new Text();
-        jFXComboBox = new JFXComboBox();
-        imageView7 = new ImageView();
+        text14 = new Text();
 
         setMaxHeight(USE_PREF_SIZE);
         setMaxWidth(USE_PREF_SIZE);
@@ -252,7 +245,6 @@ public abstract class EBase extends Pane {
         pane7.setPrefHeight(700.0);
         pane7.setPrefWidth(599.0);
         pane7.setStyle("-fx-background-color: #ffffff;");
-        pane7.setVisible(false);
 
         text6.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         text6.setLayoutX(56.0);
@@ -275,7 +267,7 @@ public abstract class EBase extends Pane {
         text8.setLayoutY(275.0);
         text8.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text8.setStrokeWidth(0.0);
-        text8.setText("MDC ID");
+        text8.setText("Relationship ");
         text8.setFont(new Font(17.0));
 
         text9.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
@@ -311,20 +303,12 @@ public abstract class EBase extends Pane {
         text12.setFont(new Font(17.0));
 
         text13.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text13.setLayoutX(56.0);
-        text13.setLayoutY(565.0);
+        text13.setLayoutX(284.0);
+        text13.setLayoutY(505.0);
         text13.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text13.setStrokeWidth(0.0);
-        text13.setText("Main Campus");
+        text13.setText("Zip Code");
         text13.setFont(new Font(17.0));
-
-        text14.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text14.setLayoutX(284.0);
-        text14.setLayoutY(505.0);
-        text14.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text14.setStrokeWidth(0.0);
-        text14.setText("Zip Code");
-        text14.setFont(new Font(17.0));
 
         jFXButton.setLayoutX(479.0);
         jFXButton.setLayoutY(614.0);
@@ -361,25 +345,14 @@ public abstract class EBase extends Pane {
         textField6.setPrefHeight(26.0);
         textField6.setPrefWidth(109.0);
 
-        text15.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
-        text15.setLayoutX(58.0);
-        text15.setLayoutY(93.0);
-        text15.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text15.setStrokeWidth(0.0);
-        text15.setText("Add Traveler");
-        text15.setWrappingWidth(151.5982458628714);
-        text15.setFont(new Font("System Bold", 22.0));
-
-        jFXComboBox.setLayoutX(191.0);
-        jFXComboBox.setLayoutY(539.0);
-
-        imageView7.setFitHeight(137.0);
-        imageView7.setFitWidth(291.0);
-        imageView7.setLayoutX(371.0);
-        imageView7.setLayoutY(252.0);
-        imageView7.setPickOnBounds(true);
-        imageView7.setPreserveRatio(true);
-        imageView7.setImage(new Image(getClass().getResource("../../../../../event/src/blue/mdc/event/images/gif/vent.gif").toExternalForm()));
+        text14.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
+        text14.setLayoutX(58.0);
+        text14.setLayoutY(86.0);
+        text14.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text14.setStrokeWidth(0.0);
+        text14.setText("Emergency Contact");
+        text14.setWrappingWidth(204.99999779462814);
+        text14.setFont(new Font("System Bold", 22.0));
 
         pane.getChildren().add(text);
         pane.getChildren().add(imageView);
@@ -413,7 +386,6 @@ public abstract class EBase extends Pane {
         pane7.getChildren().add(text11);
         pane7.getChildren().add(text12);
         pane7.getChildren().add(text13);
-        pane7.getChildren().add(text14);
         pane7.getChildren().add(jFXButton);
         pane7.getChildren().add(textField);
         pane7.getChildren().add(textField0);
@@ -423,10 +395,8 @@ public abstract class EBase extends Pane {
         pane7.getChildren().add(textField4);
         pane7.getChildren().add(textField5);
         pane7.getChildren().add(textField6);
-        pane7.getChildren().add(text15);
-        pane7.getChildren().add(jFXComboBox);
+        pane7.getChildren().add(text14);
         getChildren().add(pane7);
-        getChildren().add(imageView7);
 
     }
 }

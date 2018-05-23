@@ -1,80 +1,64 @@
 package blue.mdc.event;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 /**
- * Add Traveler class create a pane and 
+ * Emergency Contact class create a pane and 
  * adds text fields to the pane asking for:
  * 
  * <ul>
  *  <li>Name</li>
  *  <li>Last Name</li>
- *  <li>MDC IDC</li>
+ *  <li>Relationship</li>
  *  <li>Phone</li>
  *  <li>Email</li>
  *  <li>Address</li>
  *  <li>City</li>
- *  <li>Campus</li>
  *  <li>Zip Code</li>
  * </ul>
  * 
- * Also it has a button to add contact information
- * of the student, and a <b>NEXT</b> button
- * to save and proceed to fill the {@link EmergencyContact}
- * information to the database.
+ * Also it has a button to add emergency contact information
+ * of the student, and a <b>SAVE</b> button
+ * to save the information to the database
  * 
  * @author Carlos Abraham
- * @see AddEvent
+ * @see AddTraveler
  */
 
-public class AddTraveler extends Pane {
+public class EmergencyContact extends Pane {
 
    
     Pane pane;
-    Text addTraveler;
+    Text emergencyContact;
     
     Text name;
     Text lastName;
-    Text mdcID;
+    Text relationship;
     Text phone;
     Text email;
     Text address;
     Text city;
-    Text campus;
     Text zip;
     
     TextField nameField;
     TextField lastNameField;
-    TextField mdcIDField;
+    TextField relationshipField;
     TextField phoneField;
     TextField emailField;
     TextField addressField;
     TextField cityField;
     TextField campusField;
     
-    JFXComboBox comboBox;
-    MenuItem Hialeah;
-    MenuItem Homestead;
-    MenuItem InterAmerican;
-    MenuItem Kendall;
-    MenuItem Medical;
-    MenuItem North;
-    MenuItem NWSA;
-    MenuItem West;
-    MenuItem Wolfson;
-    
     JFXButton button;
     
     /**
-     * Constructor to {@link AddTraveler} to the the {@link blue.mdc.event.MainView}.
+     * Constructor to {@link EmergencyContact} to the the {@link blue.mdc.event.MainView}.
      */
-    public AddTraveler() {
+    public EmergencyContact() {
         
         setStyle("-fx-background-color: #ffffff;");
         setLayoutX(304.0);
@@ -82,28 +66,26 @@ public class AddTraveler extends Pane {
         setPrefWidth(599.0);
         
         pane = new Pane();
-        addTraveler = new Text();
+        emergencyContact = new Text();
         name = new Text();
         lastName = new Text();
-        mdcID = new Text();
+        relationship = new Text();
         phone = new Text();
         email = new Text();
         address = new Text();
         city = new Text();
-        campus = new Text();
         zip = new Text();
 
         nameField = new TextField();
         lastNameField = new TextField();
-        mdcIDField = new TextField();
+        relationshipField = new TextField();
         phoneField = new TextField();
         emailField = new TextField();
         addressField = new TextField();
         cityField = new TextField();
         campusField = new TextField();
-        
-        comboBox = new JFXComboBox();        
-        button = new JFXButton("Next");
+               
+        button = new JFXButton("Save");
     
         /* Name Label */
         name.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
@@ -123,14 +105,14 @@ public class AddTraveler extends Pane {
         lastName.setText("Last Name");
         lastName.setFont(new Font(17.0));
         
-        /* MDC ID Label */
-        mdcID.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        mdcID.setLayoutX(56.0);
-        mdcID.setLayoutY(275.0);
-        mdcID.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        mdcID.setStrokeWidth(0.0);
-        mdcID.setText("MDC ID");
-        mdcID.setFont(new Font(17.0));
+        /* Relationship Label */
+        relationship.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        relationship.setLayoutX(56.0);
+        relationship.setLayoutY(275.0);
+        relationship.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        relationship.setStrokeWidth(0.0);
+        relationship.setText("Relationship");
+        relationship.setFont(new Font(17.0));
         
         /* Phone Number Label */
         phone.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
@@ -168,15 +150,6 @@ public class AddTraveler extends Pane {
         city.setText("City");
         city.setFont(new Font(17.0));
         
-        /* Main Campus Label */
-        campus.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        campus.setLayoutX(56.0);
-        campus.setLayoutY(565.0);
-        campus.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        campus.setStrokeWidth(0.0);
-        campus.setText("Main Campus");
-        campus.setFont(new Font(17.0));
-        
         /* Zip Code Label */
         zip.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         zip.setLayoutX(284.0);
@@ -186,6 +159,12 @@ public class AddTraveler extends Pane {
         zip.setText("Zip Code");
         zip.setFont(new Font(17.0));
         
+        /* Save button */
+        button.setLayoutX(479.0);
+        button.setLayoutY(614.0);
+        button.setStyle("-fx-background-color: #1175f7;"
+                          +"-fx-text-fill: WHITE;");
+        
         /* Name Text Field */
         nameField.setLayoutX(160.0);
         nameField.setLayoutY(131.0);
@@ -194,9 +173,9 @@ public class AddTraveler extends Pane {
         lastNameField.setLayoutX(160.0);
         lastNameField.setLayoutY(179.0);
         
-        /* MDC ID Text Field */
-        mdcIDField.setLayoutX(160.0);
-        mdcIDField.setLayoutY(246.0);
+        /* Relationship Text Field */
+        relationshipField.setLayoutX(160.0);
+        relationshipField.setLayoutY(246.0);
         
         /* Phone Number Text Field */
         phoneField.setLayoutX(160.0);
@@ -227,63 +206,33 @@ public class AddTraveler extends Pane {
         campusField.setPrefWidth(109.0);
         
         /* Add Traveler Label */
-        addTraveler.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
-        addTraveler.setLayoutX(58.0);
-        addTraveler.setLayoutY(93.0);
-        addTraveler.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        addTraveler.setStrokeWidth(0.0);
-        addTraveler.setText("Add Traveler");
-        addTraveler.setWrappingWidth(151.5982458628714);
-        addTraveler.setFont(new Font("System Bold", 22.0));
+        emergencyContact.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
+        emergencyContact.setLayoutX(58.0);
+        emergencyContact.setLayoutY(86.0);
+        emergencyContact.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        emergencyContact.setStrokeWidth(0.0);
+        emergencyContact.setText("Emergency contact");
+        emergencyContact.setWrappingWidth(205.0);
+        emergencyContact.setFont(new Font("System Bold", 22.0));
         
-         /* Next button */
-        button.setLayoutX(479.0);
-        button.setLayoutY(614.0);
-        button.setStyle("-fx-background-color: #1175f7;"
-                          +"-fx-text-fill: WHITE;");
-        button.setOnMouseClicked(e->{
-            EmergencyContact emergency = new EmergencyContact();
-            
-            
-            
-            getChildren().add(emergency);
-        });
-        
-        /* Menu ComboBox (List of MDC Campuses) */
-        comboBox.setLayoutX(191.0);
-        comboBox.setLayoutY(539.0);
-        
-        comboBox.getItems().add("Hialeah");
-        comboBox.getItems().add("Homestead");
-        comboBox.getItems().add("InterAmerican");
-        comboBox.getItems().add("Medical");
-        comboBox.getItems().add("Kendall");
-        comboBox.getItems().add("North");
-        comboBox.getItems().add("NWSA");
-        comboBox.getItems().add("West");
-        comboBox.getItems().add("Wolfson");
-        comboBox.getItems().add("Homestead");
-        
-        pane.getChildren().add(addTraveler);
+        pane.getChildren().add(emergencyContact);
         pane.getChildren().add(name);
         pane.getChildren().add(lastName);
-        pane.getChildren().add(mdcID);
+        pane.getChildren().add(relationship);
         pane.getChildren().add(phone);
         pane.getChildren().add(email);
         pane.getChildren().add(address);
         pane.getChildren().add(city);
-        pane.getChildren().add(campus);
         pane.getChildren().add(zip);
         pane.getChildren().add(button);
         pane.getChildren().add(nameField);
         pane.getChildren().add(lastNameField);
-        pane.getChildren().add(mdcIDField);
+        pane.getChildren().add(relationshipField);
         pane.getChildren().add(phoneField);
         pane.getChildren().add(emailField);
         pane.getChildren().add(addressField);
         pane.getChildren().add(cityField);
         pane.getChildren().add(campusField);
-        pane.getChildren().add(comboBox);
         
         getChildren().add(pane);
     }

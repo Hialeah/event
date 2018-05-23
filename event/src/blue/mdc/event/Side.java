@@ -31,7 +31,8 @@ import javafx.scene.text.Text;
 
 public class Side extends Pane{
     
-    
+       
+        
         Pane newEvent = new Pane(); // Buttons are represented by a Pane()
         Text newEventText = new Text();
         ImageView newEventImg = new ImageView();

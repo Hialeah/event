@@ -77,7 +77,7 @@ public class Intro extends Pane {
         copyright.setFont(new Font("Baghdad", 17.0));
         copyright.setText("Event  ©  MDC Blue");
 
-         getChildren().add(eventText); 
+        //getChildren().add(eventText); 
         getChildren().add(logo);
         getChildren().add(copyright);
         getChildren().add(gif);

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -116,7 +115,7 @@
             </Pane>
          </children>
       </Pane>
-      <Pane layoutX="304.0" prefHeight="700.0" prefWidth="599.0" style="-fx-background-color: #ffffff;" visible="false">
+      <Pane layoutX="304.0" prefHeight="700.0" prefWidth="599.0" style="-fx-background-color: #ffffff;">
          <children>
             <Text fill="#7c7979" layoutX="56.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
                <font>
@@ -128,7 +127,7 @@
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="56.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MDC ID">
+            <Text fill="#7c7979" layoutX="56.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Relationship ">
                <font>
                   <Font size="17.0" />
                </font>
@@ -153,11 +152,6 @@
                   <Font size="17.0" />
                </font>
             </Text>
-            <Text fill="#7c7979" layoutX="56.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Campus">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Text>
             <Text fill="#7c7979" layoutX="284.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code">
                <font>
                   <Font size="17.0" />
@@ -172,17 +166,11 @@
             <TextField layoutX="160.0" layoutY="419.0" prefHeight="26.0" prefWidth="264.0" />
             <TextField layoutX="111.0" layoutY="478.0" prefHeight="26.0" prefWidth="145.0" />
             <TextField layoutX="379.0" layoutY="478.0" prefHeight="26.0" prefWidth="109.0" />
-            <Text fill="#1175f7" layoutX="58.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Traveler" wrappingWidth="151.5982458628714">
+            <Text fill="#1175f7" layoutX="58.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Contact" wrappingWidth="204.99999779462814">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
             </Text>
-            <JFXComboBox layoutX="191.0" layoutY="539.0" />
          </children></Pane>
-      <ImageView fitHeight="137.0" fitWidth="291.0" layoutX="371.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../event/src/blue/mdc/event/images/gif/vent.gif" />
-         </image>
-      </ImageView>
    </children>
 </Pane>
