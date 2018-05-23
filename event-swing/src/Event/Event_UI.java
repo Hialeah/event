@@ -64,9 +64,9 @@ public class Event_UI extends JFrame {
     public Event_UI() {
 
         initComponents();
-        Yes.setVisible(false);
+        New_Button.setVisible(false);
         Update_Event.setVisible(false);
-        Allow_Remove.setVisible(false);
+       
         Add_New.setVisible(false);
         blink();
 
@@ -168,7 +168,6 @@ public class Event_UI extends JFrame {
         Exceptions_box = new javax.swing.JLabel();
         connection_label = new javax.swing.JLabel();
         connection_status = new javax.swing.JPanel();
-        Allow_Remove = new javax.swing.JButton();
         connect_DB_button = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         Org_Box = new javax.swing.JTextField();
@@ -193,7 +192,7 @@ public class Event_UI extends JFrame {
         Update_button1 = new javax.swing.JButton();
         Add_New = new javax.swing.JButton();
         Update_Event = new javax.swing.JButton();
-        Yes = new javax.swing.JButton();
+        New_Button = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -311,14 +310,6 @@ public class Event_UI extends JFrame {
 
         jPanel5.add(connection_status, new org.netbeans.lib.awtextra.AbsoluteConstraints(1780, 20, 20, 20));
 
-        Allow_Remove.setText("YES");
-        Allow_Remove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Allow_RemoveActionPerformed(evt);
-            }
-        });
-        jPanel5.add(Allow_Remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 10, 80, 40));
-
         connect_DB_button.setText("<html>\n<p>CONNECT <br/>\nDATABASE</p>\n</html>");
         connect_DB_button.setToolTipText("");
         connect_DB_button.addActionListener(new java.awt.event.ActionListener() {
@@ -326,7 +317,7 @@ public class Event_UI extends JFrame {
                 connect_DB_buttonActionPerformed(evt);
             }
         });
-        jPanel5.add(connect_DB_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(1510, 10, -1, 40));
+        jPanel5.add(connect_DB_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 10, -1, 40));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1830, 70));
 
@@ -423,7 +414,7 @@ public class Event_UI extends JFrame {
                 Add_NewActionPerformed(evt);
             }
         });
-        jPanel3.add(Add_New, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 100, -1));
+        jPanel3.add(Add_New, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 100, -1));
 
         Update_Event.setText("UPDATE");
         Update_Event.addActionListener(new java.awt.event.ActionListener() {
@@ -431,15 +422,15 @@ public class Event_UI extends JFrame {
                 Update_EventActionPerformed(evt);
             }
         });
-        jPanel3.add(Update_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, -1, -1));
+        jPanel3.add(Update_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, -1, -1));
 
-        Yes.setText("NEW");
-        Yes.addActionListener(new java.awt.event.ActionListener() {
+        New_Button.setText("NEW");
+        New_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                YesActionPerformed(evt);
+                New_ButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(Yes, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 80, -1));
+        jPanel3.add(New_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 180, 80, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 1830, 230));
 
@@ -876,7 +867,7 @@ public class Event_UI extends JFrame {
                 }
             }
         } else {
-            Yes.setVisible(true);
+            New_Button.setVisible(true);
             Update_Event.setVisible(true);
             Exceptions_box.setText("New to create new Event , Update to update Excisting Event");
         }
@@ -987,41 +978,14 @@ public class Event_UI extends JFrame {
                 connection_status.setBackground(Color.red);
             }
             Update_Event.setVisible(false);
-            Yes.setVisible(false);
+            New_Button.setVisible(false);
         }
     }                                            
 
-    private void YesActionPerformed(java.awt.event.ActionEvent evt) {                                    
-        Update_Event.setVisible(false);
-        Yes.setVisible(false);
-        Exceptions_box.setText("Current Event Information will be lost . Are you Sure");
-        Allow_Remove.setVisible(true);
-    }                                   
-
-    private void Allow_RemoveActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        Event_Name_box.setText("");
-        Org_Box.setText("");
-        Adv_Box.setText("");
-        Transp_box.setText("");
-        Location.setText("");
-        Students_in_org_Box.setText("");
-        Students_Attending_Box.setText("");
-        Chaperones.setText("");
-        date_from_box.setText("");
-        To_box.setText("");
-        Add_New.setVisible(true);
-
-        Allow_Remove.setVisible(false);
-        Exceptions_box.setText("Fill Info for New Event");
-        Update_button1.setVisible(false);
-        try {
-            Statement remove = connection.createStatement();
-            remove.executeUpdate("delete * from Students_Info");
-            remove.executeUpdate("delete * from Emergency_Info");
-        } catch (Exception e) {
-
-        }
-    }                                            
+    private void New_ButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // Code to set up new Access database
+        
+    }                                          
 
     private void Add_NewActionPerformed(java.awt.event.ActionEvent evt) {                                        
         if (Event_Name_box.getText().equals("")
@@ -1311,7 +1275,6 @@ public class Event_UI extends JFrame {
     public static javax.swing.JButton Add_student_button;
     public static javax.swing.JTextField Address_box;
     public static javax.swing.JTextField Adv_Box;
-    public static javax.swing.JButton Allow_Remove;
     public static javax.swing.JComboBox<String> Campus_box;
     public static javax.swing.JTextField Chaperones;
     public static javax.swing.JTextField Contact_Box_1;
@@ -1325,6 +1288,7 @@ public class Event_UI extends JFrame {
     public static javax.swing.JLabel Exceptions_box;
     public static javax.swing.JTextField Location;
     public static javax.swing.JTextField Mdc_Id_box;
+    public static javax.swing.JButton New_Button;
     public static javax.swing.JTextField Org_Box;
     public static javax.swing.JTextField Student_Last;
     private javax.swing.JTextField Student_Name_box;
@@ -1335,7 +1299,6 @@ public class Event_UI extends JFrame {
     public static javax.swing.JTextField Transp_box;
     public static javax.swing.JButton Update_Event;
     public static javax.swing.JButton Update_button1;
-    public static javax.swing.JButton Yes;
     public static javax.swing.JTextField advisor_fee_box;
     public static javax.swing.JTextField advisor_quant_box;
     public static javax.swing.JTextField club_contribution;
