@@ -17,7 +17,7 @@ description: Making events easier ✈️
 
 ![Event](.gitbook/assets/event-ui.png)
 
-**\#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
+**#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
 ### Installing
 
@@ -31,13 +31,13 @@ description: Making events easier ✈️
 
 #### Window
 
-Download the latest [**\#Event**](./) release.
+Download the latest [**\#Event**](https://eventgenerator.ga/#download-section) release.
 
 ### Contributing
 
 Please note that this project is licensed under MIT License. By participating in this project you agree to abide by its terms.
 
-See [Contributing Guide](./)
+See [Contributing Guide](https://docs.eventgenerator.ga/contributing)
 
 ### Contributors
 
@@ -47,5 +47,5 @@ See [Contributing Guide](./)
 
 ### License
 
-[MDC Blue](https://github.com/MDCblue) © 2018 [MIT License](https://github.com/MDCblue/event/tree/78e5fa6e290fc5fd2fc706f311fbe96769a589e8/LICENSE/README.md)
+[MDC Blue](https://github.com/MDCblue) © 2018 [MIT License](https://github.com/MDCblue/event/blob/master/LICENSE)
 
