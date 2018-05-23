@@ -54,6 +54,9 @@ public class Side extends Pane{
         Pane info = new Pane();
         Text infoText = new Text();
         ImageView infoImg = new ImageView();
+        Pane emergency = new Pane();
+        Text emergencyText = new Text();
+        ImageView emergencyImg = new ImageView();
         
         /**
         * Constructor for {@link Side} class.
@@ -82,7 +85,7 @@ public class Side extends Pane{
                 + "-fx-text-fill: WHITE;");
         
         /* Create new Event Button */
-        newEvent.setLayoutY(137.0);
+        newEvent.setLayoutY(Constants.SIDE_BUTTON_Y);
         newEvent.setPrefHeight(46.0);
         newEvent.setPrefWidth(303.0);
         newEvent.setOnMouseEntered(e -> {newEvent.setStyle("-fx-background-color: #2185ff;");});
@@ -107,7 +110,7 @@ public class Side extends Pane{
         newEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/add.png").toExternalForm()));
 
         /* Edit Event Button */
-        editEvent.setLayoutY(197.0);
+        editEvent.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS);
         editEvent.setPrefHeight(46.0);
         editEvent.setPrefWidth(303.0);
         editEvent.setOnMouseEntered(e -> {editEvent.setStyle("-fx-background-color: #2185ff;");});
@@ -128,7 +131,7 @@ public class Side extends Pane{
         editEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/edit.png").toExternalForm()));
         
         /* Add Traveler Button */
-        addTraveler.setLayoutY(257.0);
+        addTraveler.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS * 2);
         addTraveler.setPrefHeight(46.0);
         addTraveler.setPrefWidth(303.0);
         addTraveler.setOnMouseEntered(e -> {addTraveler.setStyle("-fx-background-color: #2185ff;");});
@@ -138,7 +141,7 @@ public class Side extends Pane{
             EmergencyContact emergency = new EmergencyContact();
             getChildren().add(addTraveler);
             
-            if(addTraveler){
+            if(addTraveler.button.isPressed()){
                 System.out.print("Pressed");
                 getChildren().remove(addTraveler);
                 getChildren().add(emergency);
@@ -160,7 +163,7 @@ public class Side extends Pane{
         addTravelerImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/addUser.png").toExternalForm()));
         
         /* Edit Traveler Button */
-        editTraveler.setLayoutY(317.0);
+        editTraveler.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS * 3);
         editTraveler.setPrefHeight(46.0);
         editTraveler.setPrefWidth(303.0);
         editTraveler.setOnMouseEntered(e -> {editTraveler.setStyle("-fx-background-color: #2185ff;");});
@@ -181,7 +184,7 @@ public class Side extends Pane{
         editTravelerImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/editUser.png").toExternalForm()));
         
         /* View Event Button */
-        viewEvent.setLayoutY(377.0);
+        viewEvent.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS * 4);
         viewEvent.setPrefHeight(46.0);
         viewEvent.setPrefWidth(303.0);
         viewEvent.setOnMouseEntered(e -> {viewEvent.setStyle("-fx-background-color: #2185ff;");});
@@ -203,7 +206,7 @@ public class Side extends Pane{
         viewEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/star.png").toExternalForm()));
         
         /* Information Button */
-        info.setLayoutY(437.0);
+        info.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS * 5);
         info.setPrefHeight(46.0);
         info.setPrefWidth(303.0);
         info.setOnMouseEntered(e -> {info.setStyle("-fx-background-color: #2185ff;");});
@@ -223,6 +226,26 @@ public class Side extends Pane{
         infoImg.setLayoutY(9.0);
         infoImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/bulleted-list.png").toExternalForm()));
         
+        /* Emergency Button */
+        emergency.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS * 6);
+        emergency.setPrefHeight(46.0);
+        emergency.setPrefWidth(303.0);
+        emergency.setOnMouseEntered(e -> {emergency.setStyle("-fx-background-color: #2185ff;");});
+        emergency.setOnMouseExited(e -> {emergency.setStyle("-fx-background-color: #1175f7;");});
+        
+        /* Emergency Text */
+        emergencyText.setFill(javafx.scene.paint.Color.WHITE);
+        emergencyText.setLayoutX(83.0);
+        emergencyText.setLayoutY(30.0);
+        emergencyText.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        emergencyText.setStrokeWidth(0.0);
+        emergencyText.setText("Add Emergency Contact");
+        emergencyText.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
+        
+        /* emergencyrmation Icon */
+        emergencyImg.setLayoutX(45.0);
+        emergencyImg.setLayoutY(9.0);
+        emergencyImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/bulleted-list.png").toExternalForm()));
         
         search.getChildren().addAll(searchImg, searchField);
         getChildren().add(search);
@@ -244,6 +267,9 @@ public class Side extends Pane{
 
         info.getChildren().addAll(infoText, infoImg);
         getChildren().add(info);
+        
+        emergency.getChildren().addAll(emergencyText, emergencyImg);
+        getChildren().add(emergency);
         
         
     }

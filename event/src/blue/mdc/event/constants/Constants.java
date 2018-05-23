@@ -5,13 +5,6 @@ package blue.mdc.event.constants;
  * 
  * @author Carlos Abraham
  * 
- * Example:
- * 
- * <pre>
- * {@code 
- *      public static final int WIDTH = 900;
- * }
- * </pre>
  * @see blue.mdc.event.Event
  * @see blue.mdc.event.Intro
  * @see blue.mdc.event.MainView
@@ -48,4 +41,18 @@ public class Constants {
      */
     public static final double SIDE_WIDTH = 304.0;
     
+    /**
+     * Initial Value of the button in the Side Bar
+     * 
+     * @see blue.mdc.event.Side
+     */
+    public static final double SIDE_BUTTON_Y = 110.0;
+    
+    
+    /**
+     * Distance between each button in the Side Bar.
+     * 
+     * @see blue.mdc.event.Side
+     */
+    public static final double DISTANCE_BTW_BUTTONS = 50.0;
 }

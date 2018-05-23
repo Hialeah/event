@@ -35,47 +35,65 @@ public class EmergencyContact extends Pane {
     Pane pane;
     /**
      * Emergency contact form Label.
+     * 
+     * @see EmergencyContact
      */
     Text emergencyContact;
     
     /**
      * Emergency contact name.
+     * 
+     * @see EmergencyContact
      */
     Text name;
     
     /**
      * Emergency contact Last Name.
+     * 
+     * @see EmergencyContact
      */
     Text lastName;
     
     /**
      * Emergency contact relationship
      * with student.
+     * 
+     * @see EmergencyContact
      */
     Text relationship;
     
     /**
      * Emergency contact phone number.
+     * 
+     * @see EmergencyContact
      */
     Text phone;
     
     /**
      * Emergency contact email address.
+     * 
+     * @see EmergencyContact
      */
     Text email;
     
     /**
      * Emergency contact address.
+     * 
+    * @see EmergencyContact
      */
     Text address;
     
     /**
      * Emergency contact city.
+     * 
+     * @see EmergencyContact
      */
     Text city;
     
     /**
      * Emergency contact zip code.
+     * 
+     * @see EmergencyContact
      */
     Text zip;
     
