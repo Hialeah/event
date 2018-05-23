@@ -33,15 +33,50 @@ public class EmergencyContact extends Pane {
 
    
     Pane pane;
+    /**
+     * Emergency contact form Label.
+     */
     Text emergencyContact;
     
+    /**
+     * Emergency contact name.
+     */
     Text name;
+    
+    /**
+     * Emergency contact Last Name.
+     */
     Text lastName;
+    
+    /**
+     * Emergency contact relationship
+     * with student.
+     */
     Text relationship;
+    
+    /**
+     * Emergency contact phone number.
+     */
     Text phone;
+    
+    /**
+     * Emergency contact email address.
+     */
     Text email;
+    
+    /**
+     * Emergency contact address.
+     */
     Text address;
+    
+    /**
+     * Emergency contact city.
+     */
     Text city;
+    
+    /**
+     * Emergency contact zip code.
+     */
     Text zip;
     
     TextField nameField;
@@ -207,7 +242,7 @@ public class EmergencyContact extends Pane {
         
         /* Add Traveler Label */
         emergencyContact.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
-        emergencyContact.setLayoutX(58.0);
+        emergencyContact.setLayoutX(56.0);
         emergencyContact.setLayoutY(86.0);
         emergencyContact.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         emergencyContact.setStrokeWidth(0.0);

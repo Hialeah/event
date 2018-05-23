@@ -135,7 +135,14 @@ public class Side extends Pane{
         addTraveler.setOnMouseExited(e -> {addTraveler.setStyle("-fx-background-color: #1175f7;");});
         addTraveler.setOnMouseClicked(e ->{
             AddTraveler addTraveler = new AddTraveler();
+            EmergencyContact emergency = new EmergencyContact();
             getChildren().add(addTraveler);
+            
+            if(addTraveler){
+                System.out.print("Pressed");
+                getChildren().remove(addTraveler);
+                getChildren().add(emergency);
+            }
         });
         
         /* Add Traveler Text */

@@ -41,7 +41,10 @@ import javafx.scene.layout.Pane;
  */
 
 public class Event extends Application{
-
+    
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         

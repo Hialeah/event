@@ -39,14 +39,55 @@ public class AddTraveler extends Pane {
     Pane pane;
     Text addTraveler;
     
+    /**
+     * Name of the Student.
+     */
     Text name;
+    
+    /**
+     * Last Name of the Student.
+     */
     Text lastName;
+    
+    /**
+     * Miami Dade College ID Number
+     * 10 digits ID.
+     * 
+     * @see <a href="https://faq.mdc.edu/knowledgebase/what-is-my-student-id-number/">MDC ID information.</a>
+     */
     Text mdcID;
+    
+    /**
+     * Student Phone Number.
+     * Example: (123) 456 - 7989
+     */
     Text phone;
+    
+    /**
+     * Student Email Address.
+     * Example: example@mymdc.net
+     */
     Text email;
+    
+    /**
+     * Student House Address
+     */
     Text address;
+    
+    /**
+     * Student City
+     */
     Text city;
+    
+    /**
+     * Student Main Campus
+     */
+    
     Text campus;
+    
+    /**
+     * Student Zip Code
+     */
     Text zip;
     
     TextField nameField;
@@ -241,13 +282,7 @@ public class AddTraveler extends Pane {
         button.setLayoutY(614.0);
         button.setStyle("-fx-background-color: #1175f7;"
                           +"-fx-text-fill: WHITE;");
-        button.setOnMouseClicked(e->{
-            EmergencyContact emergency = new EmergencyContact();
-            
-            
-            
-            getChildren().add(emergency);
-        });
+        button.setOnMouseClicked(e->{System.out.println("NONE");});
         
         /* Menu ComboBox (List of MDC Campuses) */
         comboBox.setLayoutX(191.0);
