@@ -138,14 +138,7 @@ public class Side extends Pane{
         addTraveler.setOnMouseExited(e -> {addTraveler.setStyle("-fx-background-color: #1175f7;");});
         addTraveler.setOnMouseClicked(e ->{
             AddTraveler addTraveler = new AddTraveler();
-            EmergencyContact emergency = new EmergencyContact();
             getChildren().add(addTraveler);
-            
-            if(addTraveler.button.isPressed()){
-                System.out.print("Pressed");
-                getChildren().remove(addTraveler);
-                getChildren().add(emergency);
-            }
         });
         
         /* Add Traveler Text */
@@ -232,6 +225,10 @@ public class Side extends Pane{
         emergency.setPrefWidth(303.0);
         emergency.setOnMouseEntered(e -> {emergency.setStyle("-fx-background-color: #2185ff;");});
         emergency.setOnMouseExited(e -> {emergency.setStyle("-fx-background-color: #1175f7;");});
+        emergency.setOnMouseClicked(e ->{
+            EmergencyContact emergency = new EmergencyContact();
+            getChildren().add(emergency);
+        });
         
         /* Emergency Text */
         emergencyText.setFill(javafx.scene.paint.Color.WHITE);
@@ -242,7 +239,7 @@ public class Side extends Pane{
         emergencyText.setText("Add Emergency Contact");
         emergencyText.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
         
-        /* emergencyrmation Icon */
+        /* Emergency Icon */
         emergencyImg.setLayoutX(45.0);
         emergencyImg.setLayoutY(9.0);
         emergencyImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/bulleted-list.png").toExternalForm()));

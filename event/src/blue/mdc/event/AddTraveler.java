@@ -283,7 +283,7 @@ public class AddTraveler extends Pane {
         button.setStyle("-fx-background-color: #1175f7;"
                           +"-fx-text-fill: WHITE;");
         button.setOnMouseClicked(e->{ 
-            
+            requestFocus();
         });
         
         /* Menu ComboBox (List of MDC Campuses) */
