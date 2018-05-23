@@ -1,4 +1,4 @@
-![Event Logo](.gitbook/assets/event%20%281%29.png)
+![Event Logo](https://eventgenerator.ga/assets/images/event.png)
 
 # Changelog
 
