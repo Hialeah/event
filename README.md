@@ -29,9 +29,9 @@ See [Contributing Guide](https://github.com/MDCblue/event/blob/master/.github/co
 
 ## Contributors
 
-| ![CA](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4) | ![LF](https://avatars3.githubusercontent.com/u/34631500?s=50&v=4) | ![E](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4) |
+| [![CA](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah)                                | [![LF](https://avatars3.githubusercontent.com/u/34631500?s=50&v=4)](https://github.com/LuisRobaina)                          | [![E](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4)](https://github.com/Jikiyama) |
 | --- | --- | --- |
-| [Abraham](https://github.com/19cah) | [Luis F.](https://github.com/LuisRobaina) | [Emanuel](https://github.com/Jikiyama) |
+| [Abraham](https://github.com/19cah)                                                                                          | [Luis F.](https://github.com/LuisRobaina)                                                                                    | [Emanuel](https://github.com/Jikiyama) |
 
 ## License
 
