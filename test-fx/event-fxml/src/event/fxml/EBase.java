@@ -1,9 +1,8 @@
 package event.fxml;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -57,9 +56,7 @@ public abstract class EBase extends Pane {
     protected final TextField textField5;
     protected final TextField textField6;
     protected final Text text15;
-    protected final MenuButton menuButton;
-    protected final MenuItem menuItem;
-    protected final MenuItem menuItem0;
+    protected final JFXComboBox jFXComboBox;
 
     public EBase() {
 
@@ -107,9 +104,7 @@ public abstract class EBase extends Pane {
         textField5 = new TextField();
         textField6 = new TextField();
         text15 = new Text();
-        menuButton = new MenuButton();
-        menuItem = new MenuItem();
-        menuItem0 = new MenuItem();
+        jFXComboBox = new JFXComboBox();
 
         setMaxHeight(USE_PREF_SIZE);
         setMaxWidth(USE_PREF_SIZE);
@@ -250,8 +245,7 @@ public abstract class EBase extends Pane {
         imageView6.setLayoutX(45.0);
         imageView6.setLayoutY(9.0);
         imageView6.setImage(new Image(getClass().getResource("../../../../../../../Documents/com.visualpharm.Icons8/android_l/Editing/25/ffffff/icons8-bulleted_list.png").toExternalForm()));
-        
-        //////////////
+
         pane7.setLayoutX(304.0);
         pane7.setPrefHeight(700.0);
         pane7.setPrefWidth(599.0);
@@ -373,16 +367,8 @@ public abstract class EBase extends Pane {
         text15.setWrappingWidth(151.5982458628714);
         text15.setFont(new Font("System Bold", 22.0));
 
-        menuButton.setLayoutX(218.0);
-        menuButton.setLayoutY(546.0);
-        menuButton.setMnemonicParsing(false);
-        menuButton.setText("MenuButton");
-
-        menuItem.setMnemonicParsing(false);
-        menuItem.setText("Action 1");
-
-        menuItem0.setMnemonicParsing(false);
-        menuItem0.setText("Action 2");
+        jFXComboBox.setLayoutX(191.0);
+        jFXComboBox.setLayoutY(539.0);
 
         pane.getChildren().add(text);
         pane.getChildren().add(imageView);
@@ -427,9 +413,7 @@ public abstract class EBase extends Pane {
         pane7.getChildren().add(textField5);
         pane7.getChildren().add(textField6);
         pane7.getChildren().add(text15);
-        menuButton.getItems().add(menuItem);
-        menuButton.getItems().add(menuItem0);
-        pane7.getChildren().add(menuButton);
+        pane7.getChildren().add(jFXComboBox);
         getChildren().add(pane7);
 
     }

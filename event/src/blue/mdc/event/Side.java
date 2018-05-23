@@ -127,6 +127,10 @@ public class Side extends Pane{
         addTraveler.setPrefWidth(303.0);
         addTraveler.setOnMouseEntered(e -> {addTraveler.setStyle("-fx-background-color: #2185ff;");});
         addTraveler.setOnMouseExited(e -> {addTraveler.setStyle("-fx-background-color: #1175f7;");});
+        addTraveler.setOnMouseClicked(e ->{
+            AddTraveler addTraveler = new AddTraveler();
+            getChildren().add(addTraveler);
+        });
         
         /* Add Traveler Text */
         addTravelerText.setFill(javafx.scene.paint.Color.WHITE);

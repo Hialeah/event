@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="event.jar" size="127718" download="eager" />
+    <jar href="event.jar" size="130213" download="eager" />
     <jar href="lib/jfoenix-8.0.4-retrolambda.jar" size="2532267" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="event" >
