@@ -31,28 +31,97 @@ import javafx.scene.text.Text;
  */
 public class AddEvent extends Pane {
 
-   
-    Text text4;
-    Text text5;
-    Text text6;
-    Text text7;
-    Text text8;
-    Text text9;
-    Text text10;
-    Text text11;
-    Text text12;
-    JFXDatePicker jFXDatePicker;
-    JFXDatePicker jFXDatePicker0;
-    Text text13;
-    JFXButton jFXButton;
-    TextField textField;
-    TextField textField0;
-    TextField textField1;
-    TextField textField2;
-    TextField textField3;
-    TextField textField4;
-    TextField textField5;
-    TextField textField6;
+    /**
+     * Name of the Event that the students
+     * will attend.
+     */
+    Text eventName;
+    
+    /** 
+     * Name of the organization that will
+     * participate in the event.
+     */
+    Text orgName;
+    
+    /**
+     * Advisor name of the organization, or
+     * advisor in charge of the students in
+     * the event.
+     */
+    Text advisor;
+    
+    /**
+     * Type of transportation used to travel 
+     * to the event.
+     */
+    Text transportation;
+    
+    /**
+     * Number of students in the organization
+     * in total.
+     */
+    Text no_students_in_org;
+    
+    /**
+     * Number of students in the organization
+     * that will be going to the event.
+     */
+    Text no_students_attending;
+    
+    /**
+     * Number of chaperones that will be going
+     * to the event.
+     * 
+     * <b>NOTE:</b> they aren't students or 
+     * they aren't organization members
+     */
+    Text no_chaperones;
+    
+    /**
+     * Text date label.
+     */
+    Text date;
+    
+    /**
+     * Text to label.
+     */
+    Text toText;
+    
+    /**
+     * Date picker.
+     * This is the start date of the event.
+     * 
+     * @see JFXDatePicker
+     */
+    JFXDatePicker start_date;
+    
+    /**
+     * Date picker.
+     * This is the end date of the event.
+     * 
+     * @see JFXDatePicker
+     */
+    JFXDatePicker end_date;
+    
+    /**
+     * Location of the event
+     */
+    Text location;
+    
+    /**
+     * Save fields button.
+     */
+    JFXButton button;
+    
+    /* TextFields */
+    TextField eventField;
+    TextField orgField;
+    TextField advisorField;
+    TextField transportationField;
+    TextField students_in_org_Field;
+    TextField students_attending_Field;
+    TextField num_of_chaperones_Field;
+    TextField locationField;
 
     public AddEvent() {
         
@@ -61,175 +130,175 @@ public class AddEvent extends Pane {
         setPrefHeight(700.0);
         setPrefWidth(599.0);
         
-        text4 = new Text();
-        text5 = new Text();
-        text6 = new Text();
-        text7 = new Text();
-        text8 = new Text();
-        text9 = new Text();
-        text10 = new Text();
-        text11 = new Text();
-        text12 = new Text();
-        jFXDatePicker = new JFXDatePicker();
-        jFXDatePicker0 = new JFXDatePicker();
-        text13 = new Text();
-        jFXButton = new JFXButton("Save");
-        textField = new TextField();
-        textField0 = new TextField();
-        textField1 = new TextField();
-        textField2 = new TextField();
-        textField3 = new TextField();
-        textField4 = new TextField();
-        textField5 = new TextField();
-        textField6 = new TextField();
+        eventName = new Text();
+        orgName = new Text();
+        advisor = new Text();
+        transportation = new Text();
+        no_students_in_org = new Text();
+        no_students_attending = new Text();
+        no_chaperones = new Text();
+        date = new Text();
+        toText = new Text();
+        start_date = new JFXDatePicker();
+        end_date = new JFXDatePicker();
+        location = new Text();
+        button = new JFXButton("Save");
+        eventField = new TextField();
+        orgField = new TextField();
+        advisorField = new TextField();
+        transportationField = new TextField();
+        students_in_org_Field = new TextField();
+        students_attending_Field = new TextField();
+        num_of_chaperones_Field = new TextField();
+        locationField = new TextField();
 
 
-        text4.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text4.setLayoutX(60.0);
-        text4.setLayoutY(110.0);
-        text4.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text4.setStrokeWidth(0.0);
-        text4.setText("Event Name");
-        text4.setFont(new Font(17.0));
+        eventName.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        eventName.setLayoutX(60.0);
+        eventName.setLayoutY(110.0);
+        eventName.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        eventName.setStrokeWidth(0.0);
+        eventName.setText("Event Name");
+        eventName.setFont(new Font(17.0));
 
-        text5.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text5.setLayoutX(60.0);
-        text5.setLayoutY(158.0);
-        text5.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text5.setStrokeWidth(0.0);
-        text5.setText("Organization");
-        text5.setFont(new Font(17.0));
+        orgName.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        orgName.setLayoutX(60.0);
+        orgName.setLayoutY(158.0);
+        orgName.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        orgName.setStrokeWidth(0.0);
+        orgName.setText("Organization");
+        orgName.setFont(new Font(17.0));
 
-        text6.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text6.setLayoutX(60.0);
-        text6.setLayoutY(211.0);
-        text6.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text6.setStrokeWidth(0.0);
-        text6.setText("Advisor");
-        text6.setFont(new Font(17.0));
+        advisor.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        advisor.setLayoutX(60.0);
+        advisor.setLayoutY(211.0);
+        advisor.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        advisor.setStrokeWidth(0.0);
+        advisor.setText("Advisor");
+        advisor.setFont(new Font(17.0));
 
-        text7.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text7.setLayoutX(60.0);
-        text7.setLayoutY(262.0);
-        text7.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text7.setStrokeWidth(0.0);
-        text7.setText("Transportation");
-        text7.setFont(new Font(17.0));
+        transportation.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        transportation.setLayoutX(60.0);
+        transportation.setLayoutY(262.0);
+        transportation.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        transportation.setStrokeWidth(0.0);
+        transportation.setText("Transportation");
+        transportation.setFont(new Font(17.0));
 
-        text8.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text8.setLayoutX(60.0);
-        text8.setLayoutY(319.0);
-        text8.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text8.setStrokeWidth(0.0);
-        text8.setText("Number of Students in Organization");
-        text8.setFont(new Font(17.0));
+        no_students_in_org.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        no_students_in_org.setLayoutX(60.0);
+        no_students_in_org.setLayoutY(319.0);
+        no_students_in_org.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        no_students_in_org.setStrokeWidth(0.0);
+        no_students_in_org.setText("Number of Students in Organization");
+        no_students_in_org.setFont(new Font(17.0));
 
-        text9.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text9.setLayoutX(60.0);
-        text9.setLayoutY(382.0);
-        text9.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text9.setStrokeWidth(0.0);
-        text9.setText("Number of Students Attending Event");
-        text9.setFont(new Font(17.0));
+        no_students_attending.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        no_students_attending.setLayoutX(60.0);
+        no_students_attending.setLayoutY(382.0);
+        no_students_attending.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        no_students_attending.setStrokeWidth(0.0);
+        no_students_attending.setText("Number of Students Attending Event");
+        no_students_attending.setFont(new Font(17.0));
 
-        text10.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text10.setLayoutX(60.0);
-        text10.setLayoutY(443.0);
-        text10.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text10.setStrokeWidth(0.0);
-        text10.setText("Number of Chaperones Attending Event");
-        text10.setFont(new Font(17.0));
+        no_chaperones.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        no_chaperones.setLayoutX(60.0);
+        no_chaperones.setLayoutY(443.0);
+        no_chaperones.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        no_chaperones.setStrokeWidth(0.0);
+        no_chaperones.setText("Number of Chaperones Attending Event");
+        no_chaperones.setFont(new Font(17.0));
 
-        text11.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text11.setLayoutX(60.0);
-        text11.setLayoutY(512.0);
-        text11.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text11.setStrokeWidth(0.0);
-        text11.setText("Date");
-        text11.setFont(new Font(17.0));
+        date.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        date.setLayoutX(60.0);
+        date.setLayoutY(512.0);
+        date.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        date.setStrokeWidth(0.0);
+        date.setText("Date");
+        date.setFont(new Font(17.0));
 
-        text12.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text12.setLayoutX(320.0);
-        text12.setLayoutY(509.0);
-        text12.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text12.setStrokeWidth(0.0);
-        text12.setText("to");
-        text12.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
-        text12.setFont(new Font(17.0));
+        toText.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        toText.setLayoutX(320.0);
+        toText.setLayoutY(509.0);
+        toText.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        toText.setStrokeWidth(0.0);
+        toText.setText("to");
+        toText.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        toText.setFont(new Font(17.0));
 
-        jFXDatePicker.setLayoutX(122.0);
-        jFXDatePicker.setLayoutY(489.0);
-        jFXDatePicker.setStyle("-jfx-default-color: #1175f7");
+        start_date.setLayoutX(122.0);
+        start_date.setLayoutY(489.0);
+        start_date.setStyle("-jfx-default-color: #1175f7");
         
-        jFXDatePicker0.setLayoutX(377.0);
-        jFXDatePicker0.setLayoutY(489.0);
-        jFXDatePicker0.setStyle("-jfx-default-color: #1175f7");
+        end_date.setLayoutX(377.0);
+        end_date.setLayoutY(489.0);
+        end_date.setStyle("-jfx-default-color: #1175f7");
         
-        text13.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text13.setLayoutX(63.0);
-        text13.setLayoutY(574.0);
-        text13.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text13.setStrokeWidth(0.0);
-        text13.setText("Location");
-        text13.setFont(new Font(17.0));
+        location.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        location.setLayoutX(63.0);
+        location.setLayoutY(574.0);
+        location.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        location.setStrokeWidth(0.0);
+        location.setText("Location");
+        location.setFont(new Font(17.0));
 
-        jFXButton.setLayoutX(479.0);
-        jFXButton.setLayoutY(614.0);
-        jFXButton.setStyle("-fx-background-color: #1175f7;"
+        button.setLayoutX(479.0);
+        button.setLayoutY(614.0);
+        button.setStyle("-fx-background-color: #1175f7;"
                           +"-fx-text-fill: WHITE;");
 
-        textField.setLayoutX(207.0);
-        textField.setLayoutY(83.0);
+        eventField.setLayoutX(207.0);
+        eventField.setLayoutY(83.0);
 
-        textField0.setLayoutX(207.0);
-        textField0.setLayoutY(126.0);
+        orgField.setLayoutX(207.0);
+        orgField.setLayoutY(126.0);
 
-        textField1.setLayoutX(207.0);
-        textField1.setLayoutY(182.0);
+        advisorField.setLayoutX(207.0);
+        advisorField.setLayoutY(182.0);
 
-        textField2.setLayoutX(207.0);
-        textField2.setLayoutY(233.0);
+        transportationField.setLayoutX(207.0);
+        transportationField.setLayoutY(233.0);
 
-        textField3.setLayoutX(405.0);
-        textField3.setLayoutY(290.0);
-        textField3.setPrefHeight(26.0);
-        textField3.setPrefWidth(61.0);
+        students_in_org_Field.setLayoutX(405.0);
+        students_in_org_Field.setLayoutY(290.0);
+        students_in_org_Field.setPrefHeight(26.0);
+        students_in_org_Field.setPrefWidth(61.0);
 
-        textField4.setLayoutX(405.0);
-        textField4.setLayoutY(353.0);
-        textField4.setPrefHeight(26.0);
-        textField4.setPrefWidth(61.0);
+        students_attending_Field.setLayoutX(405.0);
+        students_attending_Field.setLayoutY(353.0);
+        students_attending_Field.setPrefHeight(26.0);
+        students_attending_Field.setPrefWidth(61.0);
 
-        textField5.setLayoutX(405.0);
-        textField5.setLayoutY(414.0);
-        textField5.setPrefHeight(26.0);
-        textField5.setPrefWidth(61.0);
+        num_of_chaperones_Field.setLayoutX(405.0);
+        num_of_chaperones_Field.setLayoutY(414.0);
+        num_of_chaperones_Field.setPrefHeight(26.0);
+        num_of_chaperones_Field.setPrefWidth(61.0);
 
-        textField6.setLayoutX(60.0);
-        textField6.setLayoutY(588.0);
-        textField6.setPrefHeight(26.0);
-        textField6.setPrefWidth(213.0);
+        locationField.setLayoutX(60.0);
+        locationField.setLayoutY(588.0);
+        locationField.setPrefHeight(26.0);
+        locationField.setPrefWidth(213.0);
         
-        getChildren().add(text4);
-        getChildren().add(text5);
-        getChildren().add(text6);
-        getChildren().add(text7);
-        getChildren().add(text8);
-        getChildren().add(text9);
-        getChildren().add(text10);
-        getChildren().add(text11);
-        getChildren().add(text12);
-        getChildren().add(jFXDatePicker);
-        getChildren().add(jFXDatePicker0);
-        getChildren().add(text13);
-        getChildren().add(jFXButton);
-        getChildren().add(textField);
-        getChildren().add(textField0);
-        getChildren().add(textField1);
-        getChildren().add(textField2);
-        getChildren().add(textField3);
-        getChildren().add(textField4);
-        getChildren().add(textField5);
-        getChildren().add(textField6);
+        getChildren().add(eventName);
+        getChildren().add(orgName);
+        getChildren().add(advisor);
+        getChildren().add(transportation);
+        getChildren().add(no_students_in_org);
+        getChildren().add(no_students_attending);
+        getChildren().add(no_chaperones);
+        getChildren().add(date);
+        getChildren().add(toText);
+        getChildren().add(start_date);
+        getChildren().add(end_date);
+        getChildren().add(location);
+        getChildren().add(button);
+        getChildren().add(eventField);
+        getChildren().add(orgField);
+        getChildren().add(advisorField);
+        getChildren().add(transportationField);
+        getChildren().add(students_in_org_Field);
+        getChildren().add(students_attending_Field);
+        getChildren().add(num_of_chaperones_Field);
+        getChildren().add(locationField);
     }
 }

@@ -31,6 +31,8 @@ import javafx.scene.text.Text;
  * 
  * @author Carlos Abraham
  * @see AddEvent
+ * @see EmergencyContact
+ * @see Expenses
  */
 
 public class AddTraveler extends Pane {

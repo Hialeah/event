@@ -88,7 +88,7 @@ public class Event extends Application{
                     root.getChildren().addAll(mainView, side);
                 });
             }
-        }, Constants.INTRO_APPEARANCE + 5000); // 3 seconds later
+        }, Constants.INTRO_APPEARANCE + 2000); // 3 seconds later
         
         
         //Set icon logo

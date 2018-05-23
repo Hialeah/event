@@ -39,21 +39,33 @@ public abstract class EBase extends Pane {
     protected final Text text6;
     protected final Text text7;
     protected final Text text8;
-    protected final Text text9;
-    protected final Text text10;
-    protected final Text text11;
-    protected final Text text12;
-    protected final Text text13;
     protected final JFXButton jFXButton;
     protected final TextField textField;
     protected final TextField textField0;
+    protected final Text text9;
     protected final TextField textField1;
+    protected final Text text10;
     protected final TextField textField2;
     protected final TextField textField3;
+    protected final Text text11;
     protected final TextField textField4;
     protected final TextField textField5;
+    protected final Text text12;
     protected final TextField textField6;
+    protected final TextField textField7;
+    protected final Text text13;
+    protected final TextField textField8;
+    protected final TextField textField9;
     protected final Text text14;
+    protected final TextField textField10;
+    protected final TextField textField11;
+    protected final TextField textField12;
+    protected final Text text15;
+    protected final TextField textField13;
+    protected final Text text16;
+    protected final Text text17;
+    protected final Text text18;
+    protected final Text text19;
 
     public EBase() {
 
@@ -85,21 +97,33 @@ public abstract class EBase extends Pane {
         text6 = new Text();
         text7 = new Text();
         text8 = new Text();
-        text9 = new Text();
-        text10 = new Text();
-        text11 = new Text();
-        text12 = new Text();
-        text13 = new Text();
         jFXButton = new JFXButton();
         textField = new TextField();
         textField0 = new TextField();
+        text9 = new Text();
         textField1 = new TextField();
+        text10 = new Text();
         textField2 = new TextField();
         textField3 = new TextField();
+        text11 = new Text();
         textField4 = new TextField();
         textField5 = new TextField();
+        text12 = new Text();
         textField6 = new TextField();
+        textField7 = new TextField();
+        text13 = new Text();
+        textField8 = new TextField();
+        textField9 = new TextField();
         text14 = new Text();
+        textField10 = new TextField();
+        textField11 = new TextField();
+        textField12 = new TextField();
+        text15 = new Text();
+        textField13 = new TextField();
+        text16 = new Text();
+        text17 = new Text();
+        text18 = new Text();
+        text19 = new Text();
 
         setMaxHeight(USE_PREF_SIZE);
         setMaxWidth(USE_PREF_SIZE);
@@ -247,112 +271,202 @@ public abstract class EBase extends Pane {
         pane7.setStyle("-fx-background-color: #ffffff;");
 
         text6.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text6.setLayoutX(56.0);
-        text6.setLayoutY(159.0);
+        text6.setLayoutX(55.0);
+        text6.setLayoutY(535.0);
         text6.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text6.setStrokeWidth(0.0);
-        text6.setText("Name");
-        text6.setFont(new Font(17.0));
+        text6.setText("Total Expenses");
+        text6.setFont(new Font(14.0));
 
         text7.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         text7.setLayoutX(56.0);
-        text7.setLayoutY(211.0);
+        text7.setLayoutY(171.0);
         text7.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text7.setStrokeWidth(0.0);
-        text7.setText("Last Name");
+        text7.setText("Student Registration");
+        text7.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text7.setWrappingWidth(107.69999983906746);
         text7.setFont(new Font(17.0));
 
         text8.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text8.setLayoutX(56.0);
-        text8.setLayoutY(275.0);
+        text8.setLayoutX(200.0);
+        text8.setLayoutY(535.0);
         text8.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text8.setStrokeWidth(0.0);
-        text8.setText("Relationship ");
-        text8.setFont(new Font(17.0));
-
-        text9.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text9.setLayoutX(56.0);
-        text9.setLayoutY(339.0);
-        text9.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text9.setStrokeWidth(0.0);
-        text9.setText("Phone");
-        text9.setFont(new Font(17.0));
-
-        text10.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text10.setLayoutX(56.0);
-        text10.setLayoutY(392.0);
-        text10.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text10.setStrokeWidth(0.0);
-        text10.setText("Email");
-        text10.setFont(new Font(17.0));
-
-        text11.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text11.setLayoutX(56.0);
-        text11.setLayoutY(448.0);
-        text11.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text11.setStrokeWidth(0.0);
-        text11.setText("Address");
-        text11.setFont(new Font(17.0));
-
-        text12.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text12.setLayoutX(56.0);
-        text12.setLayoutY(505.0);
-        text12.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text12.setStrokeWidth(0.0);
-        text12.setText("City");
-        text12.setFont(new Font(17.0));
-
-        text13.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        text13.setLayoutX(284.0);
-        text13.setLayoutY(505.0);
-        text13.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text13.setStrokeWidth(0.0);
-        text13.setText("Zip Code");
-        text13.setFont(new Font(17.0));
+        text8.setText("Student Life Contribution");
+        text8.setFont(new Font(14.0));
 
         jFXButton.setLayoutX(479.0);
         jFXButton.setLayoutY(614.0);
 
-        textField.setLayoutX(160.0);
-        textField.setLayoutY(131.0);
+        textField.setLayoutX(250.0);
+        textField.setLayoutY(166.0);
+        textField.setPrefHeight(26.0);
+        textField.setPrefWidth(90.0);
 
-        textField0.setLayoutX(160.0);
-        textField0.setLayoutY(179.0);
+        textField0.setLayoutX(57.0);
+        textField0.setLayoutY(548.0);
+        textField0.setPrefHeight(26.0);
+        textField0.setPrefWidth(100.0);
 
-        textField1.setLayoutX(160.0);
-        textField1.setLayoutY(246.0);
+        text9.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
+        text9.setLayoutX(54.0);
+        text9.setLayoutY(85.0);
+        text9.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text9.setStrokeWidth(0.0);
+        text9.setText("Expenses");
+        text9.setWrappingWidth(107.69999983906746);
+        text9.setFont(new Font("System Bold", 22.0));
 
-        textField2.setLayoutX(160.0);
-        textField2.setLayoutY(310.0);
+        textField1.setLayoutX(388.0);
+        textField1.setLayoutY(166.0);
+        textField1.setPrefHeight(26.0);
+        textField1.setPrefWidth(90.0);
 
-        textField3.setLayoutX(160.0);
-        textField3.setLayoutY(363.0);
+        text10.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        text10.setLayoutX(54.0);
+        text10.setLayoutY(225.0);
+        text10.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text10.setStrokeWidth(0.0);
+        text10.setText("Advisor Registration");
+        text10.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text10.setWrappingWidth(108.20313718914986);
+        text10.setFont(new Font(17.0));
+
+        textField2.setLayoutX(250.0);
+        textField2.setLayoutY(226.0);
+        textField2.setPrefHeight(26.0);
+        textField2.setPrefWidth(90.0);
+
+        textField3.setLayoutX(388.0);
+        textField3.setLayoutY(226.0);
         textField3.setPrefHeight(26.0);
-        textField3.setPrefWidth(264.0);
+        textField3.setPrefWidth(90.0);
 
-        textField4.setLayoutX(160.0);
-        textField4.setLayoutY(419.0);
+        text11.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        text11.setLayoutX(74.0);
+        text11.setLayoutY(308.0);
+        text11.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text11.setStrokeWidth(0.0);
+        text11.setText("Meals");
+        text11.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text11.setFont(new Font(17.0));
+
+        textField4.setLayoutX(250.0);
+        textField4.setLayoutY(276.0);
         textField4.setPrefHeight(26.0);
-        textField4.setPrefWidth(264.0);
+        textField4.setPrefWidth(90.0);
 
-        textField5.setLayoutX(111.0);
-        textField5.setLayoutY(478.0);
+        textField5.setLayoutX(388.0);
+        textField5.setLayoutY(276.0);
         textField5.setPrefHeight(26.0);
-        textField5.setPrefWidth(145.0);
+        textField5.setPrefWidth(90.0);
 
-        textField6.setLayoutX(379.0);
-        textField6.setLayoutY(478.0);
+        text12.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        text12.setLayoutX(73.0);
+        text12.setLayoutY(358.0);
+        text12.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text12.setStrokeWidth(0.0);
+        text12.setText("Lodging");
+        text12.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text12.setFont(new Font(17.0));
+
+        textField6.setLayoutX(250.0);
+        textField6.setLayoutY(326.0);
         textField6.setPrefHeight(26.0);
-        textField6.setPrefWidth(109.0);
+        textField6.setPrefWidth(90.0);
 
-        text14.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
-        text14.setLayoutX(58.0);
-        text14.setLayoutY(86.0);
+        textField7.setLayoutX(388.0);
+        textField7.setLayoutY(326.0);
+        textField7.setPrefHeight(26.0);
+        textField7.setPrefWidth(90.0);
+
+        text13.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        text13.setLayoutX(77.0);
+        text13.setLayoutY(408.0);
+        text13.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text13.setStrokeWidth(0.0);
+        text13.setText("Taxis");
+        text13.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text13.setFont(new Font(17.0));
+
+        textField8.setLayoutX(250.0);
+        textField8.setLayoutY(426.0);
+        textField8.setPrefHeight(26.0);
+        textField8.setPrefWidth(90.0);
+
+        textField9.setLayoutX(388.0);
+        textField9.setLayoutY(426.0);
+        textField9.setPrefHeight(26.0);
+        textField9.setPrefWidth(90.0);
+
+        text14.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        text14.setLayoutX(83.0);
+        text14.setLayoutY(458.0);
         text14.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         text14.setStrokeWidth(0.0);
-        text14.setText("Emergency Contact");
-        text14.setWrappingWidth(204.99999779462814);
-        text14.setFont(new Font("System Bold", 22.0));
+        text14.setText("Gas");
+        text14.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text14.setFont(new Font(17.0));
+
+        textField10.setLayoutX(250.0);
+        textField10.setLayoutY(376.0);
+        textField10.setPrefHeight(26.0);
+        textField10.setPrefWidth(90.0);
+
+        textField11.setLayoutX(388.0);
+        textField11.setLayoutY(376.0);
+        textField11.setPrefHeight(26.0);
+        textField11.setPrefWidth(90.0);
+
+        textField12.setLayoutX(233.0);
+        textField12.setLayoutY(548.0);
+        textField12.setPrefHeight(26.0);
+        textField12.setPrefWidth(100.0);
+
+        text15.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
+        text15.setLayoutX(412.0);
+        text15.setLayoutY(535.0);
+        text15.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text15.setStrokeWidth(0.0);
+        text15.setText("Club Contribution");
+        text15.setFont(new Font(14.0));
+
+        textField13.setLayoutX(424.0);
+        textField13.setLayoutY(547.0);
+        textField13.setPrefHeight(26.0);
+        textField13.setPrefWidth(100.0);
+
+        text16.setFill(javafx.scene.paint.Color.valueOf("#c71e1eab"));
+        text16.setLayoutX(172.0);
+        text16.setLayoutY(566.0);
+        text16.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text16.setStrokeWidth(0.0);
+        text16.setText("minus");
+
+        text17.setFill(javafx.scene.paint.Color.valueOf("#c71e1eab"));
+        text17.setLayoutX(366.0);
+        text17.setLayoutY(565.0);
+        text17.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text17.setStrokeWidth(0.0);
+        text17.setText("equals");
+
+        text18.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
+        text18.setLayoutX(259.0);
+        text18.setLayoutY(140.0);
+        text18.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text18.setStrokeWidth(0.0);
+        text18.setText("Quantity");
+        text18.setFont(new Font("System Bold", 18.0));
+
+        text19.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
+        text19.setLayoutX(418.0);
+        text19.setLayoutY(140.0);
+        text19.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        text19.setStrokeWidth(0.0);
+        text19.setText("Fee");
+        text19.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+        text19.setFont(new Font("System Bold", 18.0));
 
         pane.getChildren().add(text);
         pane.getChildren().add(imageView);
@@ -381,21 +495,33 @@ public abstract class EBase extends Pane {
         pane7.getChildren().add(text6);
         pane7.getChildren().add(text7);
         pane7.getChildren().add(text8);
-        pane7.getChildren().add(text9);
-        pane7.getChildren().add(text10);
-        pane7.getChildren().add(text11);
-        pane7.getChildren().add(text12);
-        pane7.getChildren().add(text13);
         pane7.getChildren().add(jFXButton);
         pane7.getChildren().add(textField);
         pane7.getChildren().add(textField0);
+        pane7.getChildren().add(text9);
         pane7.getChildren().add(textField1);
+        pane7.getChildren().add(text10);
         pane7.getChildren().add(textField2);
         pane7.getChildren().add(textField3);
+        pane7.getChildren().add(text11);
         pane7.getChildren().add(textField4);
         pane7.getChildren().add(textField5);
+        pane7.getChildren().add(text12);
         pane7.getChildren().add(textField6);
+        pane7.getChildren().add(textField7);
+        pane7.getChildren().add(text13);
+        pane7.getChildren().add(textField8);
+        pane7.getChildren().add(textField9);
         pane7.getChildren().add(text14);
+        pane7.getChildren().add(textField10);
+        pane7.getChildren().add(textField11);
+        pane7.getChildren().add(textField12);
+        pane7.getChildren().add(text15);
+        pane7.getChildren().add(textField13);
+        pane7.getChildren().add(text16);
+        pane7.getChildren().add(text17);
+        pane7.getChildren().add(text18);
+        pane7.getChildren().add(text19);
         getChildren().add(pane7);
 
     }
