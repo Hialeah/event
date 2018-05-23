@@ -4,3 +4,6 @@
 /event-o/build/
 /event-swing/nbproject/private/
 /event-swing/build/
+/event-swing/dist/
+/test-fx/event-fxml/dist/
+/test-fx/event-fxml/build/

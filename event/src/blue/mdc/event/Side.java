@@ -41,12 +41,18 @@ public class Side extends Pane{
         Pane search = new Pane();
         ImageView searchImg = new ImageView();
         JFXTextField searchField = new JFXTextField();
-        Pane pane3 = new Pane();
-        Text text2 = new Text();
-        ImageView imageView3 = new ImageView();
-        Pane pane4 = new Pane();
-        Text text3 = new Text();
-        ImageView imageView4 = new ImageView();
+        Pane addTraveler = new Pane();
+        Text addTravelerText = new Text();
+        ImageView addTravelerImg = new ImageView();
+        Pane editTraveler = new Pane();
+        Text editTravelerText = new Text();
+        ImageView editTravelerImg = new ImageView();
+        Pane viewEvent = new Pane();
+        Text viewEventText = new Text();
+        ImageView viewEventImg = new ImageView();
+        Pane info = new Pane();
+        Text infoText = new Text();
+        ImageView infoImg = new ImageView();
         
         public Side(){
             
@@ -95,7 +101,7 @@ public class Side extends Pane{
         newEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/add.png").toExternalForm()));
 
         /* Edit Event Button */
-        editEvent.setLayoutY(198.0);
+        editEvent.setLayoutY(197.0);
         editEvent.setPrefHeight(46.0);
         editEvent.setPrefWidth(303.0);
         editEvent.setOnMouseEntered(e -> {editEvent.setStyle("-fx-background-color: #2185ff;");});
@@ -115,43 +121,91 @@ public class Side extends Pane{
         editEventImg.setLayoutY(9.0);
         editEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/edit.png").toExternalForm()));
         
+        /* Add Traveler Button */
+        addTraveler.setLayoutY(257.0);
+        addTraveler.setPrefHeight(46.0);
+        addTraveler.setPrefWidth(303.0);
+        addTraveler.setOnMouseEntered(e -> {addTraveler.setStyle("-fx-background-color: #2185ff;");});
+        addTraveler.setOnMouseExited(e -> {addTraveler.setStyle("-fx-background-color: #1175f7;");});
         
-        pane3.setLayoutY(259.0);
-        pane3.setPrefHeight(46.0);
-        pane3.setPrefWidth(303.0);
-        pane3.setOnMouseEntered(e -> {pane3.setStyle("-fx-background-color: #2185ff;");});
-        pane3.setOnMouseExited(e -> {pane3.setStyle("-fx-background-color: #1175f7;");});
-
-        text2.setFill(javafx.scene.paint.Color.WHITE);
-        text2.setLayoutX(83.0);
-        text2.setLayoutY(30.0);
-        text2.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text2.setStrokeWidth(0.0);
-        text2.setText("Instructions");
-        text2.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
-
-        imageView3.setLayoutX(45.0);
-        imageView3.setLayoutY(9.0);
-        imageView3.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/bulleted_list.png").toExternalForm()));
+        /* Add Traveler Text */
+        addTravelerText.setFill(javafx.scene.paint.Color.WHITE);
+        addTravelerText.setLayoutX(83.0);
+        addTravelerText.setLayoutY(30.0);
+        addTravelerText.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        addTravelerText.setStrokeWidth(0.0);
+        addTravelerText.setText("Add Traveler");
+        addTravelerText.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
         
-        pane4.setLayoutY(312.0);
-        pane4.setPrefHeight(46.0);
-        pane4.setPrefWidth(303.0);
-        pane4.setOnMouseEntered(e -> {pane4.setStyle("-fx-background-color: #2185ff;");});
-        pane4.setOnMouseExited(e -> {pane4.setStyle("-fx-background-color: #1175f7;");});
+        /* Add Traveler Icon */
+        addTravelerImg.setLayoutX(45.0);
+        addTravelerImg.setLayoutY(9.0);
+        addTravelerImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/addUser.png").toExternalForm()));
+        
+        /* Edit Traveler Button */
+        editTraveler.setLayoutY(317.0);
+        editTraveler.setPrefHeight(46.0);
+        editTraveler.setPrefWidth(303.0);
+        editTraveler.setOnMouseEntered(e -> {editTraveler.setStyle("-fx-background-color: #2185ff;");});
+        editTraveler.setOnMouseExited(e -> {editTraveler.setStyle("-fx-background-color: #1175f7;");});
+        
+        /* Edit Traveler Text */
+        editTravelerText.setFill(javafx.scene.paint.Color.WHITE);
+        editTravelerText.setLayoutX(83.0);
+        editTravelerText.setLayoutY(30.0);
+        editTravelerText.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        editTravelerText.setStrokeWidth(0.0);
+        editTravelerText.setText("Edit Traveler");
+        editTravelerText.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
 
-        text3.setFill(javafx.scene.paint.Color.WHITE);
-        text3.setLayoutX(83.0);
-        text3.setLayoutY(30.0);
-        text3.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
-        text3.setStrokeWidth(0.0);
-        text3.setText("View Event ");
-        text3.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
-
-        imageView4.setLayoutX(45.0);
-        imageView4.setLayoutY(9.0);
-        imageView4.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/star.png").toExternalForm()));
-
+        /* Edit Traveler Icon */
+        editTravelerImg.setLayoutX(45.0);
+        editTravelerImg.setLayoutY(9.0);
+        editTravelerImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/editUser.png").toExternalForm()));
+        
+        /* View Event Button */
+        viewEvent.setLayoutY(377.0);
+        viewEvent.setPrefHeight(46.0);
+        viewEvent.setPrefWidth(303.0);
+        viewEvent.setOnMouseEntered(e -> {viewEvent.setStyle("-fx-background-color: #2185ff;");});
+        viewEvent.setOnMouseExited(e -> {viewEvent.setStyle("-fx-background-color: #1175f7;");});
+        
+        
+        /* View Event Text */
+        viewEventText.setFill(javafx.scene.paint.Color.WHITE);
+        viewEventText.setLayoutX(83.0);
+        viewEventText.setLayoutY(30.0);
+        viewEventText.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        viewEventText.setStrokeWidth(0.0);
+        viewEventText.setText("View Event");
+        viewEventText.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
+        
+        /* View Event Icon */
+        viewEventImg.setLayoutX(45.0);
+        viewEventImg.setLayoutY(9.0);
+        viewEventImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/star.png").toExternalForm()));
+        
+        /* Information Button */
+        info.setLayoutY(437.0);
+        info.setPrefHeight(46.0);
+        info.setPrefWidth(303.0);
+        info.setOnMouseEntered(e -> {info.setStyle("-fx-background-color: #2185ff;");});
+        info.setOnMouseExited(e -> {info.setStyle("-fx-background-color: #1175f7;");});
+        
+        /* Information Text */
+        infoText.setFill(javafx.scene.paint.Color.WHITE);
+        infoText.setLayoutX(83.0);
+        infoText.setLayoutY(30.0);
+        infoText.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
+        infoText.setStrokeWidth(0.0);
+        infoText.setText("Instructions");
+        infoText.setFont(new Font("Apple SD Gothic Neo Regular", 20.0));
+        
+        /* Information Icon */
+        infoImg.setLayoutX(45.0);
+        infoImg.setLayoutY(9.0);
+        infoImg.setImage(new Image(getClass().getResource("/blue/mdc/event/images/icons/bulleted-list.png").toExternalForm()));
+        
         
         search.getChildren().addAll(searchImg, searchField);
         getChildren().add(search);
@@ -162,10 +216,18 @@ public class Side extends Pane{
         editEvent.getChildren().addAll(editEventText, editEventImg);
         getChildren().add(editEvent);
         
-        pane3.getChildren().addAll(text2, imageView3);
-        getChildren().add(pane3);
+        addTraveler.getChildren().addAll(addTravelerText, addTravelerImg);
+        getChildren().add(addTraveler);
         
-        pane4.getChildren().addAll(text3, imageView4);
-        getChildren().add(pane4);
+        editTraveler.getChildren().addAll(editTravelerText, editTravelerImg);
+        getChildren().add(editTraveler);
+        
+        viewEvent.getChildren().addAll(viewEventText, viewEventImg);
+        getChildren().add(viewEvent);
+
+        info.getChildren().addAll(infoText, infoImg);
+        getChildren().add(info);
+        
+        
     }
 }

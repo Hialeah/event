@@ -250,7 +250,8 @@ public abstract class EBase extends Pane {
         imageView6.setLayoutX(45.0);
         imageView6.setLayoutY(9.0);
         imageView6.setImage(new Image(getClass().getResource("../../../../../../../Documents/com.visualpharm.Icons8/android_l/Editing/25/ffffff/icons8-bulleted_list.png").toExternalForm()));
-
+        
+        //////////////
         pane7.setLayoutX(304.0);
         pane7.setPrefHeight(700.0);
         pane7.setPrefWidth(599.0);
