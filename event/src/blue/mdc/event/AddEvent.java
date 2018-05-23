@@ -23,7 +23,7 @@ import javafx.scene.text.Text;
  *  <li>Location</li>
  * </ul>
  * 
- * Also it has a <b></b> button
+ * Also it has a <b>SAVE</b> button
  * to save the information to the database
  * 
  * @author Carlos Abraham
