@@ -41,9 +41,9 @@ See [Contributing Guide](./)
 
 ### Contributors
 
-| ![Carlos Abraham ](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4) | ![Emanuel](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4) | image | image |
-| --- | --- | --- | --- |
-| [Abraham](https://github.com/19cah) | [Emanuel](https://github.com/Jikiyama) | [Luis F.](https://github.com/LuisRobaina) | [Adriel](https://github.com/Adriel1221) |
+| ![CA](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4) | ![LF](https://avatars3.githubusercontent.com/u/34631500?s=50&v=4) | ![E](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4) |
+| --- | --- | --- |
+| [Abraham](https://github.com/19cah) | [Luis F.](https://github.com/LuisRobaina) | [Emanuel](https://github.com/Jikiyama) |
 
 ### License
 
