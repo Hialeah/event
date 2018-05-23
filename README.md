@@ -19,13 +19,13 @@
 
 ### Window
 
-Download the latest [**\#Event**](./) release.
+Download the latest [**\#Event**](https://eventgenerator.ga/#download-section) release.
 
 ## Contributing
 
 Please note that this project is licensed under MIT License. By participating in this project you agree to abide by its terms.
 
-See [Contributing Guide](./)
+See [Contributing Guide](https://github.com/MDCblue/event/blob/master/.github/contribution-guidelines.md)
 
 ## Contributors
 
