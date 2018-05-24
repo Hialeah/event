@@ -1,13 +1,9 @@
 ![Event Logo](https://eventgenerator.ga/assets/images/event.png)
 
-![MDC Blue](https://mdc.blue/badge.svg)
+[![MDC Blue](https://mdc.blue/badge.svg)](https://github.com/mdcblue)
 [![Build Status](https://travis-ci.org/MDCblue/event.svg?branch=master)](https://travis-ci.org/MDCblue/event)
 [![CircleCI](https://circleci.com/gh/MDCblue/event.svg?style=svg&circle-token=9e0b94449621dc7622993c997eca7dd8b9a03aba)](https://circleci.com/gh/MDCblue/event) 
-[ ![Codeship Status for MDCblue/event](https://app.codeship.com/projects/0aff85f0-41b3-0136-0e71-221a7588f37b/status?branch=master)](https://app.codeship.com/projects/291411)
-![GitHub last commit](https://img.shields.io/github/last-commit/mdcblue/event.svg)  
-![GitHub repo size in bytes](https://img.shields.io/github/repo-size/mdcblue/event.svg) 
-![GitHub contributors](https://img.shields.io/github/contributors/mdcblue/event.svg) 
-![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)
+[ ![Codeship Status for MDCblue/event](https://app.codeship.com/projects/0aff85f0-41b3-0136-0e71-221a7588f37b/status?branch=master)](https://app.codeship.com/projects/291411)![Join the chat at https://gitter.im/MDCblue/event](https://badges.gitter.im/MDCblue/event.svg)
 
 **\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
