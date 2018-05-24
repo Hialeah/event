@@ -1,8 +1,3 @@
-version: 2
-jobs:
-  build:
-    
-    working_directory: ~/event
-
-    docker:
-      - image: circleci/openjdk:8-jdk
+machine:
+  java:
+    version: oraclejdk8
