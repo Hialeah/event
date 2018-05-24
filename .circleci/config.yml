@@ -1,3 +1,9 @@
 machine:
   java:
     version: oraclejdk8
+    
+jobs:
+  build:
+    machine: true
+
+    working_directory: ~/event/event
