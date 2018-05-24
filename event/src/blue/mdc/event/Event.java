@@ -29,6 +29,7 @@ import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.application.Platform;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.layout.Pane;
 
@@ -88,12 +89,14 @@ public class Event extends Application{
                     root.getChildren().addAll(mainView, side);
                 });
             }
-        }, Constants.INTRO_APPEARANCE + 2000); // 3 seconds later
+        }, Constants.INTRO_APPEARANCE + 1000); // 3 seconds later
         
         
-        //Set icon logo
-        //primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/icon/event.icns")));
-        
+        /**
+         * Set Event application icon logo.
+         */
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/blue/mdc/event/images/icon/event.png")));
+        primaryStage.setTitle("Event");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

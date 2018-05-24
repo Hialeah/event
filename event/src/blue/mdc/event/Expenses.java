@@ -10,9 +10,9 @@ import javafx.scene.text.Text;
  * Expenses class create a pane and 
  * adds text fields to the pane asking for:
  * 
- * <table border="1" >
+ * <table border="1" sumary="Expenses Table">
  * <tr>
- *   <td></td><td>Expenses</td><td>Fee</td>
+ *   <td></td><td>Quantity</td><td>Fee</td>
  * </tr>
  * <tr>
  *   <td>Student Registration</td><td>Value</td><td>$0.0</td>
