@@ -5,6 +5,8 @@
 [![CircleCI](https://circleci.com/gh/MDCblue/event.svg?style=svg&circle-token=9e0b94449621dc7622993c997eca7dd8b9a03aba)](https://circleci.com/gh/MDCblue/event) 
 [ ![Codeship Status for MDCblue/event](https://app.codeship.com/projects/0aff85f0-41b3-0136-0e71-221a7588f37b/status?branch=master)](https://app.codeship.com/projects/291411)
 
+<p align="center"> <a href="https://eventgenerator.ga">www.eventgenerator.ga</a></p>
+
 **\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
 ![Event](https://eventgenerator.ga/assets/images/desktop.png)
