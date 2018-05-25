@@ -12,7 +12,6 @@ build:
   steps:
   
     - script:
-        name: Place JAR in output directory
+        name: Display Message
         code: |
-            mv build/libs/time-api-*.jar $WERCKER_OUTPUT_DIR/time-api.jar
-            mv *.template $WERCKER_OUTPUT_DIR/
+            echo "This works fine"
