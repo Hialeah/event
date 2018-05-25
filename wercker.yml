@@ -1,10 +1,18 @@
 box: java
-    
-jobs:
-  build:
-    machine: true
-    working_directory: ~/event/event
 
-    steps:
-      - restore_cache:
-          key: event-{{ checksum "pom.xml" }}
+dev:
+  steps:
+    - script:
+      name: gradle bootRun
+      code: |
+        ./gradlew bootRun
+
+# Build Application
+build:
+  steps:
+  
+    - script:
+        name: Place JAR in output directory
+        code: |
+            mv build/libs/time-api-*.jar $WERCKER_OUTPUT_DIR/time-api.jar
+            mv *.template $WERCKER_OUTPUT_DIR/
