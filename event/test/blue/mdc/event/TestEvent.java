@@ -22,9 +22,6 @@
  */
 package blue.mdc.event;
 
-import com.sun.javaws.Main;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.stage.Stage;
@@ -44,21 +41,21 @@ public class TestEvent {
     public TestEvent() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+//    @BeforeClass
+//    public static void setUpClass() {
+//    }
+//    
+//    @AfterClass
+//    public static void tearDownClass() {
+//    }
+//    
+//    @Before
+//    public void setUp() {
+//    }
+//    
+//    @After
+//    public void tearDown() {
+//    }
 
     @Test
     public void testA() throws InterruptedException {
@@ -79,7 +76,7 @@ public class TestEvent {
             }
          });
         thread.start();// Initialize the thread
-        Thread.sleep(5000); // Time to use the app, with out this, the thread
+        Thread.sleep(10000); // Time to use the app, with out this, the thread
                                 // will be killed before you can tell.
     }
 }

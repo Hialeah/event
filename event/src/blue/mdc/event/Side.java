@@ -4,6 +4,9 @@ import blue.mdc.event.constants.Constants;
 import com.jfoenix.controls.JFXTextField;
 import java.io.File;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+import javafx.application.Platform;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -51,6 +54,7 @@ public class Side extends Pane{
             
         setPrefHeight(Constants.SIDE_HEIGHT);
         setPrefWidth(Constants.SIDE_WIDTH);
+
         
         /* Create New Event */
         a.setLayoutY(Constants.SIDE_BUTTON_Y);
@@ -110,7 +114,6 @@ public class Side extends Pane{
         searchField.setStyle("-jfx-focus-color: #ffffff;"
                 + "-fx-text-fill: WHITE;");
        
-       
 //        setOnMouseClicked(e ->{
 //                
 //                Pane pane = new Pane();
@@ -121,6 +124,19 @@ public class Side extends Pane{
 //                stage.show();
 //        }); 
         
+
+        /**
+         * Show Create new Event when the application starts.
+         */
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            public void run() {
+                Platform.runLater(() -> {
+                    AddEvent addEvent = new AddEvent();
+                    getChildren().add(addEvent);
+                });
+            }
+        }, Constants.INTRO_APPEARANCE);
         
         getChildren().add(a);
         getChildren().add(b);

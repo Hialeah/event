@@ -100,7 +100,7 @@ public class AddTraveler extends Pane {
     TextField emailField;
     TextField addressField;
     TextField cityField;
-    TextField campusField;
+    TextField zipField;
     
     JFXComboBox comboBox;
     MenuItem Hialeah;
@@ -144,7 +144,7 @@ public class AddTraveler extends Pane {
         emailField = new TextField();
         addressField = new TextField();
         cityField = new TextField();
-        campusField = new TextField();
+        zipField = new TextField();
         
         comboBox = new JFXComboBox();        
         button = new JFXButton("Next");
@@ -224,51 +224,70 @@ public class AddTraveler extends Pane {
         /* Zip Code Label */
         zip.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
         zip.setLayoutX(284.0);
-        zip.setLayoutY(505.0);
+        zip.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS * 6);
         zip.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         zip.setStrokeWidth(0.0);
         zip.setText("Zip Code");
         zip.setFont(new Font(17.0));
         
         /* Name Text Field */
-        nameField.setLayoutX(160.0);
-        nameField.setLayoutY(131.0);
+        nameField.setLayoutX(Constants.TEXT_FIELD_LAYOUT_X);
+        nameField.setLayoutY(Constants.TEXT_FIELD_INITIAL_LAYOUT_Y);
         
         /* Last Name Text Field */
-        lastNameField.setLayoutX(160.0);
-        lastNameField.setLayoutY(179.0);
+        lastNameField.setLayoutX(Constants.TEXT_FIELD_LAYOUT_X);
+        lastNameField.setLayoutY(
+                        Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                        Constants.DISTANCE_BTW_TEXT_FIELDS
+        );
         
         /* MDC ID Text Field */
-        mdcIDField.setLayoutX(160.0);
-        mdcIDField.setLayoutY(246.0);
+        mdcIDField.setLayoutX(Constants.TEXT_FIELD_LAYOUT_X);
+        mdcIDField.setLayoutY(
+                Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                Constants.DISTANCE_BTW_TEXT_FIELDS * 2
+        );
         
         /* Phone Number Text Field */
-        phoneField.setLayoutX(160.0);
-        phoneField.setLayoutY(310.0);
+        phoneField.setLayoutX(Constants.TEXT_FIELD_LAYOUT_X);
+        phoneField.setLayoutY(
+                Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                Constants.DISTANCE_BTW_TEXT_FIELDS * 3);
         
         /* Email Text Field */
-        emailField.setLayoutX(160.0);
-        emailField.setLayoutY(363.0);
+        emailField.setLayoutX(Constants.TEXT_FIELD_LAYOUT_X);
+        emailField.setLayoutY(
+                Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                Constants.DISTANCE_BTW_TEXT_FIELDS * 4
+        );
         emailField.setPrefHeight(26.0);
         emailField.setPrefWidth(264.0);
         
         /* Address Text Field */
-        addressField.setLayoutX(160.0);
-        addressField.setLayoutY(419.0);
+        addressField.setLayoutX(Constants.TEXT_FIELD_LAYOUT_X);
+        addressField.setLayoutY(
+                Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                Constants.DISTANCE_BTW_TEXT_FIELDS * 5
+        );
         addressField.setPrefHeight(26.0);
         addressField.setPrefWidth(264.0);
         
         /* City Text Field */
         cityField.setLayoutX(111.0);
-        cityField.setLayoutY(478.0);
+        cityField.setLayoutY(
+                Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                Constants.DISTANCE_BTW_TEXT_FIELDS * 6);
         cityField.setPrefHeight(26.0);
         cityField.setPrefWidth(145.0);
 
-        /* Main Campus Text Field */
-        campusField.setLayoutX(379.0);
-        campusField.setLayoutY(478.0);
-        campusField.setPrefHeight(26.0);
-        campusField.setPrefWidth(109.0);
+        /* ZipCode Text Field */
+        zipField.setLayoutX(379.0);
+        zipField.setLayoutY(
+                Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                Constants.DISTANCE_BTW_TEXT_FIELDS * 6
+        );
+        zipField.setPrefHeight(26.0);
+        zipField.setPrefWidth(109.0);
         
         /* Add Traveler Label */
         addTraveler.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
@@ -291,7 +310,10 @@ public class AddTraveler extends Pane {
         
         /* Menu ComboBox (List of MDC Campuses) */
         comboBox.setLayoutX(191.0);
-        comboBox.setLayoutY(539.0);
+        comboBox.setLayoutY(
+                Constants.TEXT_FIELD_INITIAL_LAYOUT_Y +
+                Constants.DISTANCE_BTW_TEXT_FIELDS * 7
+        );
         
         comboBox.getItems().add("Hialeah");
         comboBox.getItems().add("Homestead");
@@ -322,7 +344,7 @@ public class AddTraveler extends Pane {
         pane.getChildren().add(emailField);
         pane.getChildren().add(addressField);
         pane.getChildren().add(cityField);
-        pane.getChildren().add(campusField);
+        pane.getChildren().add(zipField);
         pane.getChildren().add(comboBox);
         
         getChildren().add(pane);

@@ -77,5 +77,28 @@ public class Constants {
      * 
      * @see blue.mdc.event.AddTraveler
      */
-    public static final double DISTANCE_BTW_LABELS = 54.0;
+    public static final double DISTANCE_BTW_LABELS = 56.0;
+    
+    /**
+     * Layout X of the TextFields in {@link AddTraveler}
+     * 
+     * @see blue.mdc.event.AddTraveler
+     */
+    public static final double TEXT_FIELD_LAYOUT_X = 160.0;
+    
+    /**
+     * Initial Value of Layout Y of the
+     * TextFields in {@link AddTraveler}
+     * 
+     * @see blue.mdc.event.AddTraveler
+     */
+    public static final double TEXT_FIELD_INITIAL_LAYOUT_Y = 138.0;
+    
+    /**
+     * Distance between each Text Field in
+     * the {@link AddTraveler} class.
+     * 
+     * @see blue.mdc.event.AddTraveler
+     */
+    public static final double DISTANCE_BTW_TEXT_FIELDS = 56.0;
 }

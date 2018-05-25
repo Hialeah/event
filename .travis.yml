@@ -1,3 +1,19 @@
+# Event Application
+# www.eventgenerator.ga
+#
+# MIT License (c) 2018 MDC Blue and/or its Contributors
+# @author: Carlos Abraham
+
+# Programming Language
 language: java
+
+# JDK Version 
 jdk: oraclejdk8
+
+# Just in development mode
 before_script: cd event
+
+# Travis CI Test branches 
+branches:
+  only: 
+    - master
