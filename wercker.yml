@@ -1,5 +1,7 @@
-box: oraclejdk8 
-
+box: 
+  java:
+    version: oraclejdk8
+    
 jobs:
   build:
     machine: true
