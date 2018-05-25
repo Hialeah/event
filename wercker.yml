@@ -1,5 +1,4 @@
-box:
-  id: oraclejdk8
+box: oraclejdk8 
 
 jobs:
   build:
