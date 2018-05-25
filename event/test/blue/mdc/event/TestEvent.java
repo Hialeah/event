@@ -25,8 +25,6 @@ package blue.mdc.event;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.stage.Stage;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -41,21 +39,17 @@ public class TestEvent {
     public TestEvent() {
     }
     
-//    @BeforeClass
-//    public static void setUpClass() {
-//    }
-//    
-//    @AfterClass
-//    public static void tearDownClass() {
-//    }
-//    
-//    @Before
-//    public void setUp() {
-//    }
-//    
-//    @After
-//    public void tearDown() {
-//    }
+    @BeforeClass
+    public static void setUpClass() {
+        System.out.println("@BeforeClass: onceExecutedBeforeAll");
+
+    }
+
+    @Before
+    public void setUp() {
+        System.out.println("@Before: executedBeforeEach");
+        
+    }
 
     @Test
     public void testA() throws InterruptedException {
