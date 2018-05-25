@@ -3,8 +3,8 @@
 <!-- some examples of how to customize the build. -->
 <!-- (If you delete it and reopen the project it will be recreated.) -->
 <!-- By default, only the Clean and Build commands use this build script. -->
-<project name="Event" default="default" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
-    <description>Builds, tests, and runs the project Event.</description>
+<project name="event" default="default" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <description>Builds, tests, and runs the project event.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 

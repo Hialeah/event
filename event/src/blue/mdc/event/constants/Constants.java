@@ -25,9 +25,12 @@ public class Constants {
     public static final int HEIGHT = 700;
     
     /**
-     * Moment in seconds when the first TEXT appears
+     * Moment in seconds when the first TEXT appears 
+     * in milliseconds.
+     * 
+     * Ex. 2000 = 2 seconds
      */
-    public static final long INTRO_APPEARANCE = 2000;
+    public static final long INTRO_APPEARANCE = 700;
     
     /**
      * Height of the left side bar

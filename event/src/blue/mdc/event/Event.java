@@ -89,7 +89,7 @@ public class Event extends Application{
                     root.getChildren().addAll(mainView, side);
                 });
             }
-        }, Constants.INTRO_APPEARANCE + 1000); // 3 seconds later
+        }, Constants.INTRO_APPEARANCE + 1000); // 1 seconds later
         
         
         /**
