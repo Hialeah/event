@@ -1,6 +1,4 @@
-box: 
-  java:
-    version: oraclejdk8
+box: java
     
 jobs:
   build:
