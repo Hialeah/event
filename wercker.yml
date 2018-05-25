@@ -1,6 +1,5 @@
 box:
-  id: openjdk
-   
+  id: oraclejdk8
 
 jobs:
   build:
