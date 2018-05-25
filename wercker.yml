@@ -1,15 +1,14 @@
-machine:
-  java:
-    version: oraclejdk8
-    
-version: 2
+cd event/
+
+box:
+  id: openjdk
+   
+
 jobs:
   build:
-    
     machine: true
-    working_directory: ~/event/event
+    # working_directory: ~/event/event
 
     steps:
-
       - restore_cache:
           key: event-{{ checksum "pom.xml" }}
