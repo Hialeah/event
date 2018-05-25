@@ -31,12 +31,12 @@ import javafx.scene.layout.Pane;
 
 public class Side extends Pane{
         
-        SideButton a = new SideButton("New", "icons/add.png");
-        SideButton b = new SideButton("New sd", "icons/add.png");
-        SideButton c = new SideButton("Newds", "icons/add.png");
-        SideButton d = new SideButton("Newsgg", "icons/add.png");
-        SideButton e = new SideButton("Newsfd", "icons/add.png");
-        SideButton f = new SideButton("Create File", "icons/add.png");
+        SideButton a = new SideButton("New Event", "icons/add.png");
+        SideButton b = new SideButton("New Traveler", "icons/addUser.png");
+        SideButton c = new SideButton("Expenses", "icons/expenses.png");
+        SideButton d = new SideButton("Edit", "icons/edit.png");
+        SideButton e = new SideButton("View Event", "icons/star.png");
+        SideButton f = new SideButton("Introduction", "icons/bulleted-list.png");
         
         Pane search = new Pane();
         ImageView searchImg = new ImageView();
@@ -52,23 +52,37 @@ public class Side extends Pane{
         setPrefHeight(Constants.SIDE_HEIGHT);
         setPrefWidth(Constants.SIDE_WIDTH);
         
-         /* Create new Event Button */
+        /* Create New Event */
         a.setLayoutY(Constants.SIDE_BUTTON_Y);
         a.setOnMouseClicked(e ->{
             AddEvent addEvent = new AddEvent();
             getChildren().add(addEvent);
         });
+        
+        /* Create New Traveler */
         b.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS);
         b.setOnMouseClicked(e ->{
             AddTraveler addTraveler = new AddTraveler();
             getChildren().add(addTraveler);
         });
+        
+        /* Expenses */
         c.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS*2);
+        c.setOnMouseClicked(e ->{
+            Expenses expenses = new Expenses();
+            getChildren().add(expenses);
+        });
+        
+        /* Edit */
         d.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS*3);
+        
+        /* View Event */
         e.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS*4);
+        
+        /* Instructions */
         f.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS*5);
-        f.setOnMouseClicked(e ->{
-            
+        
+        f.setOnMouseClicked(e ->{    
             String EventName = "EventDB";
             try{
                 File file = new File("src/blue/mdc/event/db/" + EventName +".accdb");

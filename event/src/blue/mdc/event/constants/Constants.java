@@ -1,5 +1,6 @@
 package blue.mdc.event.constants;
 
+import blue.mdc.event.*;
 /**
  * A bunch of Constant all in one place
  * 
@@ -58,4 +59,23 @@ public class Constants {
      * @see blue.mdc.event.Side
      */
     public static final double DISTANCE_BTW_BUTTONS = 50.0;
+    
+    /**
+     * Layout X of the labels in the {@link AddTraveler} class
+     */
+    public static final double LABELS_LAYOUT_X = 56.0;
+
+    /**
+     * Initial Value of the labels in {@link AddTraveler}
+     * 
+     * @see blue.mdc.event.AddTraveler
+     */
+    public static final double LABELS_LAYOUT_Y = 159.0;
+    
+    /**
+     * Distance between each label in the {@link AddTraveler}
+     * 
+     * @see blue.mdc.event.AddTraveler
+     */
+    public static final double DISTANCE_BTW_LABELS = 54.0;
 }

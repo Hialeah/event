@@ -12,10 +12,10 @@ import javafx.scene.text.Text;
  */
 public class MainView extends Pane {
 
-    protected final Pane pane;
-    protected final Text text;
-    protected final ImageView imageView;
-    protected final Pane pane0;
+    private Pane pane;
+    private Text text;
+    private ImageView imageView;
+    private Pane pane0;
 
     public MainView() {
 

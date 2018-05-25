@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import blue.mdc.event.constants.Constants;
 
 /**
  * Add Traveler class create a pane and 
@@ -150,8 +151,8 @@ public class AddTraveler extends Pane {
     
         /* Name Label */
         name.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        name.setLayoutX(56.0);
-        name.setLayoutY(159.0);
+        name.setLayoutX(Constants.LABELS_LAYOUT_X);
+        name.setLayoutY(Constants.LABELS_LAYOUT_Y);
         name.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         name.setStrokeWidth(0.0);
         name.setText("Name");
@@ -159,8 +160,8 @@ public class AddTraveler extends Pane {
         
         /* Last Name Label */
         lastName.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        lastName.setLayoutX(56.0);
-        lastName.setLayoutY(211.0);
+        lastName.setLayoutX(Constants.LABELS_LAYOUT_X);
+        lastName.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS);
         lastName.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         lastName.setStrokeWidth(0.0);
         lastName.setText("Last Name");
@@ -168,8 +169,8 @@ public class AddTraveler extends Pane {
         
         /* MDC ID Label */
         mdcID.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        mdcID.setLayoutX(56.0);
-        mdcID.setLayoutY(275.0);
+        mdcID.setLayoutX(Constants.LABELS_LAYOUT_X);
+        mdcID.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS * 2);
         mdcID.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         mdcID.setStrokeWidth(0.0);
         mdcID.setText("MDC ID");
@@ -177,8 +178,8 @@ public class AddTraveler extends Pane {
         
         /* Phone Number Label */
         phone.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        phone.setLayoutX(56.0);
-        phone.setLayoutY(339.0);
+        phone.setLayoutX(Constants.LABELS_LAYOUT_X);
+        phone.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS * 3);
         phone.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         phone.setStrokeWidth(0.0);
         phone.setText("Phone");
@@ -186,8 +187,8 @@ public class AddTraveler extends Pane {
         
         /* Email Label Label */
         email.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        email.setLayoutX(56.0);
-        email.setLayoutY(392.0);
+        email.setLayoutX(Constants.LABELS_LAYOUT_X);
+        email.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS * 4);
         email.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         email.setStrokeWidth(0.0);
         email.setText("Email");
@@ -195,8 +196,8 @@ public class AddTraveler extends Pane {
         
         /* Name Label */
         address.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        address.setLayoutX(56.0);
-        address.setLayoutY(448.0);
+        address.setLayoutX(Constants.LABELS_LAYOUT_X);
+        address.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS * 5);
         address.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         address.setStrokeWidth(0.0);
         address.setText("Address");
@@ -204,8 +205,8 @@ public class AddTraveler extends Pane {
         
         /* City Label */
         city.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        city.setLayoutX(56.0);
-        city.setLayoutY(505.0);
+        city.setLayoutX(Constants.LABELS_LAYOUT_X);
+        city.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS * 6);
         city.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         city.setStrokeWidth(0.0);
         city.setText("City");
@@ -213,8 +214,8 @@ public class AddTraveler extends Pane {
         
         /* Main Campus Label */
         campus.setFill(javafx.scene.paint.Color.valueOf("#7c7979"));
-        campus.setLayoutX(56.0);
-        campus.setLayoutY(565.0);
+        campus.setLayoutX(Constants.LABELS_LAYOUT_X);
+        campus.setLayoutY(Constants.LABELS_LAYOUT_Y + Constants.DISTANCE_BTW_LABELS * 7);
         campus.setStrokeType(javafx.scene.shape.StrokeType.OUTSIDE);
         campus.setStrokeWidth(0.0);
         campus.setText("Main Campus");
