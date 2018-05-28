@@ -11,4 +11,4 @@ branches:
     
 artifacts:
  - path: event\build\dist\jar\*.jar
-    name: jar
+   name: jar
