@@ -6,10 +6,7 @@ before_build:
 branches:
   only:
     - master
-    
-build_script:
-    - ps: . .\gradlew assemble
 
 artifacts:
-  - path: event
-    name: src
+ - path: event\build\dist\jar\*.jar
+    name: jar
