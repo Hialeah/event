@@ -114,9 +114,6 @@ public class EmergencyContact extends Pane {
     public EmergencyContact() {
         
         setStyle("-fx-background-color: #ffffff;");
-        setLayoutX(304.0);
-        setPrefHeight(700.0);
-        setPrefWidth(599.0);
         
         pane = new Pane();
         emergencyContact = new Text();

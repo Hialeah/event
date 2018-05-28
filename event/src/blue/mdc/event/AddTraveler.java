@@ -305,7 +305,8 @@ public class AddTraveler extends Pane {
         button.setStyle("-fx-background-color: #1175f7;"
                           +"-fx-text-fill: WHITE;");
         button.setOnMouseClicked(e->{ 
-            requestFocus();
+            EmergencyContact emergency = new EmergencyContact();
+            pane.getChildren().add(emergency);
         });
         
         /* Menu ComboBox (List of MDC Campuses) */
