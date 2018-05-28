@@ -12,7 +12,7 @@ import javafx.scene.text.Text;
  * 
  * <table border="1" summary="Expenses Table">
  * <tr>
- *   <td></td><td>Expenses</td><td>Fee</td>
+ *   <td></td><td>Quantity</td><td>Fee</td>
  * </tr>
  * <tr>
  *   <td>Student Registration</td><td>Value</td><td>$0.0</td>
