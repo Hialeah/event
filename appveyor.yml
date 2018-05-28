@@ -3,10 +3,11 @@ build: off
 
 before_build:
    cd event
+   
 branches:
   only:
     - master
-
+    
 artifacts:
  - path: event\build\dist\jar\*.jar
     name: jar
