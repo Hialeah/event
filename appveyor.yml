@@ -1,15 +1,14 @@
 version: 1.0.{build}
 build: off
 
+before_build:
+   cd event
 branches:
   only:
     - master
     
 build_script:
-    - ps: . .\event\gradlew assemble
-
-test_script:
-    - ps: . .\event\gradlew test
+    - ps: . .\gradlew assemble
 
 artifacts:
   - path: event
