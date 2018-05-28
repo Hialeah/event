@@ -1,7 +1,12 @@
 package blue.mdc.event;
 
+import blue.mdc.event.constants.Constants;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
@@ -242,11 +247,6 @@ public class AddEvent extends Pane {
         location.setText("Location");
         location.setFont(new Font(17.0));
 
-        button.setLayoutX(479.0);
-        button.setLayoutY(614.0);
-        button.setStyle("-fx-background-color: #1175f7;"
-                          +"-fx-text-fill: WHITE;");
-
         eventField.setLayoutX(207.0);
         eventField.setLayoutY(83.0);
 
@@ -279,6 +279,14 @@ public class AddEvent extends Pane {
         locationField.setPrefHeight(26.0);
         locationField.setPrefWidth(213.0);
         
+        button.setLayoutX(479.0);
+        button.setLayoutY(614.0);
+        button.setStyle("-fx-background-color: #1175f7;"
+                          +"-fx-text-fill: WHITE;");
+        button.setOnMouseClicked(e->{
+            saveToDB();
+        });
+        
         getChildren().add(eventName);
         getChildren().add(orgName);
         getChildren().add(advisor);
@@ -300,5 +308,41 @@ public class AddEvent extends Pane {
         getChildren().add(students_attending_Field);
         getChildren().add(num_of_chaperones_Field);
         getChildren().add(locationField);
+    }
+    
+    private void saveToDB() {
+        try{
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:ucanaccess://" + Constants.db_path);
+            Statement add = connection.createStatement();
+            
+            add.executeUpdate(
+                " INSERT INTO Students_info" +
+                    //Check Values again on Access file, because those aren't the correct ones
+                    "(" +
+                        "Event, " +
+                        " Organization, " +
+                        " Advisor, " +
+                        " Transportation, " +
+                        " Students, " +
+                        " Students, " +
+                        " Chaperones, " +
+                        " Location" +
+                    ")" +
+                    
+                " VALUES(" +
+                        "'" + eventField.getText() + "'," +
+                        "'" + orgField.getText() + "'," +
+                        "'" + advisorField.getText() + "'," +
+                        "'" + transportationField.getText() + "'," +
+                        "'" + students_in_org_Field.getText() + "'," +
+                        "'" + students_attending_Field.getText() + "'," +
+                        "'" + num_of_chaperones_Field.getText() + "'," +        
+                        "'" + locationField.getText() + "'" +
+                ")"
+            );
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 }
