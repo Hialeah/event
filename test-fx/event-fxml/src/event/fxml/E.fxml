@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #1175f7;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -13,62 +9,6 @@
       <Pane layoutX="304.0" prefHeight="700.0" prefWidth="599.0" style="-fx-background-color: #ffffff;">
          <children>
             <JFXButton layoutX="479.0" layoutY="614.0" prefHeight="38.0" prefWidth="69.0" text="Save " />
-            <Pane layoutX="92.0" layoutY="148.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
-               <children>
-                  <ImageView layoutX="48.0" layoutY="23.0">
-                     <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Editing/100/1756f5/icons8-pencil_tip.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="#1175f7" layoutX="65.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Event" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Font" size="13.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <Pane layoutX="316.0" layoutY="148.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
-               <children>
-                  <ImageView layoutX="53.0" layoutY="31.0">
-                     <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Profile/100/1756f5/icons8-edit_user.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="#1175f7" layoutX="62.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Traveler" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Font" size="13.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <Pane layoutX="92.0" layoutY="337.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
-               <children>
-                  <ImageView layoutX="45.0" layoutY="29.0">
-                     <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Business/100/1756f5/icons8-estimate.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="#1175f7" layoutX="50.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Expenses" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Font" size="13.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <Pane layoutX="316.0" layoutY="337.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
-               <children>
-                  <ImageView layoutX="48.0" layoutY="31.0">
-                     <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Healthcare/100/1756f5/icons8-ambulance.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="#1175f7" layoutX="22.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Emergency Contact" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Font" size="13.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
          </children></Pane>
    </children>
 </Pane>

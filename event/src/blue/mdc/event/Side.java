@@ -80,6 +80,11 @@ public class Side extends Pane{
         /* Edit */
         d.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS*3);
         
+        d.setOnMouseClicked(e->{
+            EditDB edit = new EditDB();
+            getChildren().add(edit);
+        });
+        
         /* View Event */
         e.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS*4);
         
