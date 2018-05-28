@@ -1,0 +1,16 @@
+version: 1.0.{build}
+build: off
+
+branches:
+  only:
+    - master
+    
+build_script:
+    - ps: . .\event\gradlew assemble
+
+test_script:
+    - ps: . .\event\gradlew test
+
+artifacts:
+  - path: event
+    name: src
