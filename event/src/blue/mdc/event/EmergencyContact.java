@@ -1,6 +1,11 @@
 package blue.mdc.event;
 
+import blue.mdc.event.constants.Constants;
 import com.jfoenix.controls.JFXButton;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
@@ -104,7 +109,7 @@ public class EmergencyContact extends Pane {
     TextField emailField;
     TextField addressField;
     TextField cityField;
-    TextField campusField;
+    TextField zipField;
     
     JFXButton button;
     
@@ -133,7 +138,7 @@ public class EmergencyContact extends Pane {
         emailField = new TextField();
         addressField = new TextField();
         cityField = new TextField();
-        campusField = new TextField();
+        zipField = new TextField();
                
         button = new JFXButton("Save");
     
@@ -209,13 +214,6 @@ public class EmergencyContact extends Pane {
         zip.setText("Zip Code");
         zip.setFont(new Font(17.0));
         
-        /* Save button */
-        button.setLayoutX(479.0);
-        button.setLayoutY(614.0);
-        button.setStyle("-fx-background-color: #1175f7;"
-                          +"-fx-text-fill: WHITE;"
-                          + "-jfx-button-type: RAISED;");
-        
         /* Name Text Field */
         nameField.setLayoutX(160.0);
         nameField.setLayoutY(131.0);
@@ -251,10 +249,10 @@ public class EmergencyContact extends Pane {
         cityField.setPrefWidth(145.0);
 
         /* Main Campus Text Field */
-        campusField.setLayoutX(379.0);
-        campusField.setLayoutY(478.0);
-        campusField.setPrefHeight(26.0);
-        campusField.setPrefWidth(109.0);
+        zipField.setLayoutX(379.0);
+        zipField.setLayoutY(478.0);
+        zipField.setPrefHeight(26.0);
+        zipField.setPrefWidth(109.0);
         
         /* Add Traveler Label */
         emergencyContact.setFill(javafx.scene.paint.Color.valueOf("#1175f7"));
@@ -266,6 +264,15 @@ public class EmergencyContact extends Pane {
         emergencyContact.setWrappingWidth(205.0);
         emergencyContact.setFont(new Font("System Bold", 22.0));
         
+        /* Save button */
+        button.setLayoutX(479.0);
+        button.setLayoutY(614.0);
+        button.setStyle("-fx-background-color: #1175f7;"
+                          +"-fx-text-fill: WHITE;"
+                          + "-jfx-button-type: RAISED;");
+        button.setOnMouseClicked(e->{
+            saveToDB();
+        });
         pane.getChildren().add(emergencyContact);
         pane.getChildren().add(name);
         pane.getChildren().add(lastName);
@@ -283,8 +290,39 @@ public class EmergencyContact extends Pane {
         pane.getChildren().add(emailField);
         pane.getChildren().add(addressField);
         pane.getChildren().add(cityField);
-        pane.getChildren().add(campusField);
+        pane.getChildren().add(zipField);
         
         getChildren().add(pane);
+    }
+    
+    private void saveToDB() {
+        try{
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:ucanaccess://" + Constants.db_path);
+            Statement add = connection.createStatement();
+            
+            add.executeUpdate(
+                " INSERT INTO Emergency_info" +
+                    "(" +
+                        " Name, " +
+                        " Last_Name, " +
+                        " Phone, " +
+                        " Email, " +
+                        " Relationship, " +
+                        " Address " + 
+                    ")" +
+                    
+                " VALUES(" +
+                        "'" + nameField.getText() + "'," +
+                        "'" + lastNameField.getText() + "'," +
+                        "'" + phoneField.getText() + "'," +
+                        "'" + emailField.getText() + "'," +
+                        "'" + relationshipField.getText() + "'," +
+                        "'" + addressField.getText() + " " + cityField.getText() + " , FL "+ zipField.getText() + "'" +
+                ")"
+            );
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 }
