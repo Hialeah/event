@@ -14,7 +14,8 @@ import blue.mdc.event.*;
  */
 
 public class Constants {
-       
+     
+    public static String db_path = "src/blue/mdc/event/db/db.accdb";
     /**
      * Width of the window in Event Application
      */

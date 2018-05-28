@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import blue.mdc.event.constants.Constants;
+import java.sql.*;
 
 /**
  * Add Traveler class create a pane and 
@@ -305,7 +306,8 @@ public class AddTraveler extends Pane {
         button.setStyle("-fx-background-color: #1175f7;"
                           + "-jfx-button-type: RAISED;"
                           +"-fx-text-fill: WHITE;");
-        button.setOnMouseClicked(e->{ 
+        button.setOnMouseClicked(e->{
+            saveToDB();
             EmergencyContact emergency = new EmergencyContact();
             pane.getChildren().add(emergency);
         });
@@ -350,5 +352,31 @@ public class AddTraveler extends Pane {
         pane.getChildren().add(comboBox);
         
         getChildren().add(pane);
+    }
+
+    private void saveToDB() {
+        try{
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:ucanaccess://" + Constants.db_path);
+            Statement add = connection.createStatement();
+            
+            add.executeUpdate(
+                " INSERT INTO Students_info" +
+                    
+                    " ( Name, Last_Name, MDC_id, Phone, Email, Address, Campus)" +
+                    
+                " VALUES(" +
+                        "'" + nameField.getText() + "'," +
+                        "'" + lastNameField.getText() + "'," +
+                        "'" + mdcIDField.getText() + "'," +
+                        "'" + phoneField.getText() + "'," +
+                        "'" + emailField.getText() + "'," +
+                        "'" + addressField.getText() + ", FL " + zipField.getText() + "'," +
+                        "'" + comboBox.getValue() + "'" +
+                ")"
+            );
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 }
