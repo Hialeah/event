@@ -317,17 +317,19 @@ public class AddEvent extends Pane {
             Statement add = connection.createStatement();
             
             add.executeUpdate(
-                " INSERT INTO Students_info" +
+                " INSERT INTO Event_info" +
                     //Check Values again on Access file, because those aren't the correct ones
                     "(" +
                         "Event, " +
                         " Organization, " +
                         " Advisor, " +
                         " Transportation, " +
-                        " Students, " +
-                        " Students, " +
+                        " Location, " +
+                        " Students_in_Org, " +
+                        " Students_Attending, " +
                         " Chaperones, " +
-                        " Location" +
+                        " from_date, " +
+                        " To_date " + 
                     ")" +
                     
                 " VALUES(" +
@@ -335,10 +337,12 @@ public class AddEvent extends Pane {
                         "'" + orgField.getText() + "'," +
                         "'" + advisorField.getText() + "'," +
                         "'" + transportationField.getText() + "'," +
+                        "'" + locationField.getText() + "'," +
                         "'" + students_in_org_Field.getText() + "'," +
                         "'" + students_attending_Field.getText() + "'," +
-                        "'" + num_of_chaperones_Field.getText() + "'," +        
-                        "'" + locationField.getText() + "'" +
+                        "'" + num_of_chaperones_Field.getText() + "'," +
+                        "'" + start_date.getValue() + "'," +
+                        "'" + end_date.getValue() + "'" +
                 ")"
             );
         }catch(SQLException e){
