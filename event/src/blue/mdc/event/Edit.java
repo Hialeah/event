@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
  *
  * @author Carlos Abraham
  */
-public class EditDB extends Pane{
+public class Edit extends Pane{
         
     Pane editEvent;
     ImageView imageView;
@@ -24,7 +24,7 @@ public class EditDB extends Pane{
     ImageView imageView2;
     Text text2;
     
-    public EditDB() {
+    public Edit() {
         
         editEvent = new Pane();
         imageView = new ImageView();

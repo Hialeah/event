@@ -81,7 +81,7 @@ public class Side extends Pane{
         d.setLayoutY(Constants.SIDE_BUTTON_Y + Constants.DISTANCE_BTW_BUTTONS*3);
         
         d.setOnMouseClicked(e->{
-            EditDB edit = new EditDB();
+            Edit edit = new Edit();
             getChildren().add(edit);
         });
         
