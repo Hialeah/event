@@ -213,7 +213,8 @@ public class EmergencyContact extends Pane {
         button.setLayoutX(479.0);
         button.setLayoutY(614.0);
         button.setStyle("-fx-background-color: #1175f7;"
-                          +"-fx-text-fill: WHITE;");
+                          +"-fx-text-fill: WHITE;"
+                          + "-jfx-button-type: RAISED;");
         
         /* Name Text Field */
         nameField.setLayoutX(160.0);

@@ -303,6 +303,7 @@ public class AddTraveler extends Pane {
         button.setLayoutX(479.0);
         button.setLayoutY(614.0);
         button.setStyle("-fx-background-color: #1175f7;"
+                          + "-jfx-button-type: RAISED;"
                           +"-fx-text-fill: WHITE;");
         button.setOnMouseClicked(e->{ 
             EmergencyContact emergency = new EmergencyContact();

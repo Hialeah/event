@@ -13,60 +13,60 @@
       <Pane layoutX="304.0" prefHeight="700.0" prefWidth="599.0" style="-fx-background-color: #ffffff;">
          <children>
             <JFXButton layoutX="479.0" layoutY="614.0" prefHeight="38.0" prefWidth="69.0" text="Save " />
-            <Pane layoutX="107.0" layoutY="152.0" opacity="0.56" prefHeight="134.0" prefWidth="150.0" style="-fx-background-color: #cccccc;">
+            <Pane layoutX="92.0" layoutY="148.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
                <children>
-                  <Text fill="#3c3c3c" layoutX="36.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Traveler" textAlignment="CENTER" wrappingWidth="77.99999559670687">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <ImageView layoutX="39.0" layoutY="31.0">
+                  <ImageView layoutX="48.0" layoutY="23.0">
                      <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Profile/75/ffffff/icons8-edit_user.png" />
+                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Editing/100/1756f5/icons8-pencil_tip.png" />
                      </image>
                   </ImageView>
+                  <Text fill="#1175f7" layoutX="65.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Event" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
-            <Pane layoutX="343.0" layoutY="152.0" opacity="0.56" prefHeight="134.0" prefWidth="150.0" style="-fx-background-color: #cccccc;">
+            <Pane layoutX="316.0" layoutY="148.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
                <children>
-                  <Text fill="#3c3c3c" layoutX="36.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Event" textAlignment="CENTER" wrappingWidth="77.99999559670687">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <ImageView layoutX="40.0" layoutY="25.0">
+                  <ImageView layoutX="53.0" layoutY="31.0">
                      <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Editing/75/ffffff/icons8-pencil_tip.png" />
+                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Profile/100/1756f5/icons8-edit_user.png" />
                      </image>
                   </ImageView>
+                  <Text fill="#1175f7" layoutX="62.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Traveler" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
-            <Pane layoutX="119.0" layoutY="351.0" opacity="0.56" prefHeight="134.0" prefWidth="150.0" style="-fx-background-color: #cccccc;">
+            <Pane layoutX="92.0" layoutY="337.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
                <children>
-                  <Text fill="#3c3c3c" layoutX="33.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Expenses" textAlignment="CENTER" wrappingWidth="84.99999559670687">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <ImageView layoutX="39.0" layoutY="19.0">
+                  <ImageView layoutX="45.0" layoutY="29.0">
                      <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Finance/75/ffffff/icons8-currency_exchange.png" />
+                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Business/100/1756f5/icons8-estimate.png" />
                      </image>
                   </ImageView>
+                  <Text fill="#1175f7" layoutX="50.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Expenses" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
-            <Pane layoutX="343.0" layoutY="351.0" opacity="0.56" prefHeight="134.0" prefWidth="150.0" style="-fx-background-color: #cccccc;">
+            <Pane layoutX="316.0" layoutY="337.0" opacity="0.63" prefHeight="166.0" prefWidth="192.0" style="-fx-background-color: #E5E4E4;">
                <children>
-                  <Text fill="#3c3c3c" layoutX="28.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Emergency Contact" textAlignment="CENTER" wrappingWidth="93.99999559670687">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <ImageView layoutX="37.0" layoutY="18.0">
+                  <ImageView layoutX="48.0" layoutY="31.0">
                      <image>
-                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Industry/75/ffffff/icons8-settings3.png" />
+                        <Image url="@../../../../../../../../Documents/com.visualpharm.Icons8/android_l/Healthcare/100/1756f5/icons8-ambulance.png" />
                      </image>
                   </ImageView>
+                  <Text fill="#1175f7" layoutX="22.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Emergency Contact" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
          </children></Pane>
