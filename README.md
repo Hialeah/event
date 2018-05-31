@@ -1,4 +1,4 @@
-![Event Logo](https://eventgenerator.ga/assets/images/event.png) ![](media/event.gif)
+[![Event Logo](https://eventgenerator.ga/assets/images/event.png) ![](media/event.gif)](https://eventgenerator.ga)
 
 [![MDC Blue](https://mdc.blue/badge.svg)](https://github.com/mdcblue)
 [![Build Status](https://img.shields.io/travis/MDCblue/event.svg?logo=travis)](https://travis-ci.org/MDCblue/event)
