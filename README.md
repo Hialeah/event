@@ -28,6 +28,26 @@
 
 Download the latest [**\#Event**](https://eventgenerator.ga/#download-section) release.
 
+
+## Event Structure
+
+> Still an example, not yet defined
+
+```
+src/main
+      ├──java 
+          ├── blue/mdc/event
+                         ├── App.java
+      ├──resources
+           ├── images
+                ├── icons
+                      ├── event.ico
+                      ├── event.png
+                      ├── event.icns
+           ├── db
+                ├── event.db
+```
+
 ## Contributing
 
 Please note that this project is licensed under MIT License. By participating in this project you agree to abide by its terms.
