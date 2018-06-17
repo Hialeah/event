@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blue.mdc.event.add.AddEventController">
+   <children>
+      <VBox layoutX="-36.0" layoutY="-61.0" prefHeight="690.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXToolbar>
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+               <center>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Event" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </center>
+            </JFXToolbar>
+            <JFXTextField labelFloat="true" promptText="Event Name">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="Organization Name">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="Advisor">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="Transportation">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="Number of students in organization">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="Number of students attending">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="Number of chaperones">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="Location">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </JFXTextField>
+            <JFXToolbar>
+               <right>
+                  <JFXDatePicker BorderPane.alignment="CENTER" />
+               </right>
+               <left>
+                  <JFXDatePicker BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="to" BorderPane.alignment="CENTER" />
+               </center>
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXToolbar>
+         </children></VBox>
+   </children>
+</AnchorPane>
