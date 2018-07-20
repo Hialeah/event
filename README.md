@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/event.gif">
+  <img src="https://eventgenerator.ga/assets/images/logo.png" width="150px">
 </p>
 
 [![MDC Blue](https://mdc.blue/badge.svg)](https://github.com/mdcblue)
