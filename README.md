@@ -18,11 +18,16 @@
 - [git.io/event](https://git.io/event)
 - [go.mdc.blue/event-repo](https://go.mdc.blue/event-repo)
 
-**\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
+
+**Event** is a cross-platform desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
+
+<p align="center"><img src="https://cdn.shpe.ga/miami-dade-college.png" width="37%"></p>
+
+**Event** is designed for [Miami Dade College](http://mdc.edu), but it can fit needs for other schools or college. If you want to try it don't hesitate to contact us at [info@mdc.blue](mailto:info@mdc.blue)
 
 ![Event](https://eventgenerator.ga/assets/images/desktop.png)
 
-**\#Event** is designed and coded with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
+**Event** is created with ❤️ by [MDC Blue](https://mdc.blue) Programming Team members.
 
 ## Installing
 
