@@ -5,6 +5,7 @@
 [![MDC Blue](https://mdc.blue/badge.svg)](https://github.com/mdcblue)
 [![Build Status](https://img.shields.io/travis/MDCblue/event.svg?logo=travis)](https://travis-ci.org/MDCblue/event)
 [![CircleCI](https://circleci.com/gh/MDCblue/event.svg?style=svg&circle-token=9e0b94449621dc7622993c997eca7dd8b9a03aba)](https://circleci.com/gh/MDCblue/event)
+[![GitHub tag](https://img.shields.io/github/tag/mdcblue/event.svg?style=flat-square)](https://github.com/MDCblue/event/releases/latest)
 [![HitCount](http://hits.dwyl.io/mdcblue/event.svg)](http://hits.dwyl.io/mdcblue/event)
 
 
