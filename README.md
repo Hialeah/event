@@ -23,7 +23,7 @@
 
 <p align="center"><img src="https://cdn.shpe.ga/miami-dade-college.png" width="37%"></p>
 
-**Event** is designed for [Miami Dade College](http://mdc.edu), but it can fit needs for other schools or college. If you want to try it don't hesitate to contact us at [info@mdc.blue](mailto:info@mdc.blue)
+**Event** is designed for [Miami Dade College](http://mdc.edu), but it can fit needs for other schools or colleges. If you want to try it don't hesitate to contact us at [info@mdc.blue](mailto:info@mdc.blue)
 
 ![Event](https://eventgenerator.ga/assets/images/desktop.png)
 
