@@ -18,6 +18,13 @@
 - [git.io/event](https://git.io/event)
 - [go.mdc.blue/event-repo](https://go.mdc.blue/event-repo)
 
+![DOCS](https://png.icons8.com/color/22/000000/new-document.png) &nbsp;&nbsp; DOCS
+
+- [docs.eventgenerator.ga](https://docs.eventgenerator.ga)
+
+![Java](https://png.icons8.com/color/22/000000/java-coffee-cup-logo.png) &nbsp;&nbsp; JAVA DOCS
+
+- [eventgenerator.ga/java](https://eventgenerator.ga/java)
 
 **Event** is a cross-platform desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
