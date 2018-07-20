@@ -1,15 +1,21 @@
-[![Event Logo](https://eventgenerator.ga/assets/images/event.png) ![](media/event.gif)](https://eventgenerator.ga)
+<p align="center">
+  <img src="media/event.gif">
+</p>
 
 [![MDC Blue](https://mdc.blue/badge.svg)](https://github.com/mdcblue)
 [![Build Status](https://img.shields.io/travis/MDCblue/event.svg?logo=travis)](https://travis-ci.org/MDCblue/event)
-[![CircleCI](https://circleci.com/gh/MDCblue/event.svg?style=svg&circle-token=9e0b94449621dc7622993c997eca7dd8b9a03aba)](https://circleci.com/gh/MDCblue/event) 
-[ ![Codeship Status for MDCblue/event](https://app.codeship.com/projects/0aff85f0-41b3-0136-0e71-221a7588f37b/status?branch=master)](https://app.codeship.com/projects/291411) [![wercker status](https://app.wercker.com/status/fd1125321cf888924167722e42e79700/s/master "wercker status")](https://app.wercker.com/project/byKey/fd1125321cf888924167722e42e79700) [![Build status](https://ci.appveyor.com/api/projects/status/3n8wnswx4gdptl9q?svg=true)](https://ci.appveyor.com/project/19cah/event) [![Build Status](https://semaphoreci.com/api/v1/19cah/event/branches/master/badge.svg)](https://semaphoreci.com/19cah/event) [![HitCount](http://hits.dwyl.io/mdcblue/event.svg)](http://hits.dwyl.io/mdcblue/event)
+[![CircleCI](https://circleci.com/gh/MDCblue/event.svg?style=svg&circle-token=9e0b94449621dc7622993c997eca7dd8b9a03aba)](https://circleci.com/gh/MDCblue/event)
+[![HitCount](http://hits.dwyl.io/mdcblue/event.svg)](http://hits.dwyl.io/mdcblue/event)
 
-<!-- [![wercker status](https://img.shields.io/wercker/ci/mdcblue/event.svg?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAHEAAACCCAMAAABGptdVAAAAHlBMVEUAAAApreAzsuU4tuY4t%2Bo6uuk7uuo7ueo7uuv%2F%2F%2F%2Bfm%2FBmAAAACXRSTlMAGTJJYHaUscxFS9c9AAACcklEQVR4Ae2bwbLcKgxELUAS%2Bv8ffm%2FhVGoqXbHclkkmxVlfc4CWtZgrH19C89lW%2BsTif0yWCTVOdI1vzPjJWBFgfDD7igA%2F8fZqgIAXS2gE4MUS6jMA78UpHhd4e7lgVN%2BMU8GB8DbeCnB29G4WdITEqgPvpjZAk8SNFweY2hRB%2Fsqq4mwzv05FnOL50i%2BJ89dsXJgayzKItgnjVLplD7pXjLKd5uPs9WnwC8AtTlBxdZc0qBj4QqACzN9V5%2B%2BfihN0hJlrGQpJXhkwXgcYEEnEiY0gwLwRMLJGk4MyAixjxAGSxkP80mjHwRsRemUc1cZ%2BZdRq43hmVEi9kWAbt1HtHvLYGDd5bpzbuI1fUqvjJn%2Bi52zjNppzCG0Mkn%2FfuI3b2En%2Bzp7T%2Bom8aFzBNgJ8cghtDJJt3MZvNGqczIyxkcAfPOexiBknvsoYP7BFwr5ozAXEGH3hpeKXo2sd1sGlemIwhaeD3y0UHL8MdMQQEHEVio7hoL9EEQ46HK5ULxdKBGhx1YecoMGB17%2FukI4rYx4QqRUOUL2%2FK9fJ4DikcyOIwgEmyf2bqdUps8ORSikvhJ7%2BS60Rxo3r1xJhOzCwDxjlk3lv7mU8VUrcvSdFr3SeHve3rE%2BGV0YwG7YAQTCPOvmcsRNoTo%2B7TGEixMKkMgbxjD0bOrb0jfLto8Un%2FdYOY1CtIz%2BTJA72R%2BDZfWsEUWqZlbylpkDt4OlxvZjVziKLX6w3%2BJk%2BBF6y4%2Bkt%2FkZxTChOMKHWF0%2BwW40PH8bt5a8RRlxiC75eAdmu%2B8BjLP6IRZd%2BGARbfL2TCJCnOX4j1jid91FO3kc5jc9vPf8BpsKu9jwT6NEAAAAASUVORK5CYII%3D)](https://app.wercker.com/mdcblue/event/runs)-->
 
-![Web](https://png.icons8.com/ios/16/000000/geography-filled.png) Visit our website at [EVENT🚀.ga](http://EVENT🚀.ga) or [eventgenerator.ga](https://eventgenerator.ga)
+![Web](https://png.icons8.com/ios/16/000000/geography-filled.png) &nbsp; &nbsp; WEBSITE
+- [event 🚀.ga](http://event🚀.ga)
+- [eventgenerator.ga](https://eventgenerator.ga)
 
-Visit our repository at [git.io/event](https://git.io/event) or [go.mdc.blue/event-repo](https://go.mdc.blue/event-repo)
+![Git](https://png.icons8.com/color/22/000000/git.png) &nbsp;&nbsp; GIT REPOSITORY
+
+- [git.io/event](https://git.io/event)
+- [go.mdc.blue/event-repo](https://go.mdc.blue/event-repo)
 
 **\#Event** is a Windows desktop application build on **Java**, designed to create your live easier when it comes to organize your needs for an event.
 
@@ -21,12 +27,12 @@ Visit our repository at [git.io/event](https://git.io/event) or [go.mdc.blue/eve
 
 #### Prerequisites
 
-* Windows 7 or higher.
-* Access 2012 \(Office Product\) or higher installed
+* Windows 7 or later.
+* macOS Sierra of later
 * [UCanAccess](http://ucanaccess.sourceforge.net/site.html) library
 * [JavaFX Material Design](http://www.jfoenix.com/) library
 
-### Window
+### Download
 
 Download the latest [**\#Event**](https://eventgenerator.ga/#download-section) release.
 
@@ -36,13 +42,12 @@ Please note that this project is licensed under MIT License. By participating in
 
 See [Contributing Guide](https://github.com/MDCblue/event/blob/master/.github/contribution-guidelines.md)
 
-## Contributors
+## Team
 
-| [![CA](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah)                                | [![LF](https://avatars3.githubusercontent.com/u/34631500?s=50&v=4)](https://github.com/LuisRobaina)                          | [![E](https://avatars3.githubusercontent.com/u/27441517?s=50&v=4)](https://github.com/Jikiyama) |
-| --- | --- | --- |
-| [Abraham](https://github.com/19cah)                                                                                          | [Luis F.](https://github.com/LuisRobaina)                                                                                    | [Emanuel](https://github.com/Jikiyama) |
+|[![CA](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah)|[![LF](https://avatars3.githubusercontent.com/u/34631500?s=50&v=4)](https://github.com/LuisRobaina)|
+| --- | --- |
+|[Abraham](https://github.com/19cah) | [Luis F.](https://github.com/LuisRobaina) |
 
 ## License
 
 [MDC Blue](https://github.com/MDCblue) © 2018 [MIT License](https://github.com/MDCblue/event/blob/master/LICENSE)
-
