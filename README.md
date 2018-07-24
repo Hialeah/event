@@ -59,7 +59,7 @@ See [Contributing Guide](https://github.com/MDCblue/event/blob/master/.github/co
 
 |[![CA](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah)|[![LF](https://avatars3.githubusercontent.com/u/34631500?s=50&v=4)](https://github.com/LuisRobaina)|
 | --- | --- |
-|[Abraham](https://github.com/19cah) | [Luis F.](https://github.com/LuisRobaina) |
+|[Abraham](https://github.com/abranhe) | [Luis F.](https://github.com/LuisRobaina) |
 
 ## License
 
