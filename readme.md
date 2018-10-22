@@ -57,10 +57,18 @@ See [Contributing Guide](https://github.com/MDCblue/event/blob/master/.github/co
 
 ## Team
 
-|[![CA](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://github.com/19cah)|[![LF](https://avatars3.githubusercontent.com/u/34631500?s=50&v=4)](https://github.com/LuisRobaina)|
+|[![CA][abranhe-img]][abranhe]|[![LF][lr-img]][lr]|
 | --- | --- |
-|[Abraham](https://github.com/abranhe) | [Luis F.](https://github.com/LuisRobaina) |
+|[Abraham][abranhe]| [Luis F.][lr] |
 
 ## License
 
-[MDC Blue](https://github.com/MDCblue) © 2018 [MIT License](https://github.com/MDCblue/event/blob/master/LICENSE)
+[MDC Blue](https://github.com/MDCblue) © 2018 [MIT License](https://github.com/MDCblue/event/blob/master/license)
+
+
+<!------------- Links --------------->
+
+[abranhe-img]: https://avatars3.githubusercontent.com/u/21347264?s=50
+[abranhe]: https://github.com/abranhe
+[lr-img]: https://avatars3.githubusercontent.com/u/34631500?s=50
+[lr]: https://github.com/LuisRobaina
